@@ -1,0 +1,158 @@
+guid: 4bb1b923-3e6a-48c8-96fd-3a0cd07decbb
+model:
+  name: Source of Business Special Time Period
+  model_tables:
+  - name: dim_sob_special_period_sbu
+    fqn: 81bdc925-aad8-4c28-9c5d-a83eedcee807
+  - name: fact_sob_special_period_sbu
+    fqn: 8fa67bf0-770c-4af3-bb1e-40327f08bf78
+    joins:
+    - with: dim_sob_special_period_sbu
+      'on': '[fact_sob_special_period_sbu::Special_Period] = [dim_sob_special_period_sbu::special_period]'
+      type: INNER
+      cardinality: MANY_TO_ONE
+  formulas:
+  - id: formula_Metric
+    name: Metric
+    expr: if ( [Metric Selection] = 'New to Brand Patients' ) then [fact_sob_special_period_sbu::New_To_Brand_Patients] else if ( [Metric Selection] = 'Continue Patients' ) then [fact_sob_special_period_sbu::Continue_Patients] else if ( [Metric Selection] = 'Switch Patients' ) then [fact_sob_special_period_sbu::Switch_Patients_Special_Period] else if ( [Metric Selection] = 'Total Patients' ) then [fact_sob_special_period_sbu::Total_Patients_Special_Period] else null
+  - id: formula_Month Range
+    name: Month Range
+    expr: if ( substr ( [dim_sob_special_period_sbu::special_period] , 4 , 2 ) = '01' ) then concat ( substr ( [dim_sob_special_period_sbu::special_period] , 4 , 2 ) , " - " , substr ( [dim_sob_special_period_sbu::special_period] , 11 , 2 ) ) else null
+  - id: formula_Report Type Value
+    name: Report Type Value
+    expr: 'if ( [Report-Type] = ''PRODUCT'' ) then [fact_sob_special_period_sbu::Current_Product_Group] else if ( [Report-Type] = ''PRODUCT+SPECIALTY'' ) then concat ( [fact_sob_special_period_sbu::Current_Product_Group] , " - " , [fact_sob_special_period_sbu::Specialty] ) else if ( [Report-Type] = ''PRODUCT+DIAGNOSIS'' ) then concat ( [fact_sob_special_period_sbu::Current_Product_Group] , " - " , [fact_sob_special_period_sbu::Diagnosis] ) else if ( [Report-Type] = ''PRODUCT+SPECIALTY+DIAGNOSIS'' ) then concat ( [fact_sob_special_period_sbu::Current_Product_Group] , " - " , [fact_sob_special_period_sbu::Specialty] , " - " , [fact_sob_special_period_sbu::Diagnosis] ) else null '
+  - id: formula_Special Year
+    name: Special Year
+    expr: substr ( [dim_sob_special_period_sbu::special_period] , 0 , 4 )
+  columns:
+  - name: Switch Patients Special Period
+    column_id: fact_sob_special_period_sbu::Switch_Patients_Special_Period
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+  - name: Special Year
+    formula_id: formula_Special Year
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+  - name: Pay Type
+    column_id: fact_sob_special_period_sbu::PAY_TYPE
+    properties:
+      column_type: ATTRIBUTE
+  - name: Naive Patients Special Period
+    column_id: fact_sob_special_period_sbu::Naive_Patients_Special_Period
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+  - name: Month Range
+    formula_id: formula_Month Range
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+  - name: Diagnosis
+    column_id: fact_sob_special_period_sbu::Diagnosis
+    properties:
+      column_type: ATTRIBUTE
+  - name: Total Patients Special Period
+    column_id: fact_sob_special_period_sbu::Total_Patients_Special_Period
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+  - name: Special Period
+    column_id: fact_sob_special_period_sbu::Special_Period
+    properties:
+      column_type: ATTRIBUTE
+  - name: Current Product Group
+    column_id: fact_sob_special_period_sbu::Current_Product_Group
+    properties:
+      column_type: ATTRIBUTE
+  - name: Continue Patients
+    column_id: fact_sob_special_period_sbu::Continue_Patients
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+  - name: Current Product Form
+    column_id: fact_sob_special_period_sbu::Current_Product_Form
+    properties:
+      column_type: ATTRIBUTE
+  - name: New To Brand Patients
+    column_id: fact_sob_special_period_sbu::New_To_Brand_Patients
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+  - name: Current Channel Desc
+    column_id: fact_sob_special_period_sbu::Current_Channel_Desc
+    properties:
+      column_type: ATTRIBUTE
+  - name: Report Type
+    column_id: fact_sob_special_period_sbu::Report_Type
+    properties:
+      column_type: ATTRIBUTE
+  - name: Specialty
+    column_id: fact_sob_special_period_sbu::Specialty
+    properties:
+      column_type: ATTRIBUTE
+  - name: Is Ytd
+    column_id: dim_sob_special_period_sbu::is_YTD
+    properties:
+      column_type: ATTRIBUTE
+  - name: Quarter
+    column_id: dim_sob_special_period_sbu::quarter
+    properties:
+      column_type: ATTRIBUTE
+  - name: Relative Year
+    column_id: dim_sob_special_period_sbu::relative_year
+    properties:
+      column_type: ATTRIBUTE
+  - name: Metric
+    formula_id: formula_Metric
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+  - name: Mode Of Administration
+    column_id: fact_sob_special_period_sbu::Mode_of_Administration
+    properties:
+      column_type: ATTRIBUTE
+  - name: Report Type Value
+    formula_id: formula_Report Type Value
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+  properties:
+    is_bypass_rls: false
+    join_progressive: true
+    spotter_config:
+      is_spotter_enabled: false
+  parameters:
+  - id: 838e72ba-28a1-470b-a5f9-da775e1898ce
+    name: Metric Selection
+    data_type: CHAR
+    default_value: New To Brand Patients
+    list_config:
+      list_choice:
+      - value: Continue Patients
+        display_name: Continue Patients
+      - value: New To Brand Patients
+        display_name: New To Brand Patients
+      - value: Switch Patients
+        display_name: Switch Patients
+      - value: Total Patients
+        display_name: Total Patients
+    description: ''
+  - id: eeb1fec6-fa72-41b4-9aa7-cb637df3bf51
+    name: Report-Type
+    data_type: CHAR
+    default_value: PRODUCT
+    list_config:
+      list_choice:
+      - value: PRODUCT
+      - value: PRODUCT+DIAGNOSIS
+      - value: PRODUCT+SPECIALTY
+      - value: PRODUCT+SPECIALTY+DIAGNOSIS
+    description: ''

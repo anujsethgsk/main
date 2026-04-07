@@ -1,0 +1,483 @@
+guid: 99515b8e-6cab-4177-850a-d1309b319ab3
+model:
+  name: Source Of Business
+  description: The "Source Of Business" worksheet provides a comprehensive overview of patient and unit metrics on a weekly and monthly basis. It includes detailed information on brand, product forms, and channels, as well as patient diagnoses and specialties. Additionally, it tracks the continuity and changes in patient engagement with the brand, including new and switching patients. (AI generated)
+  model_tables:
+  - name: fact_sob_weekly_monthly_sbu
+    fqn: bda48b8f-1b38-4912-a5c7-3dd84e025607
+  - name: dim_sob_weekly_monthly_sbu
+    alias: dim_sob_weekly_monthly (weekly)
+    fqn: bd4a5402-9c06-45c1-8278-0a10fec1a3d2
+    joins:
+    - with: fact_sob_weekly_monthly_sbu
+      'on': '[dim_sob_weekly_monthly_sbu::Date_ID] = [fact_sob_weekly_monthly_sbu::Week_ID] AND [dim_sob_weekly_monthly_sbu::Market_Description] = [fact_sob_weekly_monthly_sbu::Market_Desc]'
+      type: OUTER
+      cardinality: ONE_TO_MANY
+  - name: dim_sob_weekly_monthly_sbu
+    alias: dim_sob_weekly_monthly (monthly)
+    fqn: bd4a5402-9c06-45c1-8278-0a10fec1a3d2
+    joins:
+    - with: fact_sob_weekly_monthly_sbu
+      'on': '[dim_sob_weekly_monthly_sbu::Date_ID] = [fact_sob_weekly_monthly_sbu::Month_ID] AND [dim_sob_weekly_monthly_sbu::Market_Description] = [fact_sob_weekly_monthly_sbu::Market_Desc]'
+      type: OUTER
+      cardinality: ONE_TO_MANY
+  - name: dim_launch_date_alignment_sob
+    alias: dim_launch_date_alignment_sob (Monthly)
+    fqn: 9dab7cbc-dadf-41c0-a501-8dc6509443cc
+    joins:
+    - with: fact_sob_weekly_monthly_sbu
+      'on': '[dim_launch_date_alignment_sob::445_MONTH_ID] = [fact_sob_weekly_monthly_sbu::Month_ID] AND [dim_launch_date_alignment_sob::DIAGNOSIS] = [fact_sob_weekly_monthly_sbu::DIAGNOSIS_CATEGORY] AND [dim_launch_date_alignment_sob::BRAND] = [fact_sob_weekly_monthly_sbu::Current_Product_Group]'
+      type: INNER
+      cardinality: ONE_TO_MANY
+  - name: dim_launch_date_alignment_sob
+    alias: dim_launch_date_alignment_sob (weekly)
+    fqn: 9dab7cbc-dadf-41c0-a501-8dc6509443cc
+    joins:
+    - with: fact_sob_weekly_monthly_sbu
+      'on': '[dim_launch_date_alignment_sob::Week_ID] = [fact_sob_weekly_monthly_sbu::Week_ID] AND [dim_launch_date_alignment_sob::DIAGNOSIS] = [fact_sob_weekly_monthly_sbu::DIAGNOSIS_CATEGORY] AND [dim_launch_date_alignment_sob::BRAND] = [fact_sob_weekly_monthly_sbu::Current_Product_Group]'
+      type: INNER
+      cardinality: ONE_TO_MANY
+  formulas:
+  - id: formula_IL5 Market Indicator
+    name: IL5 Market Indicator
+    expr: if ( [fact_sob_weekly_monthly_sbu::Current_Product_Group] = 'NUCALA' ) then 'IL5' else if ( [fact_sob_weekly_monthly_sbu::Current_Product_Group] in { 'FASENRA' } ) then 'IL5' else null
+  - id: formula_Max_date_F
+    name: Max_date_F
+    expr: if ( [Max_date_P] = 'max_benlysta' and [dim_sob_weekly_monthly (weekly)::Market_Description] = 'LUPUS' ) then max ( [dim_sob_weekly_monthly (weekly)::Date_ID_as_date] ) else if ( [Max_date_P] = 'max_nucala' and [dim_sob_weekly_monthly (weekly)::Market_Description] = 'RESPIRATORY BIOLOGICS' ) then max ( [dim_sob_weekly_monthly (weekly)::Date_ID_as_date]  ) else null
+  - id: formula_Month ID
+    name: Month ID
+    expr: '[dim_sob_weekly_monthly (monthly)::Date_ID_as_date] '
+  - id: formula_Month To Date
+    name: Month To Date
+    expr: ifnull ( [dim_sob_weekly_monthly (weekly)::Month_To_Date] , [dim_sob_weekly_monthly (monthly)::Month_To_Date] )
+  - id: formula_Months Ago
+    name: Months Ago
+    expr: ifnull ( [dim_sob_weekly_monthly (monthly)::Months_Ago] , [dim_sob_weekly_monthly (weekly)::Months_Ago]  )
+  - id: formula_Patient Type Monthly_F
+    name: Patient Type Monthly_F
+    expr: 'if ( [Patient Type] = ''New to Brand Patients'' ) then [fact_sob_weekly_monthly_sbu::New_To_Brand_Patients] else [fact_sob_weekly_monthly_sbu::Total_Patients_Monthly] '
+  - id: formula_Patient Type Weekly_F
+    name: Patient Type Weekly_F
+    expr: if ( [Patient Type] = 'New to Brand Patients' ) then [fact_sob_weekly_monthly_sbu::New_To_Brand_Patients]  else [fact_sob_weekly_monthly_sbu::Total_Patients_Weekly]
+  - id: formula_Quarter Ago
+    name: Quarter Ago
+    expr: ifnull ( [dim_sob_weekly_monthly (weekly)::Quarters_Ago] , [dim_sob_weekly_monthly (monthly)::Quarters_Ago] )
+  - id: formula_Quarter To Date
+    name: Quarter To Date
+    expr: ifnull ( [dim_sob_weekly_monthly (weekly)::Quarter_To_Date] , [dim_sob_weekly_monthly (monthly)::Quarter_To_Date] )
+  - id: formula_Referral Goal
+    name: Referral Goal
+    expr: sum ( [fact_sob_weekly_monthly_sbu::New_To_Brand_Patients] ) * 1.55
+  - id: formula_Week ID
+    name: Week ID
+    expr: '[dim_sob_weekly_monthly (weekly)::Date_ID_as_date] '
+  - id: formula_Weeks Ago
+    name: Weeks Ago
+    expr: ifnull ( [dim_sob_weekly_monthly (weekly)::Weeks_Ago] , [dim_sob_weekly_monthly (monthly)::Weeks_Ago] )
+  - id: formula_Year To Date
+    name: Year To Date
+    expr: ifnull ( [dim_sob_weekly_monthly (weekly)::Year_To_Date] , [dim_sob_weekly_monthly (monthly)::Year_To_Date] )
+  - id: formula_Yearly Comparison
+    name: Yearly Comparison
+    expr: ifnull ( [dim_sob_weekly_monthly (weekly)::Yearly_Comparison] , [dim_sob_weekly_monthly (monthly)::Yearly_Comparison] )
+  - id: formula_Years Ago
+    name: Years Ago
+    expr: ifnull ( [dim_sob_weekly_monthly (weekly)::Years_Ago] , [dim_sob_weekly_monthly (monthly)::Years_Ago] )
+  columns:
+  - name: Current Product Form
+    column_id: fact_sob_weekly_monthly_sbu::Current_Product_Form
+    properties:
+      column_type: ATTRIBUTE
+      custom_order:
+      - BENLYSTA AI
+      - BENLYSTA PFS
+      - BENLYSTA AI
+      - NUCALA AI
+      - NUCALA PFS
+      - NUCALA LYO VIAL
+  - name: Month ID
+    formula_id: formula_Month ID
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      calendar: dim_calendar_sbu_week_end_friday
+  - name: Week ID
+    formula_id: formula_Week ID
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      calendar: dim_calendar_sbu_week_end_friday
+      default_date_bucket: WEEKLY
+  - name: Month To Date
+    formula_id: formula_Month To Date
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+  - name: Months Ago
+    formula_id: formula_Months Ago
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+  - name: Quarter To Date
+    formula_id: formula_Quarter To Date
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+  - name: Quarter Ago
+    formula_id: formula_Quarter Ago
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+  - name: Weeks Ago
+    formula_id: formula_Weeks Ago
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+  - name: Year To Date
+    formula_id: formula_Year To Date
+    properties:
+      column_type: ATTRIBUTE
+  - name: Yearly Comparison
+    formula_id: formula_Yearly Comparison
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+  - name: Years Ago
+    formula_id: formula_Years Ago
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+  - name: IL5 Market Indicator
+    formula_id: formula_IL5 Market Indicator
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+  - name: Referral Goal
+    formula_id: formula_Referral Goal
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+  - name: New To Brand Patients (Plan)
+    column_id: fact_sob_weekly_monthly_sbu::PLAN_NEW_TO_BRAND
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      format_pattern: '#,##0'
+  - name: Total Patients Monthly (Plan)
+    column_id: fact_sob_weekly_monthly_sbu::PLAN_TOTAL_PATIENTS
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      format_pattern: '#,##0'
+  - name: New Referrals
+    column_id: fact_sob_weekly_monthly_sbu::SP_PROJECTED_NEW_REFERRAL
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      format_pattern: '#,##0'
+  - name: New To Brand Patients (F1)
+    column_id: fact_sob_weekly_monthly_sbu::F1_NEW_TO_BRAND
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      format_pattern: '#,##0'
+  - name: Total Patients Monthly (F1)
+    column_id: fact_sob_weekly_monthly_sbu::F1_TOTAL_PATIENTS
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      format_pattern: '#,##0'
+  - name: Continue Rx
+    column_id: fact_sob_weekly_monthly_sbu::Continue_Rx
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+  - name: Naive Rx Monthly
+    column_id: fact_sob_weekly_monthly_sbu::Naive_Rx_Monthly
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+  - name: Naive Rx Weekly
+    column_id: fact_sob_weekly_monthly_sbu::Naive_Rx_Weekly
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+  - name: New To Brand Rx
+    column_id: fact_sob_weekly_monthly_sbu::New_To_Brand_Rx
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+  - name: Switch Rx Monthly
+    column_id: fact_sob_weekly_monthly_sbu::Switch_Rx_Monthly
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+  - name: Switch Rx Weekly
+    column_id: fact_sob_weekly_monthly_sbu::Switch_Rx_Weekly
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+  - name: Total Rx Monthly
+    column_id: fact_sob_weekly_monthly_sbu::Total_Rx_Monthly
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+  - name: Total Rx Weekly
+    column_id: fact_sob_weekly_monthly_sbu::Total_Rx_Weekly
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+  - name: Launch Month Number
+    column_id: dim_launch_date_alignment_sob (Monthly)::LAUNCH_MONTH_NUMBER
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+  - name: Launch Week Number
+    column_id: dim_launch_date_alignment_sob (weekly)::LAUNCH_WEEK_NUMBER
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+  - name: New To Brand Patients
+    column_id: fact_sob_weekly_monthly_sbu::New_To_Brand_Patients
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      synonyms:
+      - ntb
+      synonym_type: USER_DEFINED
+  - name: Market Id
+    column_id: fact_sob_weekly_monthly_sbu::Market_ID
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+  - name: Specialty Code Group
+    column_id: fact_sob_weekly_monthly_sbu::Specialty_Code_Group
+    properties:
+      column_type: ATTRIBUTE
+      custom_order:
+      - PULM
+      - ALG
+      - ENT
+      - RHU
+      - NEP
+      - IM
+      - OTHER
+  - name: Naive Patients Weekly
+    column_id: fact_sob_weekly_monthly_sbu::Naive_Patients_Weekly
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+  - name: Current Brand Id
+    column_id: fact_sob_weekly_monthly_sbu::Current_Brand_ID
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+  - name: Naive Units Weekly
+    column_id: fact_sob_weekly_monthly_sbu::Naive_Units_Weekly
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+  - name: Total Units Monthly
+    column_id: fact_sob_weekly_monthly_sbu::Total_Units_Monthly
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+  - name: Switch Units Weekly
+    column_id: fact_sob_weekly_monthly_sbu::Switch_Units_Weekly
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+  - name: Total Patients Monthly
+    column_id: fact_sob_weekly_monthly_sbu::Total_Patients_Monthly
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+  - name: Total Patients Weekly
+    column_id: fact_sob_weekly_monthly_sbu::Total_Patients_Weekly
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+  - name: New To Brand Units
+    column_id: fact_sob_weekly_monthly_sbu::New_To_Brand_Units
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+  - name: Total Units Weekly
+    column_id: fact_sob_weekly_monthly_sbu::Total_Units_Weekly
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+  - name: Continue Units
+    column_id: fact_sob_weekly_monthly_sbu::Continue_Units
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+  - name: Switch Units Monthly
+    column_id: fact_sob_weekly_monthly_sbu::Switch_Units_Monthly
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+  - name: Continue Patients
+    column_id: fact_sob_weekly_monthly_sbu::Continue_Patients
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+  - name: Switch Patients Monthly
+    column_id: fact_sob_weekly_monthly_sbu::Switch_Patients_Monthly
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+  - name: Switch Patients Weekly
+    column_id: fact_sob_weekly_monthly_sbu::Switch_Patients_Weekly
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+  - name: Naive Patients Monthly
+    column_id: fact_sob_weekly_monthly_sbu::Naive_Patients_Monthly
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+  - name: Naive Units Monthly
+    column_id: fact_sob_weekly_monthly_sbu::Naive_Units_Monthly
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+  - name: Market Desc
+    column_id: fact_sob_weekly_monthly_sbu::Market_Desc
+    properties:
+      column_type: ATTRIBUTE
+  - name: Current Brand
+    column_id: fact_sob_weekly_monthly_sbu::Current_Brand
+    properties:
+      column_type: ATTRIBUTE
+  - name: Current Product Group
+    column_id: fact_sob_weekly_monthly_sbu::Current_Product_Group
+    properties:
+      column_type: ATTRIBUTE
+  - name: Current Channel Desc
+    column_id: fact_sob_weekly_monthly_sbu::Current_Channel_Desc
+    properties:
+      column_type: ATTRIBUTE
+  - name: Specialty
+    column_id: fact_sob_weekly_monthly_sbu::Specialty
+    properties:
+      column_type: ATTRIBUTE
+      custom_order:
+      - PULM
+      - ALLG
+      - ENT
+      - PCP
+      - RHU
+      - NEP
+      - IM
+      - IM/NP
+      - OTHER
+  - name: Diagnosis
+    column_id: fact_sob_weekly_monthly_sbu::Diagnosis
+    properties:
+      column_type: ATTRIBUTE
+      custom_order:
+      - SEVERE ASTHMA
+      - NASAL POLYPS
+      - EGPA
+      - HES
+  - name: Previous Product Form
+    column_id: fact_sob_weekly_monthly_sbu::Previous_Product_Form
+    properties:
+      column_type: ATTRIBUTE
+  - name: Previous Product Group
+    column_id: fact_sob_weekly_monthly_sbu::Previous_Product_Group
+    properties:
+      column_type: ATTRIBUTE
+  - name: Current Channel
+    column_id: fact_sob_weekly_monthly_sbu::Current_Channel
+    properties:
+      column_type: ATTRIBUTE
+  - name: Diagnosis Category
+    column_id: fact_sob_weekly_monthly_sbu::DIAGNOSIS_CATEGORY
+    properties:
+      column_type: ATTRIBUTE
+  - name: Mode Of Administration
+    column_id: fact_sob_weekly_monthly_sbu::Mode_of_Administration
+    properties:
+      column_type: ATTRIBUTE
+  - name: Pay Type
+    column_id: fact_sob_weekly_monthly_sbu::PAY_TYPE
+    properties:
+      column_type: ATTRIBUTE
+  - name: Patient Type Monthly_F
+    formula_id: formula_Patient Type Monthly_F
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+  - name: Patient Type Weekly_F
+    formula_id: formula_Patient Type Weekly_F
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+  - name: Max_date_F
+    formula_id: formula_Max_date_F
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+  properties:
+    is_bypass_rls: false
+    join_progressive: true
+    spotter_config:
+      is_spotter_enabled: true
+  parameters:
+  - id: b42dfd04-89b3-43de-aa61-6bf058b7b21f
+    name: Launch Week Number End
+    data_type: INT64
+    default_value: '13'
+    description: Use this to limit the number of weeks displayed in a Liveboard
+  - id: ce5d5a91-c9f0-4cba-859e-7d0cafef5e90
+    name: Max_date_P
+    data_type: CHAR
+    default_value: max_benlysta
+    list_config:
+      list_choice:
+      - value: max_benlysta
+      - value: max_nucala
+    description: ''
+  - id: 4dee8c18-75f9-47b3-87bd-4fdebc03d03e
+    name: Patient Type
+    data_type: CHAR
+    default_value: New To Brand Patients
+    list_config:
+      list_choice:
+      - value: New To Brand Patients
+      - value: Total Patients
+    description: ''

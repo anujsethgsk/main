@@ -1,0 +1,362 @@
+guid: bda48b8f-1b38-4912-a5c7-3dd84e025607
+table:
+  name: fact_sob_weekly_monthly_sbu
+  description: UNKNOWN
+  db: hive_metastore
+  schema: us_speciality_analytics
+  db_table: fact_sob_weekly_monthly_sbu
+  connection:
+    name: Thoughtspot Databricks Service Principal
+    fqn: 26f23c00-ab28-4aa8-841b-665c0cf48bce
+  columns:
+  - name: Month_ID
+    db_column_name: Month_ID
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: INT32
+  - name: Week_ID
+    db_column_name: Week_ID
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: INT32
+  - name: Market_ID
+    db_column_name: Market_ID
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: INT64
+  - name: Market_Desc
+    db_column_name: Market_Desc
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Current_Brand
+    db_column_name: Current_Brand
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Current_Brand_ID
+    db_column_name: Current_Brand_ID
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: INT64
+  - name: Current_Product_Group
+    db_column_name: Current_Product_Group
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Current_Product_Form
+    db_column_name: Current_Product_Form
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Previous_Product_Group
+    db_column_name: Previous_Product_Group
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Previous_Product_Form
+    db_column_name: Previous_Product_Form
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Current_Channel
+    db_column_name: Current_Channel
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Current_Channel_Desc
+    db_column_name: Current_Channel_Desc
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Specialty
+    db_column_name: Specialty
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Specialty_Code_Group
+    db_column_name: Specialty_Code_Group
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Diagnosis
+    db_column_name: Diagnosis
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: New_To_Brand_Units
+    db_column_name: New_To_Brand_Units
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DOUBLE
+  - name: New_To_Brand_Patients
+    db_column_name: New_To_Brand_Patients
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DOUBLE
+  - name: Continue_Units
+    db_column_name: Continue_Units
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DOUBLE
+  - name: Continue_Patients
+    db_column_name: Continue_Patients
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DOUBLE
+  - name: Total_Units_Weekly
+    db_column_name: Total_Units_Weekly
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DOUBLE
+  - name: Total_Patients_Weekly
+    db_column_name: Total_Patients_Weekly
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DOUBLE
+  - name: Switch_Units_Weekly
+    db_column_name: Switch_Units_Weekly
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DOUBLE
+  - name: Switch_Patients_Weekly
+    db_column_name: Switch_Patients_Weekly
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DOUBLE
+  - name: Total_Units_Monthly
+    db_column_name: Total_Units_Monthly
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DOUBLE
+  - name: Total_Patients_Monthly
+    db_column_name: Total_Patients_Monthly
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DOUBLE
+  - name: Switch_Units_Monthly
+    db_column_name: Switch_Units_Monthly
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DOUBLE
+  - name: Switch_Patients_Monthly
+    db_column_name: Switch_Patients_Monthly
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DOUBLE
+  - name: DIAGNOSIS_CATEGORY
+    db_column_name: DIAGNOSIS_CATEGORY
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Naive_Patients_Weekly
+    db_column_name: Naive_Patients_Weekly
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DOUBLE
+  - name: Naive_Units_Weekly
+    db_column_name: Naive_Units_Weekly
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DOUBLE
+  - name: Mode_of_Administration
+    db_column_name: Mode_of_Administration
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: Naive_Patients_Monthly
+    db_column_name: Naive_Patients_Monthly
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DOUBLE
+  - name: Naive_Units_Monthly
+    db_column_name: Naive_Units_Monthly
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DOUBLE
+  - name: PAY_TYPE
+    db_column_name: PAY_TYPE
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: New_To_Brand_Rx
+    db_column_name: New_To_Brand_Rx
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DOUBLE
+  - name: Naive_Rx_Monthly
+    db_column_name: Naive_Rx_Monthly
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DOUBLE
+  - name: Total_Rx_Weekly
+    db_column_name: Total_Rx_Weekly
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DOUBLE
+  - name: Total_Rx_Monthly
+    db_column_name: Total_Rx_Monthly
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DOUBLE
+  - name: Naive_Rx_Weekly
+    db_column_name: Naive_Rx_Weekly
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DOUBLE
+  - name: Switch_Rx_Weekly
+    db_column_name: Switch_Rx_Weekly
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DOUBLE
+  - name: Continue_Rx
+    db_column_name: Continue_Rx
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DOUBLE
+  - name: Switch_Rx_Monthly
+    db_column_name: Switch_Rx_Monthly
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DOUBLE
+  - name: PLAN_NEW_TO_BRAND
+    db_column_name: PLAN_NEW_TO_BRAND
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DOUBLE
+  - name: SP_PROJECTED_NEW_REFERRAL
+    db_column_name: SP_PROJECTED_NEW_REFERRAL
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DOUBLE
+  - name: F1_TOTAL_PATIENTS
+    db_column_name: F1_TOTAL_PATIENTS
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DOUBLE
+  - name: PLAN_TOTAL_PATIENTS
+    db_column_name: PLAN_TOTAL_PATIENTS
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DOUBLE
+  - name: F1_NEW_TO_BRAND
+    db_column_name: F1_NEW_TO_BRAND
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DOUBLE
+  properties:
+    spotter_config:
+      is_spotter_enabled: false
