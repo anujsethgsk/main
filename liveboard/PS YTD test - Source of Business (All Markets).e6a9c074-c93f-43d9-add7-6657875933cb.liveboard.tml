@@ -2584,6 +2584,7 @@ liveboard:
   - key: 838e72ba-28a1-470b-a5f9-da775e1898ce
     value:
       name: Source of Business Special Time Period::Metric Selection
+      override_value: Continue Patients
   - key: eeb1fec6-fa72-41b4-9aa7-cb637df3bf51
     value:
       name: Source of Business Special Time Period::Report-Type
@@ -2618,6 +2619,7 @@ liveboard:
     view_parameters:
     - name: ""
       id: 838e72ba-28a1-470b-a5f9-da775e1898ce
+      override_value: Continue Patients
     - name: Report Type Selection
       id: eeb1fec6-fa72-41b4-9aa7-cb637df3bf51
   - view_guid: 9025740b-1d50-4f56-865f-a6f9ba1b38e2
@@ -2639,6 +2641,7 @@ liveboard:
     view_parameters:
     - name: ""
       id: 838e72ba-28a1-470b-a5f9-da775e1898ce
+      override_value: Continue Patients
     - name: Report Type Selection
       id: eeb1fec6-fa72-41b4-9aa7-cb637df3bf51
   style:
