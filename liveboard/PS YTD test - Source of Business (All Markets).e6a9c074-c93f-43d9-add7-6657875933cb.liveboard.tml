@@ -2354,8 +2354,6 @@ liveboard:
     values:
     - BENLYSTA
     - BENLYSTA-SAPHNELO-GAZYVA
-    excluded_visualizations:
-    - Viz_32
     is_mandatory: true
     is_single_value: false
     display_name: ""
