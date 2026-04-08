@@ -20,7 +20,7 @@ model:
     expr: if ( substr ( [dim_sob_special_period_sbu::special_period] , 4 , 2 ) = '01' ) then concat ( substr ( [dim_sob_special_period_sbu::special_period] , 4 , 2 ) , " - " , substr ( [dim_sob_special_period_sbu::special_period] , 11 , 2 ) ) else null
   - id: formula_Report Type Value
     name: Report Type Value
-    expr: 'if ( [Report-Type] = ''PRODUCT'' ) then [fact_sob_special_period_sbu::Current_Product_Group] else if ( [Report-Type] = ''PRODUCT+SPECIALTY'' ) then concat ( [fact_sob_special_period_sbu::Current_Product_Group] , " - " , [fact_sob_special_period_sbu::Specialty] ) else if ( [Report-Type] = ''PRODUCT+DIAGNOSIS'' ) then concat ( [fact_sob_special_period_sbu::Current_Product_Group] , " - " , [fact_sob_special_period_sbu::Diagnosis] ) else if ( [Report-Type] = ''PRODUCT+SPECIALTY+DIAGNOSIS'' ) then concat ( [fact_sob_special_period_sbu::Current_Product_Group] , " - " , [fact_sob_special_period_sbu::Specialty] , " - " , [fact_sob_special_period_sbu::Diagnosis] ) else null '
+    expr: if ( [Report-Type] = 'PRODUCT' ) then [fact_sob_special_period_sbu::Current_Product_Group] else if ( [Report-Type] = 'PRODUCT+SPECIALTY' ) then concat ( [fact_sob_special_period_sbu::Current_Product_Group] , " - " , [fact_sob_special_period_sbu::Specialty] ) else if ( [Report-Type] = 'PRODUCT+DIAGNOSIS_CATEGORY' ) then concat ( [fact_sob_special_period_sbu::Current_Product_Group] , " - " , [fact_sob_special_period_sbu::Diagnosis] ) else if ( [Report-Type] = 'PRODUCT+SPECIALTY+DIAGNOSIS_CATEGORY' ) then concat ( [fact_sob_special_period_sbu::Current_Product_Group] , " - " , [fact_sob_special_period_sbu::Specialty] , " - " , [fact_sob_special_period_sbu::Diagnosis] ) else null
   - id: formula_Special Year
     name: Special Year
     expr: substr ( [dim_sob_special_period_sbu::special_period] , 0 , 4 )
@@ -152,7 +152,7 @@ model:
     list_config:
       list_choice:
       - value: PRODUCT
-      - value: PRODUCT+DIAGNOSIS
+      - value: PRODUCT+DIAGNOSIS CATEGORY
       - value: PRODUCT+SPECIALTY
-      - value: PRODUCT+SPECIALTY+DIAGNOSIS
+      - value: PRODUCT+SPECIALTY+DIAGNOSIS CATEGORY
     description: ''

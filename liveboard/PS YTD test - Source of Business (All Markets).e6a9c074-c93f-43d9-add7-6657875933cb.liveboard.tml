@@ -2354,6 +2354,27 @@ liveboard:
     values:
     - BENLYSTA
     - BENLYSTA-SAPHNELO-GAZYVA
+    - BENLYSTA-SAPHNELO-GAZYVA W/O ONC
+    - CINQAIR
+    - DUPIXENT
+    - EXDENSUR
+    - FASENRA
+    - GAZYVA
+    - GAZYVA W/O ONC
+    - LUPKYNIS
+    - NUCALA
+    - RITUXIMAB
+    - SAPHNELO
+    - TEZSPIRE
+    - XOLAIR
+    is_mandatory: true
+    is_single_value: false
+    display_name: ""
+  - column:
+    - Source of Business Special Time Period::Report Type Value
+    oper: not in
+    values:
+    - "{null}"
     is_mandatory: true
     is_single_value: false
     display_name: ""
@@ -2584,7 +2605,6 @@ liveboard:
   - key: 838e72ba-28a1-470b-a5f9-da775e1898ce
     value:
       name: Source of Business Special Time Period::Metric Selection
-      override_value: Continue Patients
   - key: eeb1fec6-fa72-41b4-9aa7-cb637df3bf51
     value:
       name: Source of Business Special Time Period::Report-Type
@@ -2599,51 +2619,6 @@ liveboard:
     type: PARAMETER
   - name: Source of Business Special Time Period::Report Type Value
     type: FILTER
-  views:
-  - view_guid: c02aaa2d-bf42-4335-8897-e714629aeb74
-    name: Lupus
-    view_filters:
-    - column:
-      - Source Of Business::Current Channel Desc
-      oper: in
-    - column:
-      - Source Of Business::Pay Type
-      oper: in
-    - column:
-      - Source of Business Special Time Period::Report Type Value
-      oper: in
-      values:
-      - BENLYSTA
-      - BENLYSTA-SAPHNELO-GAZYVA
-    is_public: true
-    view_parameters:
-    - name: ""
-      id: 838e72ba-28a1-470b-a5f9-da775e1898ce
-      override_value: Continue Patients
-    - name: Report Type Selection
-      id: eeb1fec6-fa72-41b4-9aa7-cb637df3bf51
-  - view_guid: 9025740b-1d50-4f56-865f-a6f9ba1b38e2
-    name: Resp Bio
-    view_filters:
-    - column:
-      - Source Of Business::Current Channel Desc
-      oper: in
-    - column:
-      - Source Of Business::Pay Type
-      oper: in
-    - column:
-      - Source of Business Special Time Period::Report Type Value
-      oper: in
-      values:
-      - BENLYSTA
-      - BENLYSTA-SAPHNELO-GAZYVA
-    is_public: true
-    view_parameters:
-    - name: ""
-      id: 838e72ba-28a1-470b-a5f9-da775e1898ce
-      override_value: Continue Patients
-    - name: Report Type Selection
-      id: eeb1fec6-fa72-41b4-9aa7-cb637df3bf51
   style:
     style_properties:
     - name: lb_border_type
