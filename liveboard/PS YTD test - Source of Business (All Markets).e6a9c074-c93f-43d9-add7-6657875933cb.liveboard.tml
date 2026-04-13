@@ -1679,53 +1679,43 @@ liveboard:
       - id: Source of Business Special Time Period
         name: Source of Business Special Time Period
         fqn: 4bb1b923-3e6a-48c8-96fd-3a0cd07decbb
-      search_query: "[Month Range] [Is Ytd].'Year to date' [Special Year] [Metric] [Report Type Value]"
+      search_query: "[Month Range] [Is Ytd].'Year to date' [Special Year] [Report Type Value] [Metric 2]"
       answer_columns:
+      - name: Metric 2
       - name: Month Range
       - name: Report Type Value
       - name: Special Year
-      - name: Total Metric
-        format:
-          category: NUMBER
-          numberFormatConfig:
-            unit: NONE
-            decimals: 0.0
-            negativeValueFormat: PREFIX_DASH
-            toSeparateThousands: true
-          isCategoryEditable: true
       table:
         table_columns:
+        - column_id: Metric 2
+          show_headline: false
         - column_id: Month Range
           show_headline: false
         - column_id: Report Type Value
           show_headline: false
         - column_id: Special Year
-          show_headline: false
-        - column_id: Total Metric
           show_headline: false
         ordered_column_ids:
         - Month Range
         - Special Year
         - Report Type Value
-        - Total Metric
+        - Metric 2
         client_state: ""
-        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"columnProperties\": [{\"columnId\": \"Month Range\",\"columnProperty\": {}},{\"columnId\": \"Special Year\",\"columnProperty\": {}},{\"columnId\": \"Total Metric\",\"columnProperty\": {}}]}"
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"columnProperties\": [{\"columnId\": \"Month Range\",\"columnProperty\": {}},{\"columnId\": \"Special Year\",\"columnProperty\": {}}]}"
       chart:
         type: LINE
         chart_columns:
+        - column_id: Metric 2
         - column_id: Month Range
         - column_id: Report Type Value
         - column_id: Special Year
-        - column_id: Total Metric
         axis_configs:
         - x:
-          - Special Year
-          "y":
-          - Total Metric
-          color:
           - Report Type Value
+          "y":
+          - Metric 2
         client_state: ""
-        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"markersEnabled\": true,\"pivotSummariesState\": {}},\"showStackedLabels\": true,\"allLabels\": true,\"kpiDisplayProperties\": {\"showDateLabel\": true,\"showCurrentDateLabel\": true,\"showPreviousDateLabel\": true,\"showPreviousValue\": true,\"showChange\": true,\"showChangeAs\": \"PERCENT\",\"changeInterpretation\": \"UPWARD_IS_GOOD\"}},\"columnProperties\": [{\"columnId\": \"Month Range\",\"columnProperty\": {\"dataLabels\": true,\"kpiColumnProperties\": {\"showAbbreviatedPreviousDate\": false,\"abbreviatedPreviousDate\": \"\",\"showSparkline\": true,\"showComparisonDate\": true}}},{\"columnId\": \"Special Year\",\"columnProperty\": {\"dataLabels\": true,\"kpiColumnProperties\": {\"showAbbreviatedPreviousDate\": false,\"abbreviatedPreviousDate\": \"\",\"showSparkline\": true,\"showComparisonDate\": true}}},{\"columnId\": \"Total Metric\",\"columnProperty\": {\"dataLabels\": true,\"kpiColumnProperties\": {\"showAbbreviatedPreviousDate\": false,\"abbreviatedPreviousDate\": \"\",\"showSparkline\": true,\"showComparisonDate\": true}}},{\"columnId\": \"Report Type Value\",\"columnProperty\": {\"dataLabels\": true}},{\"columnId\": \"Measure names\",\"columnProperty\": {\"dataLabels\": true}},{\"columnId\": \"Measure values\",\"columnProperty\": {\"dataLabels\": true}}],\"axisProperties\": [{\"id\": \"875827fe-45af-428e-be2c-13256fff6378\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Metric\"],\"isOpposite\": false}},{\"id\": \"0f4863b8-3d1f-4453-bdd2-d254bfeecfaf\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Special Year\"]}}],\"seriesColors\": [{\"serieName\": \"Total Metric\",\"color\": \"#0073E6\"}],\"systemSeriesColors\": [{\"serieName\": \"Total Metric\",\"color\": \"#0073E6\"},{\"serieName\": \"benlysta\",\"color\": \"#2E75F0\"},{\"serieName\": \"benlysta-saphnelo-gazyva\",\"color\": \"#48D1E0\"},{\"serieName\": \"benlysta-saphnelo-gazyva w/o onc\",\"color\": \"#FCC838\"},{\"serieName\": \"cinqair\",\"color\": \"#06BF7F\"},{\"serieName\": \"dupixent\",\"color\": \"#8C62F5\"},{\"serieName\": \"fasenra\",\"color\": \"#fd7e14\"},{\"serieName\": \"gazyva\",\"color\": \"#ABC7F9\"},{\"serieName\": \"gazyva w/o onc\",\"color\": \"#B5ECF2\"},{\"serieName\": \"lupkynis\",\"color\": \"#FDE9AF\"},{\"serieName\": \"nucala\",\"color\": \"#9BE5CB\"},{\"serieName\": \"rituximab\",\"color\": \"#D1C0FB\"},{\"serieName\": \"saphnelo\",\"color\": \"#feb272\"},{\"serieName\": \"tezspire\",\"color\": \"#2359B6\"},{\"serieName\": \"xolair\",\"color\": \"#369FAA\"}]}"
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"markersEnabled\": true,\"pivotSummariesState\": {}},\"showStackedLabels\": true,\"allLabels\": true},\"columnProperties\": [{\"columnId\": \"Month Range\",\"columnProperty\": {\"dataLabels\": true,\"kpiColumnProperties\": {\"showAbbreviatedPreviousDate\": false,\"abbreviatedPreviousDate\": \"\",\"showSparkline\": true,\"showComparisonDate\": true}}},{\"columnId\": \"Special Year\",\"columnProperty\": {\"dataLabels\": true,\"kpiColumnProperties\": {\"showAbbreviatedPreviousDate\": false,\"abbreviatedPreviousDate\": \"\",\"showSparkline\": true,\"showComparisonDate\": true}}},{\"columnId\": \"Report Type Value\",\"columnProperty\": {\"dataLabels\": true,\"kpiColumnProperties\": {\"showAbbreviatedPreviousDate\": false,\"showSparkline\": true,\"showComparisonDate\": true}}},{\"columnId\": \"Measure names\",\"columnProperty\": {\"dataLabels\": true,\"kpiColumnProperties\": {\"showAbbreviatedPreviousDate\": false,\"showSparkline\": true,\"showComparisonDate\": true}}},{\"columnId\": \"Measure values\",\"columnProperty\": {\"dataLabels\": true,\"kpiColumnProperties\": {\"showAbbreviatedPreviousDate\": false,\"showSparkline\": true,\"showComparisonDate\": true}}},{\"columnId\": \"Metric 2\",\"columnProperty\": {\"dataLabels\": true}}],\"axisProperties\": [{\"id\": \"1fae051f-3d47-4351-81f7-9ab1ffb06868\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Metric 2\"],\"isOpposite\": false}},{\"id\": \"008816d9-ac4d-4aa8-80e4-f68621f9183b\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Report Type Value\"]}}],\"seriesColors\": [{\"serieName\": \"9d990a04-8506-4f81-a562-f834bb991e9e\",\"color\": \"#0073E6\"}],\"systemSeriesColors\": [{\"serieName\": \"9d990a04-8506-4f81-a562-f834bb991e9e\",\"color\": \"#0073E6\"},{\"serieName\": \"benlysta\",\"color\": \"#2E75F0\"},{\"serieName\": \"benlysta-saphnelo-gazyva\",\"color\": \"#48D1E0\"},{\"serieName\": \"benlysta-saphnelo-gazyva w/o onc\",\"color\": \"#FCC838\"},{\"serieName\": \"cinqair\",\"color\": \"#06BF7F\"},{\"serieName\": \"dupixent\",\"color\": \"#8C62F5\"},{\"serieName\": \"fasenra\",\"color\": \"#fd7e14\"},{\"serieName\": \"gazyva\",\"color\": \"#ABC7F9\"},{\"serieName\": \"gazyva w/o onc\",\"color\": \"#B5ECF2\"},{\"serieName\": \"lupkynis\",\"color\": \"#FDE9AF\"},{\"serieName\": \"nucala\",\"color\": \"#9BE5CB\"},{\"serieName\": \"rituximab\",\"color\": \"#D1C0FB\"},{\"serieName\": \"saphnelo\",\"color\": \"#feb272\"},{\"serieName\": \"tezspire\",\"color\": \"#2359B6\"},{\"serieName\": \"xolair\",\"color\": \"#369FAA\"},{\"serieName\": \"Metric 2\",\"color\": \"#06BF7F\"}]}"
       display_mode: CHART_MODE
       parameters:
       - id: 5ff8101f-0740-4ea3-9cb0-361a647a5f8b
