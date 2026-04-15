@@ -2433,6 +2433,72 @@ liveboard:
         value: New To Brand Patients
       dynamic_name: Copy of YTD YOY Trend - PS
     viz_guid: f34af670-3983-4975-bd6e-536006cd0cea
+  - id: Viz_43
+    answer:
+      name: Copy of YOY Trending - @Report-Type - PS
+      tables:
+      - id: Source of Business Special Time Period
+        name: Source of Business Special Time Period
+        fqn: 4bb1b923-3e6a-48c8-96fd-3a0cd07decbb
+      search_query: "[Month Range] [Is Ytd].'Year to date' [Special Year] [Report Type Value] [Metric 2]"
+      answer_columns:
+      - name: Metric 2
+      - name: Month Range
+      - name: Report Type Value
+      - name: Special Year
+      table:
+        table_columns:
+        - column_id: Metric 2
+          show_headline: false
+        - column_id: Month Range
+          show_headline: false
+        - column_id: Report Type Value
+          show_headline: false
+        - column_id: Special Year
+          show_headline: false
+        ordered_column_ids:
+        - Month Range
+        - Special Year
+        - Report Type Value
+        - Metric 2
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"columnProperties\": [{\"columnId\": \"Month Range\",\"columnProperty\": {}},{\"columnId\": \"Special Year\",\"columnProperty\": {}}]}"
+      chart:
+        type: LINE
+        chart_columns:
+        - column_id: Metric 2
+        - column_id: Month Range
+        - column_id: Report Type Value
+        - column_id: Special Year
+        axis_configs:
+        - x:
+          - Special Year
+          "y":
+          - Metric 2
+          color:
+          - Report Type Value
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"markersEnabled\": true,\"pivotSummariesState\": {}},\"showStackedLabels\": true,\"allLabels\": true,\"kpiDisplayProperties\": {\"showDateLabel\": true,\"showCurrentDateLabel\": true,\"showPreviousDateLabel\": true,\"showPreviousValue\": true,\"showChange\": true,\"showChangeAs\": \"PERCENT\",\"changeInterpretation\": \"UPWARD_IS_GOOD\"}},\"columnProperties\": [{\"columnId\": \"Month Range\",\"columnProperty\": {\"dataLabels\": true,\"kpiColumnProperties\": {\"showAbbreviatedPreviousDate\": false,\"abbreviatedPreviousDate\": \"\",\"showSparkline\": true,\"showComparisonDate\": true}}},{\"columnId\": \"Special Year\",\"columnProperty\": {\"dataLabels\": true,\"kpiColumnProperties\": {\"showAbbreviatedPreviousDate\": false,\"abbreviatedPreviousDate\": \"\",\"showSparkline\": true,\"showComparisonDate\": true}}},{\"columnId\": \"Report Type Value\",\"columnProperty\": {\"dataLabels\": true,\"kpiColumnProperties\": {\"showAbbreviatedPreviousDate\": false,\"abbreviatedPreviousDate\": \"\",\"showSparkline\": true,\"showComparisonDate\": true}}},{\"columnId\": \"Measure names\",\"columnProperty\": {\"dataLabels\": true,\"kpiColumnProperties\": {\"showAbbreviatedPreviousDate\": false,\"abbreviatedPreviousDate\": \"\",\"showSparkline\": true,\"showComparisonDate\": true}}},{\"columnId\": \"Measure values\",\"columnProperty\": {\"dataLabels\": true,\"kpiColumnProperties\": {\"showAbbreviatedPreviousDate\": false,\"abbreviatedPreviousDate\": \"\",\"showSparkline\": true,\"showComparisonDate\": true}}},{\"columnId\": \"Metric 2\",\"columnProperty\": {\"dataLabels\": true,\"kpiColumnProperties\": {\"showAbbreviatedPreviousDate\": false,\"abbreviatedPreviousDate\": \"\",\"showSparkline\": true,\"showComparisonDate\": true}}}],\"axisProperties\": [{\"id\": \"48c10110-209d-417a-ba7b-ac88f6c845e2\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Metric 2\"],\"isOpposite\": false}},{\"id\": \"e3b1e9a1-b4bd-4694-8361-1e5fa4f97f5d\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Special Year\"]}}],\"seriesColors\": [{\"serieName\": \"9d990a04-8506-4f81-a562-f834bb991e9e\",\"color\": \"#0073E6\"}],\"systemSeriesColors\": [{\"serieName\": \"9d990a04-8506-4f81-a562-f834bb991e9e\",\"color\": \"#0073E6\"},{\"serieName\": \"benlysta\",\"color\": \"#2E75F0\"},{\"serieName\": \"benlysta-saphnelo-gazyva\",\"color\": \"#48D1E0\"},{\"serieName\": \"benlysta-saphnelo-gazyva w/o onc\",\"color\": \"#FCC838\"},{\"serieName\": \"cinqair\",\"color\": \"#06BF7F\"},{\"serieName\": \"dupixent\",\"color\": \"#8C62F5\"},{\"serieName\": \"fasenra\",\"color\": \"#fd7e14\"},{\"serieName\": \"gazyva\",\"color\": \"#ABC7F9\"},{\"serieName\": \"gazyva w/o onc\",\"color\": \"#B5ECF2\"},{\"serieName\": \"lupkynis\",\"color\": \"#FDE9AF\"},{\"serieName\": \"nucala\",\"color\": \"#9BE5CB\"},{\"serieName\": \"rituximab\",\"color\": \"#D1C0FB\"},{\"serieName\": \"saphnelo\",\"color\": \"#feb272\"},{\"serieName\": \"tezspire\",\"color\": \"#2359B6\"},{\"serieName\": \"xolair\",\"color\": \"#369FAA\"},{\"serieName\": \"Metric 2\",\"color\": \"#06BF7F\"},{\"serieName\": \"exdensur\",\"color\": \"#049160\"},{\"serieName\": \"cinqair-copd\",\"color\": \"#2E75F0\"},{\"serieName\": \"cinqair-egpa\",\"color\": \"#48D1E0\"},{\"serieName\": \"cinqair-eoe\",\"color\": \"#FCC838\"},{\"serieName\": \"cinqair-hes\",\"color\": \"#06BF7F\"},{\"serieName\": \"cinqair-nasal polyps\",\"color\": \"#8C62F5\"},{\"serieName\": \"cinqair-sua\",\"color\": \"#fd7e14\"},{\"serieName\": \"dupixent-atopic dermatitis\",\"color\": \"#ABC7F9\"},{\"serieName\": \"dupixent-ciu\",\"color\": \"#B5ECF2\"},{\"serieName\": \"dupixent-copd\",\"color\": \"#FDE9AF\"},{\"serieName\": \"dupixent-egpa\",\"color\": \"#9BE5CB\"},{\"serieName\": \"dupixent-eoe\",\"color\": \"#D1C0FB\"},{\"serieName\": \"dupixent-hes\",\"color\": \"#feb272\"},{\"serieName\": \"dupixent-nasal polyps\",\"color\": \"#2359B6\"},{\"serieName\": \"dupixent-other\",\"color\": \"#369FAA\"},{\"serieName\": \"dupixent-other asthma\",\"color\": \"#BF982A\"},{\"serieName\": \"dupixent-sua\",\"color\": \"#049160\"},{\"serieName\": \"fasenra-atopic dermatitis\",\"color\": \"#6A4ABA\"},{\"serieName\": \"fasenra-ciu\",\"color\": \"#ca6510\"},{\"serieName\": \"fasenra-copd\",\"color\": \"#71A1F4\"},{\"serieName\": \"fasenra-egpa\",\"color\": \"#82DFE9\"},{\"serieName\": \"fasenra-eoe\",\"color\": \"#FCD977\"},{\"serieName\": \"fasenra-hes\",\"color\": \"#56D3A8\"},{\"serieName\": \"fasenra-nasal polyps\",\"color\": \"#B094F8\"},{\"serieName\": \"fasenra-other\",\"color\": \"#fd9843\"},{\"serieName\": \"fasenra-sua\",\"color\": \"#163772\"},{\"serieName\": \"nucala-atopic dermatitis\",\"color\": \"#22636B\"},{\"serieName\": \"nucala-ciu\",\"color\": \"#785F1A\"},{\"serieName\": \"nucala-copd\",\"color\": \"#025B3C\"},{\"serieName\": \"nucala-egpa\",\"color\": \"#422E75\"},{\"serieName\": \"nucala-eoe\",\"color\": \"#984c0c\"},{\"serieName\": \"nucala-hes\",\"color\": \"#2E75F0\"},{\"serieName\": \"nucala-nasal polyps\",\"color\": \"#48D1E0\"},{\"serieName\": \"nucala-other\",\"color\": \"#FCC838\"},{\"serieName\": \"nucala-sua\",\"color\": \"#06BF7F\"},{\"serieName\": \"tezspire-atopic dermatitis\",\"color\": \"#8C62F5\"},{\"serieName\": \"tezspire-ciu\",\"color\": \"#fd7e14\"},{\"serieName\": \"tezspire-copd\",\"color\": \"#ABC7F9\"},{\"serieName\": \"tezspire-egpa\",\"color\": \"#B5ECF2\"},{\"serieName\": \"tezspire-eoe\",\"color\": \"#FDE9AF\"},{\"serieName\": \"tezspire-hes\",\"color\": \"#9BE5CB\"},{\"serieName\": \"tezspire-nasal polyps\",\"color\": \"#D1C0FB\"},{\"serieName\": \"tezspire-other\",\"color\": \"#feb272\"},{\"serieName\": \"tezspire-sua\",\"color\": \"#2359B6\"},{\"serieName\": \"xolair-atopic dermatitis\",\"color\": \"#369FAA\"},{\"serieName\": \"xolair-ciu\",\"color\": \"#BF982A\"},{\"serieName\": \"xolair-copd\",\"color\": \"#049160\"},{\"serieName\": \"xolair-egpa\",\"color\": \"#6A4ABA\"},{\"serieName\": \"xolair-eoe\",\"color\": \"#ca6510\"},{\"serieName\": \"xolair-hes\",\"color\": \"#71A1F4\"},{\"serieName\": \"xolair-nasal polyps\",\"color\": \"#82DFE9\"},{\"serieName\": \"xolair-other\",\"color\": \"#FCD977\"},{\"serieName\": \"xolair-other asthma\",\"color\": \"#56D3A8\"},{\"serieName\": \"xolair-sua\",\"color\": \"#B094F8\"}]}"
+      display_mode: CHART_MODE
+      parameters:
+      - id: f2d0eed0-481a-4152-b184-344a4f4a88d4
+        name: Specialty Selection
+        data_type: CHAR
+        default_value: "NULL"
+        list_config:
+          list_choice:
+          - value: ALLG
+          - value: ENT
+          - value: IM
+          - value: "NULL"
+        description: ""
+      parameter_values:
+      - key: Metric Selection
+        value: Continue Patients
+      - key: Report-Type
+        value: PRODUCT+DIAGNOSIS CATEGORY
+      dynamic_name: "Copy of YOY Trending - [${PARAMETER:Report-Type}] - PS"
+    viz_guid: 0cb7b05f-2718-47dc-9450-93360f38f067
   filters:
   - column:
     - Source Of Business::Current Channel Desc
@@ -2822,6 +2888,7 @@ liveboard:
         "y": 16
         height: 8
         width: 12
+      - visualization_id: Viz_43
       id: c5aaa81b-4806-4b1c-b287-127f1ae8f640
     - name: Pivot
       description: ""
