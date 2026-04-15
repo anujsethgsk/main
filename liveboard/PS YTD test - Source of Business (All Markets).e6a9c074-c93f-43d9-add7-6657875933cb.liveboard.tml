@@ -2871,28 +2871,28 @@ liveboard:
       - visualization_id: Viz_31
         x: 0
         "y": 3
-        height: 6
-        width: 12
+        height: 8
+        width: 6
       - visualization_id: Viz_32
         x: 0
-        "y": 17
-        height: 7
-        width: 12
+        "y": 11
+        height: 8
+        width: 6
       - visualization_id: Viz_40
         x: 0
         "y": 0
         height: 3
         width: 12
       - visualization_id: Viz_42
-        x: 0
-        "y": 24
+        x: 6
+        "y": 11
         height: 8
-        width: 12
+        width: 6
       - visualization_id: Viz_43
-        x: 0
-        "y": 9
+        x: 6
+        "y": 3
         height: 8
-        width: 12
+        width: 6
       id: c5aaa81b-4806-4b1c-b287-127f1ae8f640
     - name: Pivot
       description: ""
