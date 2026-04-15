@@ -1717,7 +1717,7 @@ liveboard:
           color:
           - Report Type Value
         client_state: ""
-        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"markersEnabled\": true,\"pivotSummariesState\": {}},\"showStackedLabels\": true,\"allLabels\": true,\"kpiDisplayProperties\": {\"showDateLabel\": true,\"showCurrentDateLabel\": true,\"showPreviousDateLabel\": true,\"showPreviousValue\": true,\"showChange\": true,\"showChangeAs\": \"PERCENT\",\"changeInterpretation\": \"UPWARD_IS_GOOD\"}},\"columnProperties\": [{\"columnId\": \"Month Range\",\"columnProperty\": {\"dataLabels\": true,\"kpiColumnProperties\": {\"showAbbreviatedPreviousDate\": false,\"abbreviatedPreviousDate\": \"\",\"showSparkline\": true,\"showComparisonDate\": true}}},{\"columnId\": \"Special Year\",\"columnProperty\": {\"dataLabels\": true,\"kpiColumnProperties\": {\"showAbbreviatedPreviousDate\": false,\"abbreviatedPreviousDate\": \"\",\"showSparkline\": true,\"showComparisonDate\": true}}},{\"columnId\": \"Report Type Value\",\"columnProperty\": {\"dataLabels\": true,\"kpiColumnProperties\": {\"showAbbreviatedPreviousDate\": false,\"abbreviatedPreviousDate\": \"\",\"showSparkline\": true,\"showComparisonDate\": true}}},{\"columnId\": \"Measure names\",\"columnProperty\": {\"dataLabels\": true,\"kpiColumnProperties\": {\"showAbbreviatedPreviousDate\": false,\"abbreviatedPreviousDate\": \"\",\"showSparkline\": true,\"showComparisonDate\": true}}},{\"columnId\": \"Measure values\",\"columnProperty\": {\"dataLabels\": true,\"kpiColumnProperties\": {\"showAbbreviatedPreviousDate\": false,\"abbreviatedPreviousDate\": \"\",\"showSparkline\": true,\"showComparisonDate\": true}}},{\"columnId\": \"Metric 2\",\"columnProperty\": {\"dataLabels\": true,\"kpiColumnProperties\": {\"showAbbreviatedPreviousDate\": false,\"showSparkline\": true,\"showComparisonDate\": true}}}],\"axisProperties\": [{\"id\": \"48c10110-209d-417a-ba7b-ac88f6c845e2\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Metric 2\"],\"isOpposite\": false}},{\"id\": \"e3b1e9a1-b4bd-4694-8361-1e5fa4f97f5d\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Special Year\"]}}],\"seriesColors\": [{\"serieName\": \"9d990a04-8506-4f81-a562-f834bb991e9e\",\"color\": \"#0073E6\"}],\"systemSeriesColors\": [{\"serieName\": \"9d990a04-8506-4f81-a562-f834bb991e9e\",\"color\": \"#0073E6\"},{\"serieName\": \"benlysta\",\"color\": \"#2E75F0\"},{\"serieName\": \"benlysta-saphnelo-gazyva\",\"color\": \"#48D1E0\"},{\"serieName\": \"benlysta-saphnelo-gazyva w/o onc\",\"color\": \"#FCC838\"},{\"serieName\": \"cinqair\",\"color\": \"#06BF7F\"},{\"serieName\": \"dupixent\",\"color\": \"#8C62F5\"},{\"serieName\": \"fasenra\",\"color\": \"#fd7e14\"},{\"serieName\": \"gazyva\",\"color\": \"#ABC7F9\"},{\"serieName\": \"gazyva w/o onc\",\"color\": \"#B5ECF2\"},{\"serieName\": \"lupkynis\",\"color\": \"#FDE9AF\"},{\"serieName\": \"nucala\",\"color\": \"#9BE5CB\"},{\"serieName\": \"rituximab\",\"color\": \"#D1C0FB\"},{\"serieName\": \"saphnelo\",\"color\": \"#feb272\"},{\"serieName\": \"tezspire\",\"color\": \"#2359B6\"},{\"serieName\": \"xolair\",\"color\": \"#369FAA\"},{\"serieName\": \"Metric 2\",\"color\": \"#06BF7F\"},{\"serieName\": \"exdensur\",\"color\": \"#049160\"}]}"
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"markersEnabled\": true,\"pivotSummariesState\": {}},\"showStackedLabels\": true,\"allLabels\": true,\"kpiDisplayProperties\": {\"showDateLabel\": true,\"showCurrentDateLabel\": true,\"showPreviousDateLabel\": true,\"showPreviousValue\": true,\"showChange\": true,\"showChangeAs\": \"PERCENT\",\"changeInterpretation\": \"UPWARD_IS_GOOD\"}},\"columnProperties\": [{\"columnId\": \"Month Range\",\"columnProperty\": {\"dataLabels\": true,\"kpiColumnProperties\": {\"showAbbreviatedPreviousDate\": false,\"abbreviatedPreviousDate\": \"\",\"showSparkline\": true,\"showComparisonDate\": true}}},{\"columnId\": \"Special Year\",\"columnProperty\": {\"dataLabels\": true,\"kpiColumnProperties\": {\"showAbbreviatedPreviousDate\": false,\"abbreviatedPreviousDate\": \"\",\"showSparkline\": true,\"showComparisonDate\": true}}},{\"columnId\": \"Report Type Value\",\"columnProperty\": {\"dataLabels\": true,\"kpiColumnProperties\": {\"showAbbreviatedPreviousDate\": false,\"abbreviatedPreviousDate\": \"\",\"showSparkline\": true,\"showComparisonDate\": true}}},{\"columnId\": \"Measure names\",\"columnProperty\": {\"dataLabels\": true,\"kpiColumnProperties\": {\"showAbbreviatedPreviousDate\": false,\"abbreviatedPreviousDate\": \"\",\"showSparkline\": true,\"showComparisonDate\": true}}},{\"columnId\": \"Measure values\",\"columnProperty\": {\"dataLabels\": true,\"kpiColumnProperties\": {\"showAbbreviatedPreviousDate\": false,\"abbreviatedPreviousDate\": \"\",\"showSparkline\": true,\"showComparisonDate\": true}}},{\"columnId\": \"Metric 2\",\"columnProperty\": {\"dataLabels\": true,\"kpiColumnProperties\": {\"showAbbreviatedPreviousDate\": false,\"abbreviatedPreviousDate\": \"\",\"showSparkline\": true,\"showComparisonDate\": true}}}],\"axisProperties\": [{\"id\": \"48c10110-209d-417a-ba7b-ac88f6c845e2\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Metric 2\"],\"isOpposite\": false}},{\"id\": \"e3b1e9a1-b4bd-4694-8361-1e5fa4f97f5d\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Special Year\"]}}],\"seriesColors\": [{\"serieName\": \"9d990a04-8506-4f81-a562-f834bb991e9e\",\"color\": \"#0073E6\"}],\"systemSeriesColors\": [{\"serieName\": \"9d990a04-8506-4f81-a562-f834bb991e9e\",\"color\": \"#0073E6\"},{\"serieName\": \"benlysta\",\"color\": \"#2E75F0\"},{\"serieName\": \"benlysta-saphnelo-gazyva\",\"color\": \"#48D1E0\"},{\"serieName\": \"benlysta-saphnelo-gazyva w/o onc\",\"color\": \"#FCC838\"},{\"serieName\": \"cinqair\",\"color\": \"#06BF7F\"},{\"serieName\": \"dupixent\",\"color\": \"#8C62F5\"},{\"serieName\": \"fasenra\",\"color\": \"#fd7e14\"},{\"serieName\": \"gazyva\",\"color\": \"#ABC7F9\"},{\"serieName\": \"gazyva w/o onc\",\"color\": \"#B5ECF2\"},{\"serieName\": \"lupkynis\",\"color\": \"#FDE9AF\"},{\"serieName\": \"nucala\",\"color\": \"#9BE5CB\"},{\"serieName\": \"rituximab\",\"color\": \"#D1C0FB\"},{\"serieName\": \"saphnelo\",\"color\": \"#feb272\"},{\"serieName\": \"tezspire\",\"color\": \"#2359B6\"},{\"serieName\": \"xolair\",\"color\": \"#369FAA\"},{\"serieName\": \"Metric 2\",\"color\": \"#06BF7F\"},{\"serieName\": \"exdensur\",\"color\": \"#049160\"},{\"serieName\": \"cinqair-copd\",\"color\": \"#2E75F0\"},{\"serieName\": \"cinqair-egpa\",\"color\": \"#48D1E0\"},{\"serieName\": \"cinqair-eoe\",\"color\": \"#FCC838\"},{\"serieName\": \"cinqair-hes\",\"color\": \"#06BF7F\"},{\"serieName\": \"cinqair-nasal polyps\",\"color\": \"#8C62F5\"},{\"serieName\": \"cinqair-sua\",\"color\": \"#fd7e14\"},{\"serieName\": \"dupixent-atopic dermatitis\",\"color\": \"#ABC7F9\"},{\"serieName\": \"dupixent-ciu\",\"color\": \"#B5ECF2\"},{\"serieName\": \"dupixent-copd\",\"color\": \"#FDE9AF\"},{\"serieName\": \"dupixent-egpa\",\"color\": \"#9BE5CB\"},{\"serieName\": \"dupixent-eoe\",\"color\": \"#D1C0FB\"},{\"serieName\": \"dupixent-hes\",\"color\": \"#feb272\"},{\"serieName\": \"dupixent-nasal polyps\",\"color\": \"#2359B6\"},{\"serieName\": \"dupixent-other\",\"color\": \"#369FAA\"},{\"serieName\": \"dupixent-other asthma\",\"color\": \"#BF982A\"},{\"serieName\": \"dupixent-sua\",\"color\": \"#049160\"},{\"serieName\": \"fasenra-atopic dermatitis\",\"color\": \"#6A4ABA\"},{\"serieName\": \"fasenra-ciu\",\"color\": \"#ca6510\"},{\"serieName\": \"fasenra-copd\",\"color\": \"#71A1F4\"},{\"serieName\": \"fasenra-egpa\",\"color\": \"#82DFE9\"},{\"serieName\": \"fasenra-eoe\",\"color\": \"#FCD977\"},{\"serieName\": \"fasenra-hes\",\"color\": \"#56D3A8\"},{\"serieName\": \"fasenra-nasal polyps\",\"color\": \"#B094F8\"},{\"serieName\": \"fasenra-other\",\"color\": \"#fd9843\"},{\"serieName\": \"fasenra-sua\",\"color\": \"#163772\"},{\"serieName\": \"nucala-atopic dermatitis\",\"color\": \"#22636B\"},{\"serieName\": \"nucala-ciu\",\"color\": \"#785F1A\"},{\"serieName\": \"nucala-copd\",\"color\": \"#025B3C\"},{\"serieName\": \"nucala-egpa\",\"color\": \"#422E75\"},{\"serieName\": \"nucala-eoe\",\"color\": \"#984c0c\"},{\"serieName\": \"nucala-hes\",\"color\": \"#2E75F0\"},{\"serieName\": \"nucala-nasal polyps\",\"color\": \"#48D1E0\"},{\"serieName\": \"nucala-other\",\"color\": \"#FCC838\"},{\"serieName\": \"nucala-sua\",\"color\": \"#06BF7F\"},{\"serieName\": \"tezspire-atopic dermatitis\",\"color\": \"#8C62F5\"},{\"serieName\": \"tezspire-ciu\",\"color\": \"#fd7e14\"},{\"serieName\": \"tezspire-copd\",\"color\": \"#ABC7F9\"},{\"serieName\": \"tezspire-egpa\",\"color\": \"#B5ECF2\"},{\"serieName\": \"tezspire-eoe\",\"color\": \"#FDE9AF\"},{\"serieName\": \"tezspire-hes\",\"color\": \"#9BE5CB\"},{\"serieName\": \"tezspire-nasal polyps\",\"color\": \"#D1C0FB\"},{\"serieName\": \"tezspire-other\",\"color\": \"#feb272\"},{\"serieName\": \"tezspire-sua\",\"color\": \"#2359B6\"},{\"serieName\": \"xolair-atopic dermatitis\",\"color\": \"#369FAA\"},{\"serieName\": \"xolair-ciu\",\"color\": \"#BF982A\"},{\"serieName\": \"xolair-copd\",\"color\": \"#049160\"},{\"serieName\": \"xolair-egpa\",\"color\": \"#6A4ABA\"},{\"serieName\": \"xolair-eoe\",\"color\": \"#ca6510\"},{\"serieName\": \"xolair-hes\",\"color\": \"#71A1F4\"},{\"serieName\": \"xolair-nasal polyps\",\"color\": \"#82DFE9\"},{\"serieName\": \"xolair-other\",\"color\": \"#FCD977\"},{\"serieName\": \"xolair-other asthma\",\"color\": \"#56D3A8\"},{\"serieName\": \"xolair-sua\",\"color\": \"#B094F8\"}]}"
       display_mode: CHART_MODE
       parameters:
       - id: 5ff8101f-0740-4ea3-9cb0-361a647a5f8b
@@ -1731,6 +1731,11 @@ liveboard:
           - value: IM
           - value: "NULL"
         description: ""
+      parameter_values:
+      - key: Metric Selection
+        value: Continue Patients
+      - key: Report-Type
+        value: PRODUCT+DIAGNOSIS CATEGORY
       dynamic_name: "YOY Trending - [${PARAMETER:Report-Type}]"
     viz_guid: e6b49da4-43d4-473a-9bf9-dfd483ad2f71
   - id: Viz_32
@@ -2611,6 +2616,85 @@ liveboard:
     type: PARAMETER
   - name: Source of Business Special Time Period::Report Type Value
     type: FILTER
+  views:
+  - view_guid: c02aaa2d-bf42-4335-8897-e714629aeb74
+    name: Lupus
+    view_filters:
+    - column:
+      - Source Of Business::Current Channel Desc
+      oper: in
+    - column:
+      - Source Of Business::Pay Type
+      oper: in
+    - column:
+      - Source of Business Special Time Period::Report Type Value
+      oper: in
+      values:
+      - BENLYSTA
+      - BENLYSTA-SAPHNELO-GAZYVA
+      - BENLYSTA-SAPHNELO-GAZYVA W/O ONC
+      - CINQAIR
+      - DUPIXENT
+      - EXDENSUR
+      - FASENRA
+      - GAZYVA
+      - GAZYVA W/O ONC
+      - LUPKYNIS
+      - NUCALA
+      - RITUXIMAB
+      - SAPHNELO
+      - TEZSPIRE
+      - XOLAIR
+    - column:
+      - Source of Business Special Time Period::Report Type Value
+      oper: not in
+      values:
+      - "{null}"
+    is_public: true
+    view_parameters:
+    - name: ""
+      id: 838e72ba-28a1-470b-a5f9-da775e1898ce
+    - name: Report Type Selection
+      id: eeb1fec6-fa72-41b4-9aa7-cb637df3bf51
+  - view_guid: 9025740b-1d50-4f56-865f-a6f9ba1b38e2
+    name: Resp Bio
+    view_filters:
+    - column:
+      - Source Of Business::Current Channel Desc
+      oper: in
+    - column:
+      - Source Of Business::Pay Type
+      oper: in
+    - column:
+      - Source of Business Special Time Period::Report Type Value
+      oper: in
+      values:
+      - BENLYSTA
+      - BENLYSTA-SAPHNELO-GAZYVA
+      - BENLYSTA-SAPHNELO-GAZYVA W/O ONC
+      - CINQAIR
+      - DUPIXENT
+      - EXDENSUR
+      - FASENRA
+      - GAZYVA
+      - GAZYVA W/O ONC
+      - LUPKYNIS
+      - NUCALA
+      - RITUXIMAB
+      - SAPHNELO
+      - TEZSPIRE
+      - XOLAIR
+    - column:
+      - Source of Business Special Time Period::Report Type Value
+      oper: not in
+      values:
+      - "{null}"
+    is_public: true
+    view_parameters:
+    - name: ""
+      id: 838e72ba-28a1-470b-a5f9-da775e1898ce
+    - name: Report Type Selection
+      id: eeb1fec6-fa72-41b4-9aa7-cb637df3bf51
   style:
     style_properties:
     - name: lb_border_type
