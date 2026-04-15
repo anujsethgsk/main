@@ -2532,6 +2532,105 @@ liveboard:
         value: New To Brand Patients
       dynamic_name: Copy of YTD YOY Trend - PS
     viz_guid: 24934f92-e2db-4017-8866-c1e6b6571e16
+  - id: Viz_44
+    answer:
+      name: Copy of YTD YOY Trend - PS
+      tables:
+      - id: Source of Business Special Time Period
+        name: Source of Business Special Time Period
+        fqn: 4bb1b923-3e6a-48c8-96fd-3a0cd07decbb
+      formulas:
+      - id: formula_YOY Difference
+        name: YOY Difference
+        expr: "sum ( [Metric] ) - [formula_LY] "
+        was_auto_generated: false
+      - id: formula_YoY % Change
+        name: YoY % Change
+        expr: "( sum ( [Metric] ) - [formula_LY] ) / [formula_LY]"
+        was_auto_generated: false
+      - id: formula_LY
+        name: LY
+        expr: "moving_sum ( [Metric] , - 1 , 1 , [Special Year] )"
+        was_auto_generated: false
+      - id: formula_Specialty - Diagnosis
+        name: Specialty - Diagnosis
+        expr: "concat ( [Diagnosis] , ' - ' , [Specialty] ) "
+        was_auto_generated: false
+      search_query: "[Month Range] [Special Year] [Metric 2] [Month Range] != '{Null}' [formula_LY] sort by [Special Year] descending [formula_YOY Difference] [formula_YoY % Change] [Report Type Value]"
+      answer_columns:
+      - name: LY
+        format:
+          category: NUMBER
+          numberFormatConfig:
+            unit: NONE
+            decimals: 0.0
+            negativeValueFormat: PREFIX_DASH
+            toSeparateThousands: true
+          isCategoryEditable: true
+      - name: Metric 2
+      - name: Month Range
+      - name: Report Type Value
+      - name: Special Year
+        sort_info:
+          category: DEFAULT
+      - name: YOY Difference
+      - name: YoY % Change
+        format:
+          category: PERCENTAGE
+          percentageFormatConfig:
+            decimals: 1.0
+          isCategoryEditable: true
+      table:
+        table_columns:
+        - column_id: LY
+          show_headline: false
+        - column_id: Metric 2
+          show_headline: false
+        - column_id: Month Range
+          show_headline: false
+        - column_id: Report Type Value
+          show_headline: false
+        - column_id: Special Year
+          show_headline: false
+        - column_id: YOY Difference
+          show_headline: false
+        - column_id: YoY % Change
+          show_headline: false
+        ordered_column_ids:
+        - Month Range
+        - Special Year
+        - Report Type Value
+        - Metric 2
+        - LY
+        - YOY Difference
+        - YoY % Change
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"orderedColumnIds\": [\"Month Range\",\"Special Year\",\"YOY Difference\",\"YoY % Change\",\"LY\"],\"columnProperties\": [{\"columnId\": \"Month Range\",\"columnProperty\": {\"conditionalFormatting\": {},\"isHidden\": false}},{\"columnId\": \"Special Year\",\"columnProperty\": {\"conditionalFormatting\": {},\"isHidden\": false}},{\"columnId\": \"LY\",\"columnProperty\": {\"conditionalFormatting\": {},\"isHidden\": true}},{\"columnId\": \"YOY Difference\",\"columnProperty\": {\"conditionalFormatting\": {\"rows\": [{\"operator\": \"LESS_THAN\",\"value\": \"0\",\"plotAsBand\": false,\"fontProperties\": {\"color\": \"#E62323\"},\"backgroundFormatType\": \"SOLID\",\"solidBackgroundAttrs\": {},\"comparisonType\": \"VALUE_BASED\",\"lhsColumnId\": \"YOY Difference\",\"isHighlightRow\": false}]},\"isHidden\": false}},{\"columnId\": \"YoY % Change\",\"columnProperty\": {\"conditionalFormatting\": {\"rows\": [{\"operator\": \"LESS_THAN\",\"value\": \"0\",\"plotAsBand\": false,\"fontProperties\": {\"color\": \"#E62323\"},\"backgroundFormatType\": \"SOLID\",\"solidBackgroundAttrs\": {},\"comparisonType\": \"VALUE_BASED\",\"lhsColumnId\": \"YoY % Change\",\"isHighlightRow\": false}]},\"isHidden\": false}}]}"
+      chart:
+        type: COLUMN
+        chart_columns:
+        - column_id: LY
+        - column_id: Metric 2
+        - column_id: Month Range
+        - column_id: Report Type Value
+        - column_id: Special Year
+        - column_id: YOY Difference
+        - column_id: YoY % Change
+        axis_configs:
+        - x:
+          - Month Range
+          "y":
+          - Metric 2
+          color:
+          - Special Year
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotState\": {\"fields\": [{\"dataField\": \"Month Range\",\"sortBy\": \"value\",\"sortBySummaryField\": \"Month Range\",\"sortOrder\": \"asc\",\"expanded\": false,\"area\": \"column\"},{\"dataField\": \"Special Year\",\"sortBy\": \"value\",\"sortBySummaryField\": \"Special Year\",\"sortOrder\": \"desc\",\"expanded\": false,\"area\": \"row\"}]},\"markersEnabled\": true,\"isStackedAsPercent\": false,\"customProps\": \"{\\\"advancedProperties\\\":{\\\"tooltip\\\":{\\\"enabled\\\":true}}}\",\"dataFieldArea\": \"row\",\"pivotSummariesState\": {\"showColumnTotals\": false,\"showRowGrandTotals\": false,\"showColumnGrandTotals\": false}},\"showStackedLabels\": true,\"allLabels\": true},\"columnProperties\": [{\"columnId\": \"Month Range\",\"columnProperty\": {\"dataLabels\": true,\"kpiColumnProperties\": {\"showAbbreviatedPreviousDate\": false,\"abbreviatedPreviousDate\": \"\",\"showSparkline\": true,\"showComparisonDate\": true}}},{\"columnId\": \"Special Year\",\"columnProperty\": {\"dataLabels\": true,\"kpiColumnProperties\": {\"showAbbreviatedPreviousDate\": false,\"abbreviatedPreviousDate\": \"\",\"showSparkline\": true,\"showComparisonDate\": true}}},{\"columnId\": \"LY\",\"columnProperty\": {\"dataLabels\": true,\"kpiColumnProperties\": {\"showAbbreviatedPreviousDate\": false,\"abbreviatedPreviousDate\": \"\",\"showSparkline\": true,\"showComparisonDate\": true}}},{\"columnId\": \"YoY % Change\",\"columnProperty\": {\"dataLabels\": true,\"conditionalFormatting\": {\"rows\": [{\"operator\": \"LESS_THAN\",\"value\": \"0\",\"plotAsBand\": false,\"fontProperties\": {\"color\": \"#E62323\"},\"comparisonType\": \"VALUE_BASED\",\"isHighlightRow\": false}]},\"kpiColumnProperties\": {\"showAbbreviatedPreviousDate\": false,\"abbreviatedPreviousDate\": \"\",\"showSparkline\": true,\"showComparisonDate\": true}}},{\"columnId\": \"YOY Difference\",\"columnProperty\": {\"dataLabels\": true,\"conditionalFormatting\": {\"rows\": [{\"operator\": \"LESS_THAN\",\"value\": \"0\",\"plotAsBand\": false,\"fontProperties\": {\"color\": \"#E62323\"},\"comparisonType\": \"VALUE_BASED\",\"isHighlightRow\": false}]},\"kpiColumnProperties\": {\"showAbbreviatedPreviousDate\": false,\"abbreviatedPreviousDate\": \"\",\"showSparkline\": true,\"showComparisonDate\": true}}},{\"columnId\": \"Report Type Value\",\"columnProperty\": {\"dataLabels\": true}},{\"columnId\": \"Metric 2\",\"columnProperty\": {\"dataLabels\": true}},{\"columnId\": \"Measure names\",\"columnProperty\": {\"dataLabels\": true}},{\"columnId\": \"Measure values\",\"columnProperty\": {\"dataLabels\": true}}],\"axisProperties\": [{\"id\": \"957062ff-50b7-44c2-ad9c-a4aecd6d3567\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Metric 2\"],\"isOpposite\": false}},{\"id\": \"212058e5-f88f-4a33-8533-814ed7017e4a\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Month Range\"]}}],\"seriesColors\": [{\"serieName\": \"9d990a04-8506-4f81-a562-f834bb991e9e\",\"color\": \"#0073E6\"}],\"systemSeriesColors\": [{\"serieName\": \"9d990a04-8506-4f81-a562-f834bb991e9e\",\"color\": \"#0073E6\"},{\"serieName\": \"LY\",\"color\": \"#FCC838\"},{\"serieName\": \"YOY Difference\",\"color\": \"#48D1E0\"},{\"serieName\": \"YoY % Change\",\"color\": \"#2E75F0\"},{\"serieName\": \"2025\",\"color\": \"#B094F8\"},{\"serieName\": \"2024\",\"color\": \"#8C62F5\"},{\"serieName\": \"2023\",\"color\": \"#56D3A8\"},{\"serieName\": \"2022\",\"color\": \"#06BF7F\"},{\"serieName\": \"2021\",\"color\": \"#FCD977\"},{\"serieName\": \"2020\",\"color\": \"#FCC838\"},{\"serieName\": \"2019\",\"color\": \"#82DFE9\"},{\"serieName\": \"2018\",\"color\": \"#48D1E0\"},{\"serieName\": \"2017\",\"color\": \"#71A1F4\"},{\"serieName\": \"2016\",\"color\": \"#2E75F0\"},{\"serieName\": \"2026\",\"color\": \"#2359B6\"}],\"tooltipConfig\": {\"columnIds\": [\"Special Year\",\"Month Range\",\"9d990a04-8506-4f81-a562-f834bb991e9e\"]}}"
+      display_mode: CHART_MODE
+      parameter_values:
+      - key: Metric Selection
+        value: New To Brand Patients
+      dynamic_name: Copy of YTD YOY Trend - PS
+    viz_guid: e8436566-5e48-48b8-9080-2eacf42e5992
   filters:
   - column:
     - Source Of Business::Current Channel Desc
@@ -2918,6 +3017,7 @@ liveboard:
         width: 12
       - visualization_id: Viz_42
       - visualization_id: Viz_43
+      - visualization_id: Viz_44
       id: c5aaa81b-4806-4b1c-b287-127f1ae8f640
     - name: Pivot
       description: ""
