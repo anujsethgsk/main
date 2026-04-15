@@ -2875,7 +2875,7 @@ liveboard:
         width: 12
       - visualization_id: Viz_32
         x: 0
-        "y": 9
+        "y": 17
         height: 7
         width: 12
       - visualization_id: Viz_40
@@ -2885,10 +2885,14 @@ liveboard:
         width: 12
       - visualization_id: Viz_42
         x: 0
-        "y": 16
+        "y": 24
         height: 8
         width: 12
       - visualization_id: Viz_43
+        x: 0
+        "y": 9
+        height: 8
+        width: 12
       id: c5aaa81b-4806-4b1c-b287-127f1ae8f640
     - name: Pivot
       description: ""
