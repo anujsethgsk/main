@@ -2435,7 +2435,7 @@ liveboard:
     viz_guid: f34af670-3983-4975-bd6e-536006cd0cea
   - id: Viz_43
     answer:
-      name: Copy of YOY Trending - @Report-Type - PS
+      name: YOY Trending - @Report-Type - Metric2
       tables:
       - id: Source of Business Special Time Period
         name: Source of Business Special Time Period
@@ -2497,7 +2497,7 @@ liveboard:
         value: Continue Patients
       - key: Report-Type
         value: PRODUCT+DIAGNOSIS CATEGORY
-      dynamic_name: "Copy of YOY Trending - [${PARAMETER:Report-Type}] - PS"
+      dynamic_name: "YOY Trending - [${PARAMETER:Report-Type}] - Metric2"
     viz_guid: 0cb7b05f-2718-47dc-9450-93360f38f067
   filters:
   - column:
