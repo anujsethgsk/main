@@ -2385,6 +2385,65 @@ liveboard:
         value: New To Brand Patients
       dynamic_name: Copy of YTD YOY Trend
     viz_guid: 418d9036-2a47-4873-9e39-6331a541336a
+  - id: Viz_43
+    answer:
+      name: PS YTD YOY Trend
+      tables:
+      - id: Source of Business Special Time Period
+        name: Source of Business Special Time Period
+        fqn: 4bb1b923-3e6a-48c8-96fd-3a0cd07decbb
+      formulas:
+      - id: formula_Specialty - Diagnosis
+        name: Specialty - Diagnosis
+        expr: "concat ( [Diagnosis] , ' - ' , [Specialty] ) "
+        was_auto_generated: false
+      search_query: "[Month Range] [Special Year] [Month Range] != '{Null}' sort by [Special Year] descending [Report Type Value] [Metric]"
+      answer_columns:
+      - name: Metric
+      - name: Month Range
+      - name: Report Type Value
+      - name: Special Year
+        sort_info:
+          category: DEFAULT
+      table:
+        table_columns:
+        - column_id: Metric
+          show_headline: false
+        - column_id: Month Range
+          show_headline: false
+        - column_id: Report Type Value
+          show_headline: false
+        - column_id: Special Year
+          show_headline: false
+        ordered_column_ids:
+        - Month Range
+        - Special Year
+        - Report Type Value
+        - Metric
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: COLUMN
+        chart_columns:
+        - column_id: Metric
+        - column_id: Month Range
+        - column_id: Report Type Value
+        - column_id: Special Year
+        axis_configs:
+        - x:
+          - Month Range
+          "y":
+          - Metric
+          color:
+          - Special Year
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotState\": {\"fields\": [{\"dataField\": \"b7f7f84c-c611-40d1-89a8-8c608fec60df\",\"sortBy\": \"value\",\"sortBySummaryField\": \"b7f7f84c-c611-40d1-89a8-8c608fec60df\",\"sortOrder\": \"asc\",\"expanded\": false,\"area\": \"column\"},{\"dataField\": \"b0ea177f-26af-482c-827e-e5c598f69024\",\"sortBy\": \"value\",\"sortBySummaryField\": \"b0ea177f-26af-482c-827e-e5c598f69024\",\"sortOrder\": \"desc\",\"expanded\": false,\"area\": \"row\"}]},\"markersEnabled\": true,\"isStackedAsPercent\": false,\"customProps\": \"{\\\"advancedProperties\\\":{\\\"tooltip\\\":{\\\"enabled\\\":true}}}\",\"dataFieldArea\": \"row\",\"pivotSummariesState\": {\"showColumnTotals\": false,\"showRowGrandTotals\": false,\"showColumnGrandTotals\": false}},\"showStackedLabels\": true,\"allLabels\": true},\"columnProperties\": [{\"columnId\": \"Measure names\",\"columnProperty\": {\"dataLabels\": true,\"kpiColumnProperties\": {\"showAbbreviatedPreviousDate\": false,\"showSparkline\": true,\"showComparisonDate\": true}}},{\"columnId\": \"Measure values\",\"columnProperty\": {\"dataLabels\": true,\"kpiColumnProperties\": {\"showAbbreviatedPreviousDate\": false,\"showSparkline\": true,\"showComparisonDate\": true}}},{\"columnId\": \"Report Type Value\",\"columnProperty\": {\"dataLabels\": true}},{\"columnId\": \"Metric\",\"columnProperty\": {\"dataLabels\": true}},{\"columnId\": \"Month Range\",\"columnProperty\": {\"dataLabels\": true}},{\"columnId\": \"Special Year\",\"columnProperty\": {\"dataLabels\": true}}],\"axisProperties\": [{\"id\": \"63d06cee-0a9c-4c9f-9625-97353c16aa9c\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Metric\"],\"isOpposite\": false}},{\"id\": \"343ff409-28aa-4c94-84cc-0ba16e5cff5b\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Month Range\"]}}],\"seriesColors\": [{\"serieName\": \"9d990a04-8506-4f81-a562-f834bb991e9e\",\"color\": \"#0073E6\"}],\"systemSeriesColors\": [{\"serieName\": \"9d990a04-8506-4f81-a562-f834bb991e9e\",\"color\": \"#0073E6\"},{\"serieName\": \"ac789717-4fee-4e82-8163-c5e1b45d0fa5\",\"color\": \"#FCC838\"},{\"serieName\": \"f0d5ccc1-c7db-43fe-90a9-35a48de9ffe5\",\"color\": \"#48D1E0\"},{\"serieName\": \"e5708bb6-4792-47e1-b164-accac6b414e7\",\"color\": \"#2E75F0\"},{\"serieName\": \"2025\",\"color\": \"#B094F8\"},{\"serieName\": \"2024\",\"color\": \"#8C62F5\"},{\"serieName\": \"2023\",\"color\": \"#56D3A8\"},{\"serieName\": \"2022\",\"color\": \"#06BF7F\"},{\"serieName\": \"2021\",\"color\": \"#FCD977\"},{\"serieName\": \"2020\",\"color\": \"#FCC838\"},{\"serieName\": \"2019\",\"color\": \"#82DFE9\"},{\"serieName\": \"2018\",\"color\": \"#48D1E0\"},{\"serieName\": \"2017\",\"color\": \"#71A1F4\"},{\"serieName\": \"2016\",\"color\": \"#2E75F0\"},{\"serieName\": \"2026\",\"color\": \"#2359B6\"},{\"serieName\": \"Metric\",\"color\": \"#06BF7F\"}],\"tooltipConfig\": {\"columnIds\": [\"b0ea177f-26af-482c-827e-e5c598f69024\",\"b7f7f84c-c611-40d1-89a8-8c608fec60df\",\"9d990a04-8506-4f81-a562-f834bb991e9e\",\"Special Year\",\"Month Range\"]}}"
+      display_mode: CHART_MODE
+      parameter_values:
+      - key: Metric Selection
+        value: New To Brand Patients
+      dynamic_name: PS YTD YOY Trend
+    viz_guid: c7ba8e69-bddd-45f0-9b2d-bdbb7f7da643
   filters:
   - column:
     - Source Of Business::Current Channel Desc
@@ -2770,6 +2829,7 @@ liveboard:
         height: 3
         width: 12
       - visualization_id: Viz_42
+      - visualization_id: Viz_43
       id: c5aaa81b-4806-4b1c-b287-127f1ae8f640
     - name: Pivot
       description: ""
