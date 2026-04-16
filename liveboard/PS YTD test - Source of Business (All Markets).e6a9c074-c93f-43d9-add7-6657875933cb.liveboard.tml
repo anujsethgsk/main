@@ -2230,7 +2230,7 @@ liveboard:
     viz_guid: 74355afe-59d8-4b86-b3d2-3798408ac395
   - id: Viz_41
     answer:
-      name: PS YTD YOY Trend
+      name: YTD YOY Trend
       tables:
       - id: Source of Business Special Time Period
         name: Source of Business Special Time Period
@@ -2285,7 +2285,7 @@ liveboard:
       parameter_values:
       - key: Metric Selection
         value: New To Brand Patients
-      dynamic_name: PS YTD YOY Trend
+      dynamic_name: YTD YOY Trend
     viz_guid: c7ba8e69-bddd-45f0-9b2d-bdbb7f7da643
   filters:
   - column:
@@ -2669,7 +2669,7 @@ liveboard:
       - visualization_id: Viz_41
         x: 0
         "y": 10
-        height: 6
+        height: 7
         width: 12
       id: c5aaa81b-4806-4b1c-b287-127f1ae8f640
     - name: Pivot
