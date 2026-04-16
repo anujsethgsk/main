@@ -1762,7 +1762,7 @@ liveboard:
         name: Specialty - Diagnosis
         expr: "concat ( [Diagnosis] , ' - ' , [Specialty] ) "
         was_auto_generated: false
-      search_query: "[Month Range] [Special Year] [Metric] [Month Range] != '{Null}' [formula_LY] sort by [Special Year] descending [formula_YOY Difference] [formula_YoY % Change] [Report Type Value]"
+      search_query: "[Month Range] [Special Year] [Month Range] != '{Null}' [formula_LY] sort by [Special Year] descending [formula_YOY Difference] [formula_YoY % Change] [Metric 2] [Report Type Value]"
       answer_columns:
       - name: LY
         format:
@@ -1773,20 +1773,12 @@ liveboard:
             negativeValueFormat: PREFIX_DASH
             toSeparateThousands: true
           isCategoryEditable: true
+      - name: Metric 2
       - name: Month Range
       - name: Report Type Value
       - name: Special Year
         sort_info:
           category: DEFAULT
-      - name: Total Metric
-        format:
-          category: NUMBER
-          numberFormatConfig:
-            unit: NONE
-            decimals: 0.0
-            negativeValueFormat: PREFIX_DASH
-            toSeparateThousands: true
-          isCategoryEditable: true
       - name: YOY Difference
       - name: YoY % Change
         format:
@@ -1798,13 +1790,13 @@ liveboard:
         table_columns:
         - column_id: LY
           show_headline: false
+        - column_id: Metric 2
+          show_headline: false
         - column_id: Month Range
           show_headline: false
         - column_id: Report Type Value
           show_headline: false
         - column_id: Special Year
-          show_headline: false
-        - column_id: Total Metric
           show_headline: false
         - column_id: YOY Difference
           show_headline: false
@@ -1814,31 +1806,31 @@ liveboard:
         - Month Range
         - Special Year
         - Report Type Value
-        - Total Metric
         - LY
         - YOY Difference
         - YoY % Change
+        - Metric 2
         client_state: ""
-        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"orderedColumnIds\": [\"Month Range\",\"Special Year\",\"Total Metric\",\"YOY Difference\",\"YoY % Change\",\"LY\"],\"columnProperties\": [{\"columnId\": \"Month Range\",\"columnProperty\": {\"conditionalFormatting\": {},\"isHidden\": false}},{\"columnId\": \"Special Year\",\"columnProperty\": {\"conditionalFormatting\": {},\"isHidden\": false}},{\"columnId\": \"Total Metric\",\"columnProperty\": {\"conditionalFormatting\": {},\"isHidden\": false}},{\"columnId\": \"LY\",\"columnProperty\": {\"conditionalFormatting\": {},\"isHidden\": true}},{\"columnId\": \"YOY Difference\",\"columnProperty\": {\"conditionalFormatting\": {\"rows\": [{\"operator\": \"LESS_THAN\",\"value\": \"0\",\"plotAsBand\": false,\"fontProperties\": {\"color\": \"#E62323\"},\"backgroundFormatType\": \"SOLID\",\"solidBackgroundAttrs\": {},\"comparisonType\": \"VALUE_BASED\",\"lhsColumnId\": \"YOY Difference\",\"isHighlightRow\": false}]},\"isHidden\": false}},{\"columnId\": \"YoY % Change\",\"columnProperty\": {\"conditionalFormatting\": {\"rows\": [{\"operator\": \"LESS_THAN\",\"value\": \"0\",\"plotAsBand\": false,\"fontProperties\": {\"color\": \"#E62323\"},\"backgroundFormatType\": \"SOLID\",\"solidBackgroundAttrs\": {},\"comparisonType\": \"VALUE_BASED\",\"lhsColumnId\": \"YoY % Change\",\"isHighlightRow\": false}]},\"isHidden\": false}}]}"
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"orderedColumnIds\": [\"Month Range\",\"Special Year\",\"YOY Difference\",\"YoY % Change\",\"LY\"],\"columnProperties\": [{\"columnId\": \"Month Range\",\"columnProperty\": {\"conditionalFormatting\": {},\"isHidden\": false}},{\"columnId\": \"Special Year\",\"columnProperty\": {\"conditionalFormatting\": {},\"isHidden\": false}},{\"columnId\": \"LY\",\"columnProperty\": {\"conditionalFormatting\": {},\"isHidden\": true}},{\"columnId\": \"YOY Difference\",\"columnProperty\": {\"conditionalFormatting\": {\"rows\": [{\"operator\": \"LESS_THAN\",\"value\": \"0\",\"plotAsBand\": false,\"fontProperties\": {\"color\": \"#E62323\"},\"backgroundFormatType\": \"SOLID\",\"solidBackgroundAttrs\": {},\"comparisonType\": \"VALUE_BASED\",\"lhsColumnId\": \"YOY Difference\",\"isHighlightRow\": false}]},\"isHidden\": false}},{\"columnId\": \"YoY % Change\",\"columnProperty\": {\"conditionalFormatting\": {\"rows\": [{\"operator\": \"LESS_THAN\",\"value\": \"0\",\"plotAsBand\": false,\"fontProperties\": {\"color\": \"#E62323\"},\"backgroundFormatType\": \"SOLID\",\"solidBackgroundAttrs\": {},\"comparisonType\": \"VALUE_BASED\",\"lhsColumnId\": \"YoY % Change\",\"isHighlightRow\": false}]},\"isHidden\": false}}]}"
       chart:
         type: COLUMN
         chart_columns:
         - column_id: LY
+        - column_id: Metric 2
         - column_id: Month Range
         - column_id: Report Type Value
         - column_id: Special Year
-        - column_id: Total Metric
         - column_id: YOY Difference
         - column_id: YoY % Change
         axis_configs:
         - x:
           - Month Range
           "y":
-          - Total Metric
+          - Metric 2
           color:
           - Special Year
         client_state: ""
-        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotState\": {\"fields\": [{\"dataField\": \"Month Range\",\"sortBy\": \"value\",\"sortBySummaryField\": \"Month Range\",\"sortOrder\": \"asc\",\"expanded\": false,\"area\": \"column\"},{\"dataField\": \"Special Year\",\"sortBy\": \"value\",\"sortBySummaryField\": \"Special Year\",\"sortOrder\": \"desc\",\"expanded\": false,\"area\": \"row\"}]},\"markersEnabled\": true,\"isStackedAsPercent\": false,\"customProps\": \"{\\\"advancedProperties\\\":{\\\"tooltip\\\":{\\\"enabled\\\":true}}}\",\"dataFieldArea\": \"row\",\"pivotSummariesState\": {\"showColumnTotals\": false,\"showRowGrandTotals\": false,\"showColumnGrandTotals\": false}},\"showStackedLabels\": true,\"allLabels\": true,\"legendPosition\": \"TOP_LEGEND\",\"kpiDisplayProperties\": {\"showDateLabel\": true,\"showCurrentDateLabel\": true,\"showPreviousDateLabel\": true,\"showPreviousValue\": true,\"showChange\": true,\"showChangeAs\": \"PERCENT\",\"changeInterpretation\": \"UPWARD_IS_GOOD\"}},\"columnProperties\": [{\"columnId\": \"Month Range\",\"columnProperty\": {\"dataLabels\": true,\"kpiColumnProperties\": {\"showAbbreviatedPreviousDate\": false,\"abbreviatedPreviousDate\": \"\",\"showSparkline\": true,\"showComparisonDate\": true}}},{\"columnId\": \"Special Year\",\"columnProperty\": {\"dataLabels\": true,\"kpiColumnProperties\": {\"showAbbreviatedPreviousDate\": false,\"abbreviatedPreviousDate\": \"\",\"showSparkline\": true,\"showComparisonDate\": true}}},{\"columnId\": \"Total Metric\",\"columnProperty\": {\"dataLabels\": true,\"kpiColumnProperties\": {\"showAbbreviatedPreviousDate\": false,\"abbreviatedPreviousDate\": \"\",\"showSparkline\": true,\"showComparisonDate\": true}}},{\"columnId\": \"LY\",\"columnProperty\": {\"dataLabels\": true,\"kpiColumnProperties\": {\"showAbbreviatedPreviousDate\": false,\"abbreviatedPreviousDate\": \"\",\"showSparkline\": true,\"showComparisonDate\": true}}},{\"columnId\": \"YoY % Change\",\"columnProperty\": {\"dataLabels\": true,\"conditionalFormatting\": {\"rows\": [{\"operator\": \"LESS_THAN\",\"value\": \"0\",\"plotAsBand\": false,\"fontProperties\": {\"color\": \"#E62323\"},\"comparisonType\": \"VALUE_BASED\",\"isHighlightRow\": false}]},\"kpiColumnProperties\": {\"showAbbreviatedPreviousDate\": false,\"abbreviatedPreviousDate\": \"\",\"showSparkline\": true,\"showComparisonDate\": true}}},{\"columnId\": \"YOY Difference\",\"columnProperty\": {\"dataLabels\": true,\"conditionalFormatting\": {\"rows\": [{\"operator\": \"LESS_THAN\",\"value\": \"0\",\"plotAsBand\": false,\"fontProperties\": {\"color\": \"#E62323\"},\"comparisonType\": \"VALUE_BASED\",\"isHighlightRow\": false}]},\"kpiColumnProperties\": {\"showAbbreviatedPreviousDate\": false,\"abbreviatedPreviousDate\": \"\",\"showSparkline\": true,\"showComparisonDate\": true}}}],\"axisProperties\": [{\"id\": \"a62d6a03-8bfd-488c-a26f-adf02babdc20\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Metric\"],\"isOpposite\": false}},{\"id\": \"803a1339-4a9e-4613-8e86-686d02ea3fd8\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Month Range\"]}}],\"seriesColors\": [{\"serieName\": \"Total Metric\",\"color\": \"#0073E6\"}],\"systemSeriesColors\": [{\"serieName\": \"Total Metric\",\"color\": \"#0073E6\"},{\"serieName\": \"LY\",\"color\": \"#FCC838\"},{\"serieName\": \"YOY Difference\",\"color\": \"#48D1E0\"},{\"serieName\": \"YoY % Change\",\"color\": \"#2E75F0\"},{\"serieName\": \"2025\",\"color\": \"#B094F8\"},{\"serieName\": \"2024\",\"color\": \"#8C62F5\"},{\"serieName\": \"2023\",\"color\": \"#56D3A8\"},{\"serieName\": \"2022\",\"color\": \"#06BF7F\"},{\"serieName\": \"2021\",\"color\": \"#FCD977\"},{\"serieName\": \"2020\",\"color\": \"#FCC838\"},{\"serieName\": \"2019\",\"color\": \"#82DFE9\"},{\"serieName\": \"2018\",\"color\": \"#48D1E0\"},{\"serieName\": \"2017\",\"color\": \"#71A1F4\"},{\"serieName\": \"2016\",\"color\": \"#2E75F0\"},{\"serieName\": \"2026\",\"color\": \"#2359B6\"}],\"tooltipConfig\": {\"columnIds\": [\"Special Year\",\"Month Range\",\"Total Metric\",\"LY\",\"YOY Difference\",\"YoY % Change\"]}}"
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotState\": {\"fields\": [{\"dataField\": \"Month Range\",\"sortBy\": \"value\",\"sortBySummaryField\": \"Month Range\",\"sortOrder\": \"asc\",\"expanded\": false,\"area\": \"column\"},{\"dataField\": \"Special Year\",\"sortBy\": \"value\",\"sortBySummaryField\": \"Special Year\",\"sortOrder\": \"desc\",\"expanded\": false,\"area\": \"row\"}]},\"markersEnabled\": true,\"isStackedAsPercent\": false,\"customProps\": \"{\\\"advancedProperties\\\":{\\\"tooltip\\\":{\\\"enabled\\\":true}}}\",\"dataFieldArea\": \"row\",\"pivotSummariesState\": {\"showColumnTotals\": false,\"showRowGrandTotals\": false,\"showColumnGrandTotals\": false}},\"showStackedLabels\": true,\"allLabels\": true},\"columnProperties\": [{\"columnId\": \"Month Range\",\"columnProperty\": {\"dataLabels\": true,\"kpiColumnProperties\": {\"showAbbreviatedPreviousDate\": false,\"abbreviatedPreviousDate\": \"\",\"showSparkline\": true,\"showComparisonDate\": true}}},{\"columnId\": \"Special Year\",\"columnProperty\": {\"dataLabels\": true,\"kpiColumnProperties\": {\"showAbbreviatedPreviousDate\": false,\"abbreviatedPreviousDate\": \"\",\"showSparkline\": true,\"showComparisonDate\": true}}},{\"columnId\": \"LY\",\"columnProperty\": {\"dataLabels\": true,\"kpiColumnProperties\": {\"showAbbreviatedPreviousDate\": false,\"abbreviatedPreviousDate\": \"\",\"showSparkline\": true,\"showComparisonDate\": true}}},{\"columnId\": \"YoY % Change\",\"columnProperty\": {\"dataLabels\": true,\"conditionalFormatting\": {\"rows\": [{\"operator\": \"LESS_THAN\",\"value\": \"0\",\"plotAsBand\": false,\"fontProperties\": {\"color\": \"#E62323\"},\"comparisonType\": \"VALUE_BASED\",\"isHighlightRow\": false}]},\"kpiColumnProperties\": {\"showAbbreviatedPreviousDate\": false,\"abbreviatedPreviousDate\": \"\",\"showSparkline\": true,\"showComparisonDate\": true}}},{\"columnId\": \"YOY Difference\",\"columnProperty\": {\"dataLabels\": true,\"conditionalFormatting\": {\"rows\": [{\"operator\": \"LESS_THAN\",\"value\": \"0\",\"plotAsBand\": false,\"fontProperties\": {\"color\": \"#E62323\"},\"comparisonType\": \"VALUE_BASED\",\"isHighlightRow\": false}]},\"kpiColumnProperties\": {\"showAbbreviatedPreviousDate\": false,\"abbreviatedPreviousDate\": \"\",\"showSparkline\": true,\"showComparisonDate\": true}}},{\"columnId\": \"Report Type Value\",\"columnProperty\": {\"dataLabels\": true}},{\"columnId\": \"Metric 2\",\"columnProperty\": {\"dataLabels\": true}},{\"columnId\": \"Measure names\",\"columnProperty\": {\"dataLabels\": true}},{\"columnId\": \"Measure values\",\"columnProperty\": {\"dataLabels\": true}}],\"axisProperties\": [{\"id\": \"3ca3356c-87ec-44ab-bf53-7acf3638bb8b\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Metric 2\"],\"isOpposite\": false}},{\"id\": \"e4909ef6-7685-4ef2-bc82-7ed70c6711c8\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Month Range\"]}}],\"seriesColors\": [{\"serieName\": \"9d990a04-8506-4f81-a562-f834bb991e9e\",\"color\": \"#0073E6\"}],\"systemSeriesColors\": [{\"serieName\": \"9d990a04-8506-4f81-a562-f834bb991e9e\",\"color\": \"#0073E6\"},{\"serieName\": \"LY\",\"color\": \"#FCC838\"},{\"serieName\": \"YOY Difference\",\"color\": \"#48D1E0\"},{\"serieName\": \"YoY % Change\",\"color\": \"#2E75F0\"},{\"serieName\": \"2025\",\"color\": \"#B094F8\"},{\"serieName\": \"2024\",\"color\": \"#8C62F5\"},{\"serieName\": \"2023\",\"color\": \"#56D3A8\"},{\"serieName\": \"2022\",\"color\": \"#06BF7F\"},{\"serieName\": \"2021\",\"color\": \"#FCD977\"},{\"serieName\": \"2020\",\"color\": \"#FCC838\"},{\"serieName\": \"2019\",\"color\": \"#82DFE9\"},{\"serieName\": \"2018\",\"color\": \"#48D1E0\"},{\"serieName\": \"2017\",\"color\": \"#71A1F4\"},{\"serieName\": \"2016\",\"color\": \"#2E75F0\"},{\"serieName\": \"2026\",\"color\": \"#2359B6\"}],\"tooltipConfig\": {\"columnIds\": [\"Special Year\",\"Month Range\",\"9d990a04-8506-4f81-a562-f834bb991e9e\"]}}"
       display_mode: CHART_MODE
       parameter_values:
       - key: Metric Selection
