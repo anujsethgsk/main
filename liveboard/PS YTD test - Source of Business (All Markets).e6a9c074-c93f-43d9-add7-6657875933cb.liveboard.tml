@@ -1740,104 +1740,6 @@ liveboard:
     viz_guid: e6b49da4-43d4-473a-9bf9-dfd483ad2f71
   - id: Viz_32
     answer:
-      name: YTD YOY Trend
-      tables:
-      - id: Source of Business Special Time Period
-        name: Source of Business Special Time Period
-        fqn: 4bb1b923-3e6a-48c8-96fd-3a0cd07decbb
-      formulas:
-      - id: formula_YOY Difference
-        name: YOY Difference
-        expr: "sum ( [Metric] ) - [formula_LY] "
-        was_auto_generated: false
-      - id: formula_YoY % Change
-        name: YoY % Change
-        expr: "( sum ( [Metric] ) - [formula_LY] ) / [formula_LY]"
-        was_auto_generated: false
-      - id: formula_LY
-        name: LY
-        expr: "moving_sum ( [Metric] , - 1 , 1 , [Special Year] )"
-        was_auto_generated: false
-      - id: formula_Specialty - Diagnosis
-        name: Specialty - Diagnosis
-        expr: "concat ( [Diagnosis] , ' - ' , [Specialty] ) "
-        was_auto_generated: false
-      search_query: "[Month Range] [Special Year] [Month Range] != '{Null}' [formula_LY] sort by [Special Year] descending [formula_YOY Difference] [formula_YoY % Change] [Metric 2] [Report Type Value]"
-      answer_columns:
-      - name: LY
-        format:
-          category: NUMBER
-          numberFormatConfig:
-            unit: NONE
-            decimals: 0.0
-            negativeValueFormat: PREFIX_DASH
-            toSeparateThousands: true
-          isCategoryEditable: true
-      - name: Metric 2
-      - name: Month Range
-      - name: Report Type Value
-      - name: Special Year
-        sort_info:
-          category: DEFAULT
-      - name: YOY Difference
-      - name: YoY % Change
-        format:
-          category: PERCENTAGE
-          percentageFormatConfig:
-            decimals: 1.0
-          isCategoryEditable: true
-      table:
-        table_columns:
-        - column_id: LY
-          show_headline: false
-        - column_id: Metric 2
-          show_headline: false
-        - column_id: Month Range
-          show_headline: false
-        - column_id: Report Type Value
-          show_headline: false
-        - column_id: Special Year
-          show_headline: false
-        - column_id: YOY Difference
-          show_headline: false
-        - column_id: YoY % Change
-          show_headline: false
-        ordered_column_ids:
-        - Month Range
-        - Special Year
-        - Report Type Value
-        - LY
-        - YOY Difference
-        - YoY % Change
-        - Metric 2
-        client_state: ""
-        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"orderedColumnIds\": [\"Month Range\",\"Special Year\",\"YOY Difference\",\"YoY % Change\",\"LY\"],\"columnProperties\": [{\"columnId\": \"Month Range\",\"columnProperty\": {\"conditionalFormatting\": {},\"isHidden\": false}},{\"columnId\": \"Special Year\",\"columnProperty\": {\"conditionalFormatting\": {},\"isHidden\": false}},{\"columnId\": \"LY\",\"columnProperty\": {\"conditionalFormatting\": {},\"isHidden\": true}},{\"columnId\": \"YOY Difference\",\"columnProperty\": {\"conditionalFormatting\": {\"rows\": [{\"operator\": \"LESS_THAN\",\"value\": \"0\",\"plotAsBand\": false,\"fontProperties\": {\"color\": \"#E62323\"},\"backgroundFormatType\": \"SOLID\",\"solidBackgroundAttrs\": {},\"comparisonType\": \"VALUE_BASED\",\"lhsColumnId\": \"YOY Difference\",\"isHighlightRow\": false}]},\"isHidden\": false}},{\"columnId\": \"YoY % Change\",\"columnProperty\": {\"conditionalFormatting\": {\"rows\": [{\"operator\": \"LESS_THAN\",\"value\": \"0\",\"plotAsBand\": false,\"fontProperties\": {\"color\": \"#E62323\"},\"backgroundFormatType\": \"SOLID\",\"solidBackgroundAttrs\": {},\"comparisonType\": \"VALUE_BASED\",\"lhsColumnId\": \"YoY % Change\",\"isHighlightRow\": false}]},\"isHidden\": false}}]}"
-      chart:
-        type: COLUMN
-        chart_columns:
-        - column_id: LY
-        - column_id: Metric 2
-        - column_id: Month Range
-        - column_id: Report Type Value
-        - column_id: Special Year
-        - column_id: YOY Difference
-        - column_id: YoY % Change
-        axis_configs:
-        - x:
-          - Month Range
-          "y":
-          - Metric 2
-          color:
-          - Special Year
-        client_state: ""
-        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotState\": {\"fields\": [{\"dataField\": \"Month Range\",\"sortBy\": \"value\",\"sortBySummaryField\": \"Month Range\",\"sortOrder\": \"asc\",\"expanded\": false,\"area\": \"column\"},{\"dataField\": \"Special Year\",\"sortBy\": \"value\",\"sortBySummaryField\": \"Special Year\",\"sortOrder\": \"desc\",\"expanded\": false,\"area\": \"row\"}]},\"markersEnabled\": true,\"isStackedAsPercent\": false,\"customProps\": \"{\\\"advancedProperties\\\":{\\\"tooltip\\\":{\\\"enabled\\\":true}}}\",\"dataFieldArea\": \"row\",\"pivotSummariesState\": {\"showColumnTotals\": false,\"showRowGrandTotals\": false,\"showColumnGrandTotals\": false}},\"showStackedLabels\": true,\"allLabels\": true},\"columnProperties\": [{\"columnId\": \"Month Range\",\"columnProperty\": {\"dataLabels\": true,\"kpiColumnProperties\": {\"showAbbreviatedPreviousDate\": false,\"abbreviatedPreviousDate\": \"\",\"showSparkline\": true,\"showComparisonDate\": true}}},{\"columnId\": \"Special Year\",\"columnProperty\": {\"dataLabels\": true,\"kpiColumnProperties\": {\"showAbbreviatedPreviousDate\": false,\"abbreviatedPreviousDate\": \"\",\"showSparkline\": true,\"showComparisonDate\": true}}},{\"columnId\": \"LY\",\"columnProperty\": {\"dataLabels\": true,\"kpiColumnProperties\": {\"showAbbreviatedPreviousDate\": false,\"abbreviatedPreviousDate\": \"\",\"showSparkline\": true,\"showComparisonDate\": true}}},{\"columnId\": \"YoY % Change\",\"columnProperty\": {\"dataLabels\": true,\"conditionalFormatting\": {\"rows\": [{\"operator\": \"LESS_THAN\",\"value\": \"0\",\"plotAsBand\": false,\"fontProperties\": {\"color\": \"#E62323\"},\"comparisonType\": \"VALUE_BASED\",\"isHighlightRow\": false}]},\"kpiColumnProperties\": {\"showAbbreviatedPreviousDate\": false,\"abbreviatedPreviousDate\": \"\",\"showSparkline\": true,\"showComparisonDate\": true}}},{\"columnId\": \"YOY Difference\",\"columnProperty\": {\"dataLabels\": true,\"conditionalFormatting\": {\"rows\": [{\"operator\": \"LESS_THAN\",\"value\": \"0\",\"plotAsBand\": false,\"fontProperties\": {\"color\": \"#E62323\"},\"comparisonType\": \"VALUE_BASED\",\"isHighlightRow\": false}]},\"kpiColumnProperties\": {\"showAbbreviatedPreviousDate\": false,\"abbreviatedPreviousDate\": \"\",\"showSparkline\": true,\"showComparisonDate\": true}}},{\"columnId\": \"Report Type Value\",\"columnProperty\": {\"dataLabels\": true}},{\"columnId\": \"Metric 2\",\"columnProperty\": {\"dataLabels\": true}},{\"columnId\": \"Measure names\",\"columnProperty\": {\"dataLabels\": true}},{\"columnId\": \"Measure values\",\"columnProperty\": {\"dataLabels\": true}}],\"axisProperties\": [{\"id\": \"3ca3356c-87ec-44ab-bf53-7acf3638bb8b\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Metric 2\"],\"isOpposite\": false}},{\"id\": \"e4909ef6-7685-4ef2-bc82-7ed70c6711c8\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Month Range\"]}}],\"seriesColors\": [{\"serieName\": \"9d990a04-8506-4f81-a562-f834bb991e9e\",\"color\": \"#0073E6\"}],\"systemSeriesColors\": [{\"serieName\": \"9d990a04-8506-4f81-a562-f834bb991e9e\",\"color\": \"#0073E6\"},{\"serieName\": \"LY\",\"color\": \"#FCC838\"},{\"serieName\": \"YOY Difference\",\"color\": \"#48D1E0\"},{\"serieName\": \"YoY % Change\",\"color\": \"#2E75F0\"},{\"serieName\": \"2025\",\"color\": \"#B094F8\"},{\"serieName\": \"2024\",\"color\": \"#8C62F5\"},{\"serieName\": \"2023\",\"color\": \"#56D3A8\"},{\"serieName\": \"2022\",\"color\": \"#06BF7F\"},{\"serieName\": \"2021\",\"color\": \"#FCD977\"},{\"serieName\": \"2020\",\"color\": \"#FCC838\"},{\"serieName\": \"2019\",\"color\": \"#82DFE9\"},{\"serieName\": \"2018\",\"color\": \"#48D1E0\"},{\"serieName\": \"2017\",\"color\": \"#71A1F4\"},{\"serieName\": \"2016\",\"color\": \"#2E75F0\"},{\"serieName\": \"2026\",\"color\": \"#2359B6\"}],\"tooltipConfig\": {\"columnIds\": [\"Special Year\",\"Month Range\",\"9d990a04-8506-4f81-a562-f834bb991e9e\"]}}"
-      display_mode: CHART_MODE
-      parameter_values:
-      - key: Metric Selection
-        value: New To Brand Patients
-    viz_guid: 971e1ffb-37d2-4cc7-992a-98e860a60377
-  - id: Viz_33
-    answer:
       name: NTB By Pay Type
       tables:
       - id: Source Of Business
@@ -1889,7 +1791,7 @@ liveboard:
         client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {\"xGridlineEnabled\": false,\"yGridlineEnabled\": true},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {\"pivotState\": {\"fields\": [{\"dataField\": \"fc62f2a0-4ffc-4857-a3cd-3360a027e2bd\",\"sortBy\": \"value\",\"sortBySummaryField\": \"fc62f2a0-4ffc-4857-a3cd-3360a027e2bd\",\"sortOrder\": \"asc\",\"expanded\": false,\"area\": \"column\"}]},\"markersEnabled\": true,\"isStackedAsPercent\": false,\"dataFieldArea\": \"column\",\"pivotSummariesState\": {\"showColumnTotals\": false,\"showRowGrandTotals\": false,\"showColumnGrandTotals\": false}},\"showStackedLabels\": true,\"allLabels\": true},\"columnProperties\": [{\"columnId\": \"Total New To Brand Patients\",\"columnProperty\": {\"dataLabels\": true}},{\"columnId\": \"Month(Month ID)\",\"columnProperty\": {\"dataLabels\": true}},{\"columnId\": \"Pay Type\",\"columnProperty\": {\"dataLabels\": true}}],\"axisProperties\": [{\"id\": \"049273dc-88e8-49b7-80df-633889558f13\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Month(Month ID)\"],\"name\": \"Monthly\"}},{\"id\": \"4db60afe-552a-445a-a005-510090567ea9\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total New To Brand Patients\"],\"name\": \"New To Brand Patients\",\"yAxisRange\": {\"min\": 0.0},\"isOpposite\": false}}],\"seriesColors\": [{\"serieName\": \"pulm\",\"color\": \"#2E75F0\"},{\"serieName\": \"allg\",\"color\": \"#48D1E0\"},{\"serieName\": \"ent\",\"color\": \"#FCC838\"},{\"serieName\": \"pcp\",\"color\": \"#06BF7F\"},{\"serieName\": \"im/np\",\"color\": \"#8C62F5\"},{\"serieName\": \"other\",\"color\": \"#fd7e14\"},{\"serieName\": \"egpa\",\"color\": \"#2E75F0\"},{\"serieName\": \"hes\",\"color\": \"#48D1E0\"},{\"serieName\": \"nasal polyps\",\"color\": \"#FCC838\"},{\"serieName\": \"severe asthma\",\"color\": \"#06BF7F\"},{\"serieName\": \"asthma - other/unspecified\",\"color\": \"#8C62F5\"},{\"serieName\": \"atopic dermatitis\",\"color\": \"#fd7e14\"},{\"serieName\": \"ciu\",\"color\": \"#ABC7F9\"},{\"serieName\": \"definitive with dx\",\"color\": \"#B5ECF2\"},{\"serieName\": \"definitive with dx and renal\",\"color\": \"#FDE9AF\"},{\"serieName\": \"definitive with renal\",\"color\": \"#9BE5CB\"},{\"serieName\": \"probable biopsy\",\"color\": \"#369FAA\"},{\"serieName\": \"probable with dx\",\"color\": \"#BF982A\"},{\"serieName\": \"probable with proteinuria\",\"color\": \"#049160\"},{\"serieName\": \"probable with renal\",\"color\": \"#6A4ABA\"},{\"serieName\": \"sa_rest\",\"color\": \"#ca6510\"},{\"serieName\": \"sle only\",\"color\": \"#fd7e14\"},{\"serieName\": \"Total New To Brand Patients\",\"color\": \"#48D1E0\"},{\"serieName\": \"benlysta ai\",\"color\": \"#2E75F0\"},{\"serieName\": \"benlysta iv\",\"color\": \"#48D1E0\"},{\"serieName\": \"benlysta pfs\",\"color\": \"#FCC838\"},{\"serieName\": \"cinqair\",\"color\": \"#06BF7F\"},{\"serieName\": \"dupixent\",\"color\": \"#8C62F5\"},{\"serieName\": \"fasenra inj\",\"color\": \"#fd7e14\"},{\"serieName\": \"fasenra pen\",\"color\": \"#ABC7F9\"},{\"serieName\": \"lupkynis\",\"color\": \"#B5ECF2\"},{\"serieName\": \"nucala ai\",\"color\": \"#FDE9AF\"},{\"serieName\": \"nucala lyo vial\",\"color\": \"#9BE5CB\"},{\"serieName\": \"nucala pfs\",\"color\": \"#D1C0FB\"},{\"serieName\": \"rituximab\",\"color\": \"#feb272\"},{\"serieName\": \"saphnelo\",\"color\": \"#2359B6\"},{\"serieName\": \"tezspire\",\"color\": \"#369FAA\"},{\"serieName\": \"tezspire pen\",\"color\": \"#BF982A\"},{\"serieName\": \"xolair\",\"color\": \"#049160\"},{\"serieName\": \"cash\",\"color\": \"#FFD700\"},{\"serieName\": \"medicaid\",\"color\": \"#556B2F\"},{\"serieName\": \"medicare\",\"color\": \"#9370DB\"},{\"serieName\": \"medicare part d\",\"color\": \"#800000\"},{\"serieName\": \"third party\",\"color\": \"#1E90FF\"},{\"serieName\": \"unspecified\",\"color\": \"#D3D3D3\"}],\"systemSeriesColors\": [{\"serieName\": \"pulm\",\"color\": \"#2E75F0\"},{\"serieName\": \"allg\",\"color\": \"#48D1E0\"},{\"serieName\": \"ent\",\"color\": \"#FCC838\"},{\"serieName\": \"pcp\",\"color\": \"#06BF7F\"},{\"serieName\": \"im/np\",\"color\": \"#8C62F5\"},{\"serieName\": \"other\",\"color\": \"#fd7e14\"},{\"serieName\": \"egpa\",\"color\": \"#2E75F0\"},{\"serieName\": \"hes\",\"color\": \"#48D1E0\"},{\"serieName\": \"nasal polyps\",\"color\": \"#FCC838\"},{\"serieName\": \"severe asthma\",\"color\": \"#06BF7F\"},{\"serieName\": \"asthma - other/unspecified\",\"color\": \"#8C62F5\"},{\"serieName\": \"atopic dermatitis\",\"color\": \"#fd7e14\"},{\"serieName\": \"ciu\",\"color\": \"#ABC7F9\"},{\"serieName\": \"definitive with dx\",\"color\": \"#B5ECF2\"},{\"serieName\": \"definitive with dx and renal\",\"color\": \"#FDE9AF\"},{\"serieName\": \"definitive with renal\",\"color\": \"#9BE5CB\"},{\"serieName\": \"probable biopsy\",\"color\": \"#369FAA\"},{\"serieName\": \"probable with dx\",\"color\": \"#BF982A\"},{\"serieName\": \"probable with proteinuria\",\"color\": \"#049160\"},{\"serieName\": \"probable with renal\",\"color\": \"#6A4ABA\"},{\"serieName\": \"sa_rest\",\"color\": \"#ca6510\"},{\"serieName\": \"sle only\",\"color\": \"#fd7e14\"},{\"serieName\": \"Total New To Brand Patients\",\"color\": \"#48D1E0\"},{\"serieName\": \"benlysta ai\",\"color\": \"#2E75F0\"},{\"serieName\": \"benlysta iv\",\"color\": \"#48D1E0\"},{\"serieName\": \"benlysta pfs\",\"color\": \"#FCC838\"},{\"serieName\": \"cinqair\",\"color\": \"#06BF7F\"},{\"serieName\": \"dupixent\",\"color\": \"#8C62F5\"},{\"serieName\": \"fasenra inj\",\"color\": \"#fd7e14\"},{\"serieName\": \"fasenra pen\",\"color\": \"#ABC7F9\"},{\"serieName\": \"lupkynis\",\"color\": \"#B5ECF2\"},{\"serieName\": \"nucala ai\",\"color\": \"#FDE9AF\"},{\"serieName\": \"nucala lyo vial\",\"color\": \"#9BE5CB\"},{\"serieName\": \"nucala pfs\",\"color\": \"#D1C0FB\"},{\"serieName\": \"rituximab\",\"color\": \"#feb272\"},{\"serieName\": \"saphnelo\",\"color\": \"#2359B6\"},{\"serieName\": \"tezspire\",\"color\": \"#369FAA\"},{\"serieName\": \"tezspire pen\",\"color\": \"#BF982A\"},{\"serieName\": \"xolair\",\"color\": \"#049160\"},{\"serieName\": \"cash\",\"color\": \"#2E75F0\"},{\"serieName\": \"medicaid\",\"color\": \"#48D1E0\"},{\"serieName\": \"medicare\",\"color\": \"#FCC838\"},{\"serieName\": \"medicare part d\",\"color\": \"#06BF7F\"},{\"serieName\": \"third party\",\"color\": \"#8C62F5\"},{\"serieName\": \"unspecified\",\"color\": \"#fd7e14\"}]}"
       display_mode: CHART_MODE
     viz_guid: 47bfd2a7-448d-4ac3-abc5-08194f127f97
-  - id: Viz_34
+  - id: Viz_33
     answer:
       name: Current Month vs Last Year
       description: Growth
@@ -1950,7 +1852,7 @@ liveboard:
         client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotState\": {},\"isStackedAsPercent\": false,\"dataFieldArea\": \"column\",\"pivotSummariesState\": {\"showColumnTotals\": false,\"showRowGrandTotals\": false,\"showColumnGrandTotals\": false}},\"showStackedLabels\": true,\"allLabels\": true},\"columnProperties\": [{\"columnId\": \"New To Brand Patient Growth\",\"columnProperty\": {\"dataLabels\": true}},{\"columnId\": \"Month(Month ID)\",\"columnProperty\": {\"dataLabels\": true}},{\"columnId\": \"Pay Type\",\"columnProperty\": {\"dataLabels\": true}}],\"axisProperties\": [{\"id\": \"b8d5a14a-649b-43b5-bf4a-2890a1b8be5d\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Month(Month ID)\"]}},{\"id\": \"7df2ee6a-6175-4edf-8b27-27c516c41056\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"New To Brand Patient Growth\"],\"format\": {\"category\": \"PERCENTAGE\",\"percentageFormatConfig\": {\"decimals\": 0.0},\"isCategoryEditable\": true},\"isOpposite\": false}}],\"seriesColors\": [{\"serieName\": \"1d4d82ee-e78c-41f7-901d-4e910715dcee\",\"color\": \"#747E8C\"},{\"serieName\": \"2f7da628-1d84-461c-b365-7a2a0c08eb65\",\"color\": \"#2E75F0\"},{\"serieName\": \"New To Brand Patient Growth\",\"color\": \"#FCC838\"},{\"serieName\": \"severe asthma\",\"color\": \"#2E75F0\"},{\"serieName\": \"probable with proteinuria\",\"color\": \"#71A1F4\"},{\"serieName\": \"probable with renal\",\"color\": \"#6A4ABA\"},{\"serieName\": \"sa_rest\",\"color\": \"#B094F8\"},{\"serieName\": \"sle only\",\"color\": \"#049160\"},{\"serieName\": \"asthma - other/unspecified\",\"color\": \"#6A4ABA\"},{\"serieName\": \"atopic dermatitis\",\"color\": \"#B094F8\"},{\"serieName\": \"ciu\",\"color\": \"#8C62F5\"},{\"serieName\": \"definitive with dx\",\"color\": \"#049160\"},{\"serieName\": \"definitive with dx and renal\",\"color\": \"#56D3A8\"},{\"serieName\": \"definitive with renal\",\"color\": \"#BF982A\"},{\"serieName\": \"egpa\",\"color\": \"#06BF7F\"},{\"serieName\": \"hes\",\"color\": \"#FCC838\"},{\"serieName\": \"nasal polyps\",\"color\": \"#48D1E0\"},{\"serieName\": \"probable with dx\",\"color\": \"#2359B6\"},{\"serieName\": \"benlysta ai\",\"color\": \"#fd9843\"},{\"serieName\": \"benlysta iv\",\"color\": \"#fd7e14\"},{\"serieName\": \"benlysta pfs\",\"color\": \"#B094F8\"},{\"serieName\": \"cinqair\",\"color\": \"#8C62F5\"},{\"serieName\": \"dupixent\",\"color\": \"#049160\"},{\"serieName\": \"fasenra inj\",\"color\": \"#56D3A8\"},{\"serieName\": \"fasenra pen\",\"color\": \"#06BF7F\"},{\"serieName\": \"lupkynis\",\"color\": \"#BF982A\"},{\"serieName\": \"nucala ai\",\"color\": \"#FCD977\"},{\"serieName\": \"nucala lyo vial\",\"color\": \"#FCC838\"},{\"serieName\": \"nucala pfs\",\"color\": \"#369FAA\"},{\"serieName\": \"rituximab\",\"color\": \"#82DFE9\"},{\"serieName\": \"saphnelo\",\"color\": \"#48D1E0\"},{\"serieName\": \"tezspire\",\"color\": \"#2359B6\"},{\"serieName\": \"tezspire pen\",\"color\": \"#71A1F4\"},{\"serieName\": \"xolair\",\"color\": \"#2E75F0\"},{\"serieName\": \"cash\",\"color\": \"#FFD700\"},{\"serieName\": \"medicaid\",\"color\": \"#556B2F\"},{\"serieName\": \"medicare\",\"color\": \"#9370DB\"},{\"serieName\": \"medicare part d\",\"color\": \"#800000\"},{\"serieName\": \"third party\",\"color\": \"#1E90FF\"},{\"serieName\": \"unspecified\",\"color\": \"#D3D3D3\"}],\"systemSeriesColors\": [{\"serieName\": \"1d4d82ee-e78c-41f7-901d-4e910715dcee\",\"color\": \"#747E8C\"},{\"serieName\": \"2f7da628-1d84-461c-b365-7a2a0c08eb65\",\"color\": \"#2E75F0\"},{\"serieName\": \"New To Brand Patient Growth\",\"color\": \"#FCC838\"},{\"serieName\": \"severe asthma\",\"color\": \"#2E75F0\"},{\"serieName\": \"probable with proteinuria\",\"color\": \"#71A1F4\"},{\"serieName\": \"probable with renal\",\"color\": \"#6A4ABA\"},{\"serieName\": \"sa_rest\",\"color\": \"#B094F8\"},{\"serieName\": \"sle only\",\"color\": \"#049160\"},{\"serieName\": \"asthma - other/unspecified\",\"color\": \"#6A4ABA\"},{\"serieName\": \"atopic dermatitis\",\"color\": \"#B094F8\"},{\"serieName\": \"ciu\",\"color\": \"#8C62F5\"},{\"serieName\": \"definitive with dx\",\"color\": \"#049160\"},{\"serieName\": \"definitive with dx and renal\",\"color\": \"#56D3A8\"},{\"serieName\": \"definitive with renal\",\"color\": \"#BF982A\"},{\"serieName\": \"egpa\",\"color\": \"#06BF7F\"},{\"serieName\": \"hes\",\"color\": \"#FCC838\"},{\"serieName\": \"nasal polyps\",\"color\": \"#48D1E0\"},{\"serieName\": \"probable with dx\",\"color\": \"#2359B6\"},{\"serieName\": \"benlysta ai\",\"color\": \"#fd9843\"},{\"serieName\": \"benlysta iv\",\"color\": \"#fd7e14\"},{\"serieName\": \"benlysta pfs\",\"color\": \"#B094F8\"},{\"serieName\": \"cinqair\",\"color\": \"#8C62F5\"},{\"serieName\": \"dupixent\",\"color\": \"#049160\"},{\"serieName\": \"fasenra inj\",\"color\": \"#56D3A8\"},{\"serieName\": \"fasenra pen\",\"color\": \"#06BF7F\"},{\"serieName\": \"lupkynis\",\"color\": \"#BF982A\"},{\"serieName\": \"nucala ai\",\"color\": \"#FCD977\"},{\"serieName\": \"nucala lyo vial\",\"color\": \"#FCC838\"},{\"serieName\": \"nucala pfs\",\"color\": \"#369FAA\"},{\"serieName\": \"rituximab\",\"color\": \"#82DFE9\"},{\"serieName\": \"saphnelo\",\"color\": \"#48D1E0\"},{\"serieName\": \"tezspire\",\"color\": \"#2359B6\"},{\"serieName\": \"tezspire pen\",\"color\": \"#71A1F4\"},{\"serieName\": \"xolair\",\"color\": \"#2E75F0\"},{\"serieName\": \"cash\",\"color\": \"#06BF7F\"},{\"serieName\": \"medicaid\",\"color\": \"#FCC838\"},{\"serieName\": \"medicare\",\"color\": \"#82DFE9\"},{\"serieName\": \"medicare part d\",\"color\": \"#48D1E0\"},{\"serieName\": \"third party\",\"color\": \"#71A1F4\"},{\"serieName\": \"unspecified\",\"color\": \"#2E75F0\"}]}"
       display_mode: CHART_MODE
     viz_guid: 7336c5b2-646e-4e64-ac80-ee7cebf85485
-  - id: Viz_35
+  - id: Viz_34
     answer:
       name: Current Month By Pay Type
       tables:
@@ -2010,7 +1912,7 @@ liveboard:
         client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"chartSpecific\": {\"pivotState\": {},\"isStackedAsPercent\": false,\"dataFieldArea\": \"column\",\"pivotSummariesState\": {\"showColumnTotals\": false,\"showRowGrandTotals\": false,\"showColumnGrandTotals\": false}},\"showStackedLabels\": true,\"allLabels\": true},\"columnProperties\": [{\"columnId\": \"Total New To Brand Patients\",\"columnProperty\": {\"dataLabels\": true}},{\"columnId\": \"Month(Month ID)\",\"columnProperty\": {\"dataLabels\": true}},{\"columnId\": \"Pay Type\",\"columnProperty\": {\"dataLabels\": true}}],\"axisProperties\": [{\"id\": \"95375f1c-8dc5-49e4-ac9c-9a792f2e7d0a\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total New To Brand Patients\"],\"isOpposite\": false}},{\"id\": \"66055bb4-1c6d-44a4-b022-0f651d30ff1b\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Pay Type\"]}}],\"seriesColors\": [{\"serieName\": \"Total New To Brand Patients\",\"color\": \"#747E8C\"},{\"serieName\": \"2f7da628-1d84-461c-b365-7a2a0c08eb65\",\"color\": \"#2E75F0\"},{\"serieName\": \"99d4ba21-ab4b-4b77-83e2-f226a39b220e\",\"color\": \"#FCC838\"},{\"serieName\": \"atopic dermatitis\",\"color\": \"#fd7e14\"},{\"serieName\": \"asthma - other/unspecified\",\"color\": \"#8C62F5\"},{\"serieName\": \"ciu\",\"color\": \"#ABC7F9\"},{\"serieName\": \"definitive with dx\",\"color\": \"#B5ECF2\"},{\"serieName\": \"definitive with dx and renal\",\"color\": \"#FDE9AF\"},{\"serieName\": \"definitive with renal\",\"color\": \"#9BE5CB\"},{\"serieName\": \"egpa\",\"color\": \"#2E75F0\"},{\"serieName\": \"hes\",\"color\": \"#48D1E0\"},{\"serieName\": \"nasal polyps\",\"color\": \"#FCC838\"},{\"serieName\": \"probable biopsy\",\"color\": \"#369FAA\"},{\"serieName\": \"probable with dx\",\"color\": \"#BF982A\"},{\"serieName\": \"probable with proteinuria\",\"color\": \"#049160\"},{\"serieName\": \"probable with renal\",\"color\": \"#6A4ABA\"},{\"serieName\": \"sa_rest\",\"color\": \"#CA6510\"},{\"serieName\": \"severe asthma\",\"color\": \"#06BF7F\"},{\"serieName\": \"sle only\",\"color\": \"#FD7E14\"},{\"serieName\": \"jan 2025\",\"color\": \"#fd7e14\"},{\"serieName\": \"benlysta ai\",\"color\": \"#fd9843\"},{\"serieName\": \"benlysta iv\",\"color\": \"#fd7e14\"},{\"serieName\": \"benlysta pfs\",\"color\": \"#B094F8\"},{\"serieName\": \"cinqair\",\"color\": \"#8C62F5\"},{\"serieName\": \"dupixent\",\"color\": \"#049160\"},{\"serieName\": \"fasenra inj\",\"color\": \"#56D3A8\"},{\"serieName\": \"fasenra pen\",\"color\": \"#06BF7F\"},{\"serieName\": \"lupkynis\",\"color\": \"#BF982A\"},{\"serieName\": \"nucala ai\",\"color\": \"#FCD977\"},{\"serieName\": \"nucala lyo vial\",\"color\": \"#FCC838\"},{\"serieName\": \"nucala pfs\",\"color\": \"#369FAA\"},{\"serieName\": \"rituximab\",\"color\": \"#82DFE9\"},{\"serieName\": \"saphnelo\",\"color\": \"#48D1E0\"},{\"serieName\": \"tezspire\",\"color\": \"#2359B6\"},{\"serieName\": \"tezspire pen\",\"color\": \"#71A1F4\"},{\"serieName\": \"xolair\",\"color\": \"#2E75F0\"},{\"serieName\": \"cash\",\"color\": \"#FFD700\"},{\"serieName\": \"medicaid\",\"color\": \"#556B2F\"},{\"serieName\": \"medicare\",\"color\": \"#9370DB\"},{\"serieName\": \"medicare part d\",\"color\": \"#800000\"},{\"serieName\": \"third party\",\"color\": \"#1E90FF\"},{\"serieName\": \"unspecified\",\"color\": \"#D3D3D3\"}],\"systemSeriesColors\": [{\"serieName\": \"Total New To Brand Patients\",\"color\": \"#747E8C\"},{\"serieName\": \"2f7da628-1d84-461c-b365-7a2a0c08eb65\",\"color\": \"#2E75F0\"},{\"serieName\": \"99d4ba21-ab4b-4b77-83e2-f226a39b220e\",\"color\": \"#FCC838\"},{\"serieName\": \"atopic dermatitis\",\"color\": \"#fd7e14\"},{\"serieName\": \"asthma - other/unspecified\",\"color\": \"#8C62F5\"},{\"serieName\": \"ciu\",\"color\": \"#ABC7F9\"},{\"serieName\": \"definitive with dx\",\"color\": \"#B5ECF2\"},{\"serieName\": \"definitive with dx and renal\",\"color\": \"#FDE9AF\"},{\"serieName\": \"definitive with renal\",\"color\": \"#9BE5CB\"},{\"serieName\": \"egpa\",\"color\": \"#2E75F0\"},{\"serieName\": \"hes\",\"color\": \"#48D1E0\"},{\"serieName\": \"nasal polyps\",\"color\": \"#FCC838\"},{\"serieName\": \"probable biopsy\",\"color\": \"#369FAA\"},{\"serieName\": \"probable with dx\",\"color\": \"#BF982A\"},{\"serieName\": \"probable with proteinuria\",\"color\": \"#049160\"},{\"serieName\": \"probable with renal\",\"color\": \"#6A4ABA\"},{\"serieName\": \"sa_rest\",\"color\": \"#CA6510\"},{\"serieName\": \"severe asthma\",\"color\": \"#06BF7F\"},{\"serieName\": \"sle only\",\"color\": \"#FD7E14\"},{\"serieName\": \"jan 2025\",\"color\": \"#fd7e14\"},{\"serieName\": \"benlysta ai\",\"color\": \"#fd9843\"},{\"serieName\": \"benlysta iv\",\"color\": \"#fd7e14\"},{\"serieName\": \"benlysta pfs\",\"color\": \"#B094F8\"},{\"serieName\": \"cinqair\",\"color\": \"#8C62F5\"},{\"serieName\": \"dupixent\",\"color\": \"#049160\"},{\"serieName\": \"fasenra inj\",\"color\": \"#56D3A8\"},{\"serieName\": \"fasenra pen\",\"color\": \"#06BF7F\"},{\"serieName\": \"lupkynis\",\"color\": \"#BF982A\"},{\"serieName\": \"nucala ai\",\"color\": \"#FCD977\"},{\"serieName\": \"nucala lyo vial\",\"color\": \"#FCC838\"},{\"serieName\": \"nucala pfs\",\"color\": \"#369FAA\"},{\"serieName\": \"rituximab\",\"color\": \"#82DFE9\"},{\"serieName\": \"saphnelo\",\"color\": \"#48D1E0\"},{\"serieName\": \"tezspire\",\"color\": \"#2359B6\"},{\"serieName\": \"tezspire pen\",\"color\": \"#71A1F4\"},{\"serieName\": \"xolair\",\"color\": \"#2E75F0\"},{\"serieName\": \"cash\",\"color\": \"#06BF7F\"},{\"serieName\": \"medicaid\",\"color\": \"#FCC838\"},{\"serieName\": \"medicare\",\"color\": \"#82DFE9\"},{\"serieName\": \"medicare part d\",\"color\": \"#48D1E0\"},{\"serieName\": \"third party\",\"color\": \"#71A1F4\"},{\"serieName\": \"unspecified\",\"color\": \"#2E75F0\"}]}"
       display_mode: CHART_MODE
     viz_guid: 1ad01990-ea86-4678-a9bf-70a2d15f05af
-  - id: Viz_36
+  - id: Viz_35
     answer:
       name: NTB By Pay Type
       tables:
@@ -2062,7 +1964,7 @@ liveboard:
         client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {\"xGridlineEnabled\": false,\"yGridlineEnabled\": true},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {\"pivotState\": {\"fields\": [{\"dataField\": \"fc62f2a0-4ffc-4857-a3cd-3360a027e2bd\",\"sortBy\": \"value\",\"sortBySummaryField\": \"fc62f2a0-4ffc-4857-a3cd-3360a027e2bd\",\"sortOrder\": \"asc\",\"expanded\": false,\"area\": \"column\"}]},\"markersEnabled\": true,\"isStackedAsPercent\": false,\"dataFieldArea\": \"column\",\"pivotSummariesState\": {\"showColumnTotals\": false,\"showRowGrandTotals\": false,\"showColumnGrandTotals\": false}},\"showStackedLabels\": true,\"allLabels\": true},\"columnProperties\": [{\"columnId\": \"Total New To Brand Patients\",\"columnProperty\": {\"dataLabels\": true}},{\"columnId\": \"Pay Type\",\"columnProperty\": {\"dataLabels\": true}},{\"columnId\": \"Week(Week ID)\",\"columnProperty\": {\"dataLabels\": true}}],\"axisProperties\": [{\"id\": \"de495521-4e5b-4c82-a924-6ee2f55541e5\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total New To Brand Patients\"],\"isOpposite\": false}},{\"id\": \"9ec28627-0efb-415b-9ebc-3430001d4864\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Week(Week ID)\"]}}],\"seriesColors\": [{\"serieName\": \"pulm\",\"color\": \"#2E75F0\"},{\"serieName\": \"allg\",\"color\": \"#48D1E0\"},{\"serieName\": \"ent\",\"color\": \"#FCC838\"},{\"serieName\": \"pcp\",\"color\": \"#06BF7F\"},{\"serieName\": \"im/np\",\"color\": \"#8C62F5\"},{\"serieName\": \"other\",\"color\": \"#fd7e14\"},{\"serieName\": \"rhu\",\"color\": \"#D1C0FB\"},{\"serieName\": \"nep\",\"color\": \"#feb272\"},{\"serieName\": \"im\",\"color\": \"#ABC7F9\"},{\"serieName\": \"alg\",\"color\": \"#48D1E0\"},{\"serieName\": \"unspecified\",\"color\": \"#fd7e14\"},{\"serieName\": \"cash\",\"color\": \"#FFD700\"},{\"serieName\": \"medicaid\",\"color\": \"#556B2F\"},{\"serieName\": \"medicare\",\"color\": \"#9370DB\"},{\"serieName\": \"medicare part d\",\"color\": \"#800000\"},{\"serieName\": \"third party\",\"color\": \"#1E90FF\"}],\"systemSeriesColors\": [{\"serieName\": \"pulm\",\"color\": \"#2E75F0\"},{\"serieName\": \"allg\",\"color\": \"#48D1E0\"},{\"serieName\": \"ent\",\"color\": \"#FCC838\"},{\"serieName\": \"pcp\",\"color\": \"#06BF7F\"},{\"serieName\": \"im/np\",\"color\": \"#8C62F5\"},{\"serieName\": \"other\",\"color\": \"#fd7e14\"},{\"serieName\": \"rhu\",\"color\": \"#D1C0FB\"},{\"serieName\": \"nep\",\"color\": \"#feb272\"},{\"serieName\": \"im\",\"color\": \"#ABC7F9\"},{\"serieName\": \"alg\",\"color\": \"#48D1E0\"},{\"serieName\": \"unspecified\",\"color\": \"#fd7e14\"},{\"serieName\": \"cash\",\"color\": \"#FFD700\"},{\"serieName\": \"medicaid\",\"color\": \"#556B2F\"},{\"serieName\": \"medicare\",\"color\": \"#9370DB\"},{\"serieName\": \"medicare part d\",\"color\": \"#800000\"},{\"serieName\": \"third party\",\"color\": \"#1E90FF\"},{\"serieName\": \"{null}\",\"color\": \"#2E75F0\"}]}"
       display_mode: CHART_MODE
     viz_guid: 79b0abd1-7ac5-41b4-9cc3-2441476454a9
-  - id: Viz_37
+  - id: Viz_36
     answer:
       name: NTB Current Week by Pay Type
       tables:
@@ -2122,7 +2024,7 @@ liveboard:
         client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"chartSpecific\": {\"pivotState\": {\"fields\": [{\"dataField\": \"35e18760-b906-467e-8b97-3a6ccd950174\",\"sortBy\": \"value\",\"sortBySummaryField\": \"35e18760-b906-467e-8b97-3a6ccd950174\",\"sortOrder\": \"asc\",\"expanded\": false,\"area\": \"column\"}]},\"isStackedAsPercent\": false,\"dataFieldArea\": \"column\",\"pivotSummariesState\": {\"showColumnTotals\": false,\"showRowGrandTotals\": false,\"showColumnGrandTotals\": false}},\"showStackedLabels\": true,\"allLabels\": true},\"columnProperties\": [{\"columnId\": \"Total New To Brand Patients\",\"columnProperty\": {\"dataLabels\": true}},{\"columnId\": \"Pay Type\",\"columnProperty\": {\"dataLabels\": true}}],\"axisProperties\": [{\"id\": \"54802013-308c-4277-b19e-bab23f8216f8\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total New To Brand Patients\"],\"isOpposite\": false}},{\"id\": \"be8e31c5-ca1d-461d-ba4d-e74d00cb1743\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Pay Type\"]}}],\"seriesColors\": [{\"serieName\": \"Total New To Brand Patients\",\"color\": \"#747E8C\"},{\"serieName\": \"2f7da628-1d84-461c-b365-7a2a0c08eb65\",\"color\": \"#2E75F0\"},{\"serieName\": \"99d4ba21-ab4b-4b77-83e2-f226a39b220e\",\"color\": \"#FCC838\"},{\"serieName\": \"pulm\",\"color\": \"#8C62F5\"},{\"serieName\": \"allg\",\"color\": \"#56D3A8\"},{\"serieName\": \"ent\",\"color\": \"#06BF7F\"},{\"serieName\": \"pcp\",\"color\": \"#FCD977\"},{\"serieName\": \"rhu\",\"color\": \"#FCC838\"},{\"serieName\": \"nep\",\"color\": \"#82DFE9\"},{\"serieName\": \"im\",\"color\": \"#48D1E0\"},{\"serieName\": \"im/np\",\"color\": \"#71A1F4\"},{\"serieName\": \"other\",\"color\": \"#2E75F0\"},{\"serieName\": \"alg\",\"color\": \"#71A1F4\"},{\"serieName\": \"cash\",\"color\": \"#FFD700\"},{\"serieName\": \"medicaid\",\"color\": \"#556B2F\"},{\"serieName\": \"medicare\",\"color\": \"#9370DB\"},{\"serieName\": \"medicare part d\",\"color\": \"#800000\"},{\"serieName\": \"third party\",\"color\": \"#1E90FF\"},{\"serieName\": \"unspecified\",\"color\": \"#D3D3D3\"}],\"systemSeriesColors\": [{\"serieName\": \"Total New To Brand Patients\",\"color\": \"#747E8C\"},{\"serieName\": \"2f7da628-1d84-461c-b365-7a2a0c08eb65\",\"color\": \"#2E75F0\"},{\"serieName\": \"99d4ba21-ab4b-4b77-83e2-f226a39b220e\",\"color\": \"#FCC838\"},{\"serieName\": \"pulm\",\"color\": \"#8C62F5\"},{\"serieName\": \"allg\",\"color\": \"#56D3A8\"},{\"serieName\": \"ent\",\"color\": \"#06BF7F\"},{\"serieName\": \"pcp\",\"color\": \"#FCD977\"},{\"serieName\": \"rhu\",\"color\": \"#FCC838\"},{\"serieName\": \"nep\",\"color\": \"#82DFE9\"},{\"serieName\": \"im\",\"color\": \"#48D1E0\"},{\"serieName\": \"im/np\",\"color\": \"#71A1F4\"},{\"serieName\": \"other\",\"color\": \"#2E75F0\"},{\"serieName\": \"alg\",\"color\": \"#71A1F4\"},{\"serieName\": \"cash\",\"color\": \"#06BF7F\"},{\"serieName\": \"medicaid\",\"color\": \"#FCC838\"},{\"serieName\": \"medicare\",\"color\": \"#82DFE9\"},{\"serieName\": \"medicare part d\",\"color\": \"#48D1E0\"},{\"serieName\": \"third party\",\"color\": \"#71A1F4\"},{\"serieName\": \"unspecified\",\"color\": \"#2E75F0\"}]}"
       display_mode: CHART_MODE
     viz_guid: 72484f42-764f-4347-8ae5-5864d7200314
-  - id: Viz_38
+  - id: Viz_37
     answer:
       name: NTB Current Week (vs Last Year) by Pay Type
       description: Growth
@@ -2183,11 +2085,11 @@ liveboard:
         client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotState\": {\"fields\": [{\"dataField\": \"35e18760-b906-467e-8b97-3a6ccd950174\",\"sortBy\": \"value\",\"sortBySummaryField\": \"35e18760-b906-467e-8b97-3a6ccd950174\",\"sortOrder\": \"asc\",\"expanded\": false,\"area\": \"column\"}]},\"isStackedAsPercent\": false,\"dataFieldArea\": \"column\",\"pivotSummariesState\": {\"showColumnTotals\": false,\"showRowGrandTotals\": false,\"showColumnGrandTotals\": false}},\"showStackedLabels\": true,\"allLabels\": true},\"columnProperties\": [{\"columnId\": \"New To Brand Patient Growth\",\"columnProperty\": {\"dataLabels\": true}},{\"columnId\": \"Pay Type\",\"columnProperty\": {\"dataLabels\": true}},{\"columnId\": \"Week(Week ID)\",\"columnProperty\": {\"dataLabels\": true}}],\"axisProperties\": [{\"id\": \"c196d993-0742-4dca-881c-7891ac5ec175\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"New To Brand Patient Growth\"],\"isOpposite\": false}},{\"id\": \"7c5e73e5-ad34-4cc8-bdec-36b85c043b59\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Week(Week ID)\"]}}],\"seriesColors\": [{\"serieName\": \"1d4d82ee-e78c-41f7-901d-4e910715dcee\",\"color\": \"#747E8C\"},{\"serieName\": \"2f7da628-1d84-461c-b365-7a2a0c08eb65\",\"color\": \"#2E75F0\"},{\"serieName\": \"New To Brand Patient Growth\",\"color\": \"#FCC838\"},{\"serieName\": \"pulm\",\"color\": \"#06BF7F\"},{\"serieName\": \"allg\",\"color\": \"#FCC838\"},{\"serieName\": \"ent\",\"color\": \"#82DFE9\"},{\"serieName\": \"pcp\",\"color\": \"#48D1E0\"},{\"serieName\": \"im/np\",\"color\": \"#71A1F4\"},{\"serieName\": \"other\",\"color\": \"#2E75F0\"},{\"serieName\": \"alg\",\"color\": \"#48D1E0\"},{\"serieName\": \"im\",\"color\": \"#FCC838\"},{\"serieName\": \"nep\",\"color\": \"#71A1F4\"},{\"serieName\": \"rhu\",\"color\": \"#FCD977\"},{\"serieName\": \"cash\",\"color\": \"#FFD700\"},{\"serieName\": \"medicaid\",\"color\": \"#556B2F\"},{\"serieName\": \"medicare\",\"color\": \"#9370DB\"},{\"serieName\": \"medicare part d\",\"color\": \"#800000\"},{\"serieName\": \"third party\",\"color\": \"#1E90FF\"},{\"serieName\": \"unspecified\",\"color\": \"#D3D3D3\"}],\"systemSeriesColors\": [{\"serieName\": \"1d4d82ee-e78c-41f7-901d-4e910715dcee\",\"color\": \"#747E8C\"},{\"serieName\": \"2f7da628-1d84-461c-b365-7a2a0c08eb65\",\"color\": \"#2E75F0\"},{\"serieName\": \"New To Brand Patient Growth\",\"color\": \"#FCC838\"},{\"serieName\": \"pulm\",\"color\": \"#06BF7F\"},{\"serieName\": \"allg\",\"color\": \"#FCC838\"},{\"serieName\": \"ent\",\"color\": \"#82DFE9\"},{\"serieName\": \"pcp\",\"color\": \"#48D1E0\"},{\"serieName\": \"im/np\",\"color\": \"#71A1F4\"},{\"serieName\": \"other\",\"color\": \"#2E75F0\"},{\"serieName\": \"alg\",\"color\": \"#48D1E0\"},{\"serieName\": \"im\",\"color\": \"#FCC838\"},{\"serieName\": \"nep\",\"color\": \"#71A1F4\"},{\"serieName\": \"rhu\",\"color\": \"#FCD977\"},{\"serieName\": \"cash\",\"color\": \"#06BF7F\"},{\"serieName\": \"medicaid\",\"color\": \"#FCC838\"},{\"serieName\": \"medicare\",\"color\": \"#82DFE9\"},{\"serieName\": \"medicare part d\",\"color\": \"#48D1E0\"},{\"serieName\": \"third party\",\"color\": \"#71A1F4\"},{\"serieName\": \"unspecified\",\"color\": \"#2E75F0\"}]}"
       display_mode: CHART_MODE
     viz_guid: 41311887-9c2c-4a16-9268-2c9aecaf46f9
-  - id: Viz_39
+  - id: Viz_38
     viz_guid: c392e360-84c1-4039-aa1b-93e7ced0fec9
     note_tile:
       html_parsed_string: "<h2 class=\"theme-module__editor-h2\"><br></h2><p class=\"theme-module__editor-paragraph\" dir=\"ltr\"><span style=\"background-color: rgb(255, 255, 255); color: rgb(28, 35, 48); font-family: optimo-plain, &quot;helvetica neue&quot;, helvetica, arial, sans-serif; font-weight: 400; font-size: 14px; white-space: pre-wrap;\">This scorecard is meant to provide a quick summary for many of the common measures associated with patient counts. Select the market of interest in the top left.  Additional filters can be added by clicking on the \"pills\" above.</span></p><div class=\"pinboard-note-tile-module__noteTileBg editor-module__bgNode\" style=\"background-color: rgb(255, 255, 255);\"></div>"
-  - id: Viz_40
+  - id: Viz_39
     answer:
       name: This scorecard is meant to provide the cumulative YTD trends based on the metric selected above.
       tables:
@@ -2224,7 +2126,7 @@ liveboard:
       - key: Metric Selection
         value: Continue Patients
     viz_guid: a7f4acda-c8fa-4570-bd07-12337ec61016
-  - id: Viz_41
+  - id: Viz_40
     answer:
       name: YOY Trending by Specialty
       tables:
@@ -2326,66 +2228,7 @@ liveboard:
         client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"chartSpecific\": {\"pivotState\": {\"rowExpandedPaths\": [{\"paths\": [\"BENLYSTA\"]},{\"paths\": [\"BENLYSTA\",\"IM\"]},{\"paths\": [\"BENLYSTA\",\"NEP\"]},{\"paths\": [\"BENLYSTA\",\"NONE\"]},{\"paths\": [\"BENLYSTA\",\"ONC\"]},{\"paths\": [\"BENLYSTA\",\"OTHER\"]},{\"paths\": [\"BENLYSTA\",\"RHU\"]},{\"paths\": [\"BENLYSTA-SAPHNELO-GAZYVA\"]},{\"paths\": [\"BENLYSTA-SAPHNELO-GAZYVA\",\"IM\"]},{\"paths\": [\"BENLYSTA-SAPHNELO-GAZYVA\",\"NEP\"]},{\"paths\": [\"BENLYSTA-SAPHNELO-GAZYVA\",\"NONE\"]},{\"paths\": [\"BENLYSTA-SAPHNELO-GAZYVA\",\"ONC\"]},{\"paths\": [\"BENLYSTA-SAPHNELO-GAZYVA\",\"OTHER\"]},{\"paths\": [\"BENLYSTA-SAPHNELO-GAZYVA\",\"RHU\"]},{\"paths\": [\"BENLYSTA-SAPHNELO-GAZYVA W/O ONC\"]},{\"paths\": [\"BENLYSTA-SAPHNELO-GAZYVA W/O ONC\",\"NONE\"]},{\"paths\": [\"CINQAIR\"]},{\"paths\": [\"CINQAIR\",\"ALLG\"]},{\"paths\": [\"CINQAIR\",\"ENT\"]},{\"paths\": [\"CINQAIR\",\"NONE\"]},{\"paths\": [\"CINQAIR\",\"NP_PA\"]},{\"paths\": [\"CINQAIR\",\"OTHER\"]},{\"paths\": [\"CINQAIR\",\"PCP\"]},{\"paths\": [\"CINQAIR\",\"PULM\"]},{\"paths\": [\"CINQAIR\",\"RHU\"]},{\"paths\": [\"DUPIXENT\"]},{\"paths\": [\"DUPIXENT\",\"ALLG\"]},{\"paths\": [\"DUPIXENT\",\"ENT\"]},{\"paths\": [\"DUPIXENT\",\"NONE\"]},{\"paths\": [\"DUPIXENT\",\"NP_PA\"]},{\"paths\": [\"DUPIXENT\",\"OTHER\"]},{\"paths\": [\"DUPIXENT\",\"PCP\"]},{\"paths\": [\"DUPIXENT\",\"PULM\"]},{\"paths\": [\"DUPIXENT\",\"RHU\"]},{\"paths\": [\"FASENRA\"]},{\"paths\": [\"FASENRA\",\"ALLG\"]},{\"paths\": [\"FASENRA\",\"ENT\"]},{\"paths\": [\"FASENRA\",\"NONE\"]},{\"paths\": [\"FASENRA\",\"NP_PA\"]},{\"paths\": [\"FASENRA\",\"OTHER\"]},{\"paths\": [\"FASENRA\",\"PCP\"]},{\"paths\": [\"FASENRA\",\"PULM\"]},{\"paths\": [\"FASENRA\",\"RHU\"]},{\"paths\": [\"GAZYVA\"]},{\"paths\": [\"GAZYVA\",\"IM\"]},{\"paths\": [\"GAZYVA\",\"NEP\"]},{\"paths\": [\"GAZYVA\",\"NONE\"]},{\"paths\": [\"GAZYVA\",\"OTHER\"]},{\"paths\": [\"GAZYVA\",\"RHU\"]},{\"paths\": [\"GAZYVA W/O ONC\"]},{\"paths\": [\"GAZYVA W/O ONC\",\"NONE\"]},{\"paths\": [\"LUPKYNIS\"]},{\"paths\": [\"LUPKYNIS\",\"NONE\"]},{\"paths\": [\"LUPKYNIS\",\"RHU\"]},{\"paths\": [\"NUCALA\"]},{\"paths\": [\"NUCALA\",\"ALLG\"]},{\"paths\": [\"NUCALA\",\"ENT\"]},{\"paths\": [\"NUCALA\",\"NONE\"]},{\"paths\": [\"NUCALA\",\"OTHER\"]},{\"paths\": [\"NUCALA\",\"PCP\"]},{\"paths\": [\"NUCALA\",\"PULM\"]},{\"paths\": [\"NUCALA\",\"RHU\"]},{\"paths\": [\"RITUXIMAB\"]},{\"paths\": [\"RITUXIMAB\",\"IM\"]},{\"paths\": [\"RITUXIMAB\",\"NONE\"]},{\"paths\": [\"RITUXIMAB\",\"ONC\"]},{\"paths\": [\"RITUXIMAB\",\"OTHER\"]},{\"paths\": [\"RITUXIMAB\",\"RHU\"]},{\"paths\": [\"SAPHNELO\"]},{\"paths\": [\"SAPHNELO\",\"IM\"]},{\"paths\": [\"SAPHNELO\",\"NEP\"]},{\"paths\": [\"SAPHNELO\",\"NONE\"]},{\"paths\": [\"SAPHNELO\",\"ONC\"]},{\"paths\": [\"SAPHNELO\",\"OTHER\"]},{\"paths\": [\"SAPHNELO\",\"RHU\"]},{\"paths\": [\"TEZSPIRE\"]},{\"paths\": [\"TEZSPIRE\",\"ALLG\"]},{\"paths\": [\"TEZSPIRE\",\"ENT\"]},{\"paths\": [\"TEZSPIRE\",\"NONE\"]},{\"paths\": [\"TEZSPIRE\",\"NP_PA\"]},{\"paths\": [\"TEZSPIRE\",\"OTHER\"]},{\"paths\": [\"TEZSPIRE\",\"PCP\"]},{\"paths\": [\"TEZSPIRE\",\"PULM\"]},{\"paths\": [\"TEZSPIRE\",\"RHU\"]},{\"paths\": [\"XOLAIR\"]},{\"paths\": [\"XOLAIR\",\"ALLG\"]},{\"paths\": [\"XOLAIR\",\"ENT\"]},{\"paths\": [\"XOLAIR\",\"NONE\"]},{\"paths\": [\"XOLAIR\",\"OTHER\"]},{\"paths\": [\"XOLAIR\",\"PCP\"]},{\"paths\": [\"XOLAIR\",\"PULM\"]},{\"paths\": [\"XOLAIR\",\"RHU\"]}]},\"markersEnabled\": true,\"isStackedAsPercent\": false,\"pivotSummariesState\": {}},\"showStackedLabels\": true,\"allLabels\": true,\"legendPosition\": \"BOTTOM_LEGEND\",\"kpiDisplayProperties\": {\"showDateLabel\": true,\"showCurrentDateLabel\": true,\"showPreviousDateLabel\": true,\"showPreviousValue\": true,\"showChange\": true,\"showChangeAs\": \"PERCENT\",\"changeInterpretation\": \"UPWARD_IS_GOOD\"}},\"columnProperties\": [{\"columnId\": \"Month Range\",\"columnProperty\": {\"dataLabels\": true,\"kpiColumnProperties\": {\"showAbbreviatedPreviousDate\": false,\"abbreviatedPreviousDate\": \"\",\"showSparkline\": true,\"showComparisonDate\": true}}},{\"columnId\": \"Special Year\",\"columnProperty\": {\"dataLabels\": true,\"kpiColumnProperties\": {\"showAbbreviatedPreviousDate\": false,\"abbreviatedPreviousDate\": \"\",\"showSparkline\": true,\"showComparisonDate\": true}}},{\"columnId\": \"Total Metric\",\"columnProperty\": {\"dataLabels\": true,\"kpiColumnProperties\": {\"showAbbreviatedPreviousDate\": false,\"abbreviatedPreviousDate\": \"\",\"showSparkline\": true,\"showComparisonDate\": true}}},{\"columnId\": \"Specialty\",\"columnProperty\": {\"dataLabels\": true,\"kpiColumnProperties\": {\"showAbbreviatedPreviousDate\": false,\"abbreviatedPreviousDate\": \"\",\"showSparkline\": true,\"showComparisonDate\": true}}},{\"columnId\": \"Current Product Group\",\"columnProperty\": {\"dataLabels\": true,\"kpiColumnProperties\": {\"showAbbreviatedPreviousDate\": false,\"showSparkline\": true,\"showComparisonDate\": true}}},{\"columnId\": \"Diagnosis\",\"columnProperty\": {\"dataLabels\": true,\"kpiColumnProperties\": {\"showAbbreviatedPreviousDate\": false,\"showSparkline\": true,\"showComparisonDate\": true}}},{\"columnId\": \"Measure names\",\"columnProperty\": {\"dataLabels\": true,\"kpiColumnProperties\": {\"showAbbreviatedPreviousDate\": false,\"showSparkline\": true,\"showComparisonDate\": true}}},{\"columnId\": \"Measure values\",\"columnProperty\": {\"dataLabels\": true,\"kpiColumnProperties\": {\"showAbbreviatedPreviousDate\": false,\"showSparkline\": true,\"showComparisonDate\": true}}}],\"axisProperties\": [{\"id\": \"22fbc93d-8394-4b57-9c38-4e531c1868d2\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Metric\"],\"isOpposite\": false}},{\"id\": \"ada2b01d-323e-4d47-9f4b-470cd363e585\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Current Product Group\",\"Specialty\",\"Diagnosis\"]}}],\"seriesColors\": [{\"serieName\": \"Total Metric\",\"color\": \"#0073E6\"}]}"
       display_mode: CHART_MODE
     viz_guid: 74355afe-59d8-4b86-b3d2-3798408ac395
-  - id: Viz_42
-    answer:
-      name: Copy of YTD YOY Trend
-      tables:
-      - id: Source of Business Special Time Period
-        name: Source of Business Special Time Period
-        fqn: 4bb1b923-3e6a-48c8-96fd-3a0cd07decbb
-      formulas:
-      - id: formula_Specialty - Diagnosis
-        name: Specialty - Diagnosis
-        expr: "concat ( [Diagnosis] , ' - ' , [Specialty] ) "
-        was_auto_generated: false
-      search_query: "[Month Range] [Special Year] [Month Range] != '{Null}' sort by [Special Year] descending [Report Type Value] [Metric]"
-      answer_columns:
-      - name: Metric
-      - name: Month Range
-      - name: Report Type Value
-      - name: Special Year
-        sort_info:
-          category: DEFAULT
-      table:
-        table_columns:
-        - column_id: Metric
-          show_headline: false
-        - column_id: Month Range
-          show_headline: false
-        - column_id: Report Type Value
-          show_headline: false
-        - column_id: Special Year
-          show_headline: false
-        ordered_column_ids:
-        - Month Range
-        - Special Year
-        - Report Type Value
-        - Metric
-        client_state: ""
-        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
-      chart:
-        type: COLUMN
-        chart_columns:
-        - column_id: Metric
-        - column_id: Month Range
-        - column_id: Report Type Value
-        - column_id: Special Year
-        axis_configs:
-        - x:
-          - Month Range
-          "y":
-          - Metric
-          color:
-          - Special Year
-        client_state: ""
-        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotState\": {\"fields\": [{\"dataField\": \"b7f7f84c-c611-40d1-89a8-8c608fec60df\",\"sortBy\": \"value\",\"sortBySummaryField\": \"b7f7f84c-c611-40d1-89a8-8c608fec60df\",\"sortOrder\": \"asc\",\"expanded\": false,\"area\": \"column\"},{\"dataField\": \"b0ea177f-26af-482c-827e-e5c598f69024\",\"sortBy\": \"value\",\"sortBySummaryField\": \"b0ea177f-26af-482c-827e-e5c598f69024\",\"sortOrder\": \"desc\",\"expanded\": false,\"area\": \"row\"}]},\"markersEnabled\": true,\"isStackedAsPercent\": false,\"customProps\": \"{\\\"advancedProperties\\\":{\\\"tooltip\\\":{\\\"enabled\\\":true}}}\",\"dataFieldArea\": \"row\",\"pivotSummariesState\": {\"showColumnTotals\": false,\"showRowGrandTotals\": false,\"showColumnGrandTotals\": false}},\"showStackedLabels\": true,\"allLabels\": true},\"columnProperties\": [{\"columnId\": \"Measure names\",\"columnProperty\": {\"dataLabels\": true,\"kpiColumnProperties\": {\"showAbbreviatedPreviousDate\": false,\"showSparkline\": true,\"showComparisonDate\": true}}},{\"columnId\": \"Measure values\",\"columnProperty\": {\"dataLabels\": true,\"kpiColumnProperties\": {\"showAbbreviatedPreviousDate\": false,\"showSparkline\": true,\"showComparisonDate\": true}}},{\"columnId\": \"Report Type Value\",\"columnProperty\": {\"dataLabels\": true}},{\"columnId\": \"Metric\",\"columnProperty\": {\"dataLabels\": true}},{\"columnId\": \"Month Range\",\"columnProperty\": {\"dataLabels\": true}},{\"columnId\": \"Special Year\",\"columnProperty\": {\"dataLabels\": true}}],\"axisProperties\": [{\"id\": \"63d06cee-0a9c-4c9f-9625-97353c16aa9c\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Metric\"],\"isOpposite\": false}},{\"id\": \"343ff409-28aa-4c94-84cc-0ba16e5cff5b\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Month Range\"]}}],\"seriesColors\": [{\"serieName\": \"9d990a04-8506-4f81-a562-f834bb991e9e\",\"color\": \"#0073E6\"}],\"systemSeriesColors\": [{\"serieName\": \"9d990a04-8506-4f81-a562-f834bb991e9e\",\"color\": \"#0073E6\"},{\"serieName\": \"ac789717-4fee-4e82-8163-c5e1b45d0fa5\",\"color\": \"#FCC838\"},{\"serieName\": \"f0d5ccc1-c7db-43fe-90a9-35a48de9ffe5\",\"color\": \"#48D1E0\"},{\"serieName\": \"e5708bb6-4792-47e1-b164-accac6b414e7\",\"color\": \"#2E75F0\"},{\"serieName\": \"2025\",\"color\": \"#B094F8\"},{\"serieName\": \"2024\",\"color\": \"#8C62F5\"},{\"serieName\": \"2023\",\"color\": \"#56D3A8\"},{\"serieName\": \"2022\",\"color\": \"#06BF7F\"},{\"serieName\": \"2021\",\"color\": \"#FCD977\"},{\"serieName\": \"2020\",\"color\": \"#FCC838\"},{\"serieName\": \"2019\",\"color\": \"#82DFE9\"},{\"serieName\": \"2018\",\"color\": \"#48D1E0\"},{\"serieName\": \"2017\",\"color\": \"#71A1F4\"},{\"serieName\": \"2016\",\"color\": \"#2E75F0\"},{\"serieName\": \"2026\",\"color\": \"#2359B6\"},{\"serieName\": \"Metric\",\"color\": \"#06BF7F\"}],\"tooltipConfig\": {\"columnIds\": [\"b0ea177f-26af-482c-827e-e5c598f69024\",\"b7f7f84c-c611-40d1-89a8-8c608fec60df\",\"9d990a04-8506-4f81-a562-f834bb991e9e\",\"Special Year\",\"Month Range\"]}}"
-      display_mode: CHART_MODE
-      parameter_values:
-      - key: Metric Selection
-        value: New To Brand Patients
-      dynamic_name: Copy of YTD YOY Trend
-    viz_guid: 418d9036-2a47-4873-9e39-6331a541336a
-  - id: Viz_43
+  - id: Viz_41
     answer:
       name: PS YTD YOY Trend
       tables:
@@ -2700,22 +2543,22 @@ liveboard:
         "y": 22
         height: 4
         width: 3
-      - visualization_id: Viz_33
+      - visualization_id: Viz_32
         x: 6
         "y": 18
         height: 4
         width: 6
-      - visualization_id: Viz_34
+      - visualization_id: Viz_33
         x: 9
         "y": 22
         height: 4
         width: 3
-      - visualization_id: Viz_35
+      - visualization_id: Viz_34
         x: 6
         "y": 22
         height: 4
         width: 3
-      - visualization_id: Viz_39
+      - visualization_id: Viz_38
         x: 0
         "y": 0
         height: 1
@@ -2794,17 +2637,17 @@ liveboard:
         "y": 21
         height: 4
         width: 3
-      - visualization_id: Viz_36
+      - visualization_id: Viz_35
         x: 6
         "y": 17
         height: 4
         width: 6
-      - visualization_id: Viz_37
+      - visualization_id: Viz_36
         x: 6
         "y": 21
         height: 4
         width: 3
-      - visualization_id: Viz_38
+      - visualization_id: Viz_37
         x: 9
         "y": 21
         height: 4
@@ -2816,25 +2659,23 @@ liveboard:
       - visualization_id: Viz_31
         x: 0
         "y": 3
-        height: 8
+        height: 7
         width: 12
-      - visualization_id: Viz_32
-        x: 0
-        "y": 11
-        height: 8
-        width: 12
-      - visualization_id: Viz_40
+      - visualization_id: Viz_39
         x: 0
         "y": 0
         height: 3
         width: 12
-      - visualization_id: Viz_42
-      - visualization_id: Viz_43
+      - visualization_id: Viz_41
+        x: 0
+        "y": 10
+        height: 6
+        width: 12
       id: c5aaa81b-4806-4b1c-b287-127f1ae8f640
     - name: Pivot
       description: ""
       tiles:
-      - visualization_id: Viz_41
+      - visualization_id: Viz_40
         x: 0
         "y": 0
         height: 8
