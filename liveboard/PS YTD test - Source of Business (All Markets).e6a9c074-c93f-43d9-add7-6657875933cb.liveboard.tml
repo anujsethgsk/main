@@ -2310,151 +2310,152 @@ liveboard:
     - Source of Business Special Time Period::Report Type Value
     oper: in
     values:
+    - "{null}"
     - benlysta-definitive with dx
     - benlysta-definitive with dx and renal
     - benlysta-definitive with renal
     - benlysta-none
     - benlysta-probable biopsy
-    - "{null}"
-    - BENLYSTA-PROBABLE WITH DX
-    - BENLYSTA-PROBABLE WITH PROTEINURIA
-    - BENLYSTA-PROBABLE WITH RENAL
-    - BENLYSTA-SAPHNELO-GAZYVA W/O ONC-DEFINITIVE WITH DX
-    - BENLYSTA-SAPHNELO-GAZYVA W/O ONC-DEFINITIVE WITH DX AND RENAL
-    - BENLYSTA-SAPHNELO-GAZYVA W/O ONC-DEFINITIVE WITH RENAL
-    - BENLYSTA-SAPHNELO-GAZYVA W/O ONC-NONE
-    - BENLYSTA-SAPHNELO-GAZYVA W/O ONC-PROBABLE BIOPSY
-    - BENLYSTA-SAPHNELO-GAZYVA W/O ONC-PROBABLE WITH DX
-    - BENLYSTA-SAPHNELO-GAZYVA W/O ONC-PROBABLE WITH PROTEINURIA
-    - BENLYSTA-SAPHNELO-GAZYVA W/O ONC-PROBABLE WITH RENAL
-    - BENLYSTA-SAPHNELO-GAZYVA W/O ONC-SLE ONLY
-    - BENLYSTA-SAPHNELO-GAZYVA-DEFINITIVE WITH DX
-    - BENLYSTA-SAPHNELO-GAZYVA-DEFINITIVE WITH DX AND RENAL
-    - BENLYSTA-SAPHNELO-GAZYVA-DEFINITIVE WITH RENAL
-    - BENLYSTA-SAPHNELO-GAZYVA-NONE
-    - BENLYSTA-SAPHNELO-GAZYVA-PROBABLE BIOPSY
-    - BENLYSTA-SAPHNELO-GAZYVA-PROBABLE WITH DX
-    - BENLYSTA-SAPHNELO-GAZYVA-PROBABLE WITH PROTEINURIA
-    - BENLYSTA-SAPHNELO-GAZYVA-PROBABLE WITH RENAL
-    - BENLYSTA-SAPHNELO-GAZYVA-SLE ONLY
-    - BENLYSTA-SLE ONLY
-    - CINQAIR-ASTHMA - OTHER/UNSPECIFIED
-    - CINQAIR-CIU
-    - CINQAIR-COPD
-    - CINQAIR-COPD_ASTHMA
-    - CINQAIR-EGPA
-    - CINQAIR-EOE
-    - CINQAIR-HES
-    - CINQAIR-NASAL POLYPS
-    - CINQAIR-NONE
-    - CINQAIR-SEVERE ASTHMA
-    - CINQAIR-SUA
-    - DUPIXENT-ASTHMA - OTHER/UNSPECIFIED
-    - DUPIXENT-ATOPIC DERMATITIS
-    - DUPIXENT-CIU
-    - DUPIXENT-COPD
-    - DUPIXENT-COPD_ASTHMA
-    - DUPIXENT-EGPA
-    - DUPIXENT-EOE
-    - DUPIXENT-HES
-    - DUPIXENT-NASAL POLYPS
-    - DUPIXENT-NONE
-    - DUPIXENT-OTHER
-    - DUPIXENT-OTHER ASTHMA
-    - DUPIXENT-SEVERE ASTHMA
-    - DUPIXENT-SUA
-    - EXDENSUR-NONE
-    - EXDENSUR-SEVERE ASTHMA
-    - EXDENSUR-SUA
-    - FASENRA-ASTHMA - OTHER/UNSPECIFIED
-    - FASENRA-ATOPIC DERMATITIS
-    - FASENRA-CIU
-    - FASENRA-COPD
-    - FASENRA-COPD_ASTHMA
-    - FASENRA-EGPA
-    - FASENRA-EOE
-    - FASENRA-HES
-    - FASENRA-NASAL POLYPS
-    - FASENRA-NONE
-    - FASENRA-OTHER
-    - FASENRA-SEVERE ASTHMA
-    - FASENRA-SUA
-    - GAZYVA W/O ONC-DEFINITIVE WITH DX
-    - GAZYVA W/O ONC-DEFINITIVE WITH DX AND RENAL
-    - GAZYVA W/O ONC-DEFINITIVE WITH RENAL
-    - GAZYVA W/O ONC-NONE
-    - GAZYVA W/O ONC-PROBABLE WITH DX
-    - GAZYVA W/O ONC-PROBABLE WITH PROTEINURIA
-    - GAZYVA W/O ONC-PROBABLE WITH RENAL
-    - GAZYVA W/O ONC-SLE ONLY
-    - GAZYVA-DEFINITIVE WITH DX
-    - GAZYVA-DEFINITIVE WITH DX AND RENAL
-    - GAZYVA-DEFINITIVE WITH RENAL
-    - GAZYVA-NONE
-    - GAZYVA-PROBABLE BIOPSY
-    - GAZYVA-PROBABLE WITH DX
-    - GAZYVA-PROBABLE WITH PROTEINURIA
-    - GAZYVA-PROBABLE WITH RENAL
-    - GAZYVA-SLE ONLY
-    - LUPKYNIS-DEFINITIVE WITH DX
-    - LUPKYNIS-NONE
-    - NUCALA-ASTHMA - OTHER/UNSPECIFIED
-    - NUCALA-ATOPIC DERMATITIS
-    - NUCALA-CIU
-    - NUCALA-COPD
-    - NUCALA-COPD_ASTHMA
-    - NUCALA-EGPA
-    - NUCALA-EOE
-    - NUCALA-HES
-    - NUCALA-NASAL POLYPS
-    - NUCALA-NONE
-    - NUCALA-OTHER
-    - NUCALA-SEVERE ASTHMA
-    - NUCALA-SUA
-    - RITUXIMAB-DEFINITIVE WITH DX
-    - RITUXIMAB-DEFINITIVE WITH DX AND RENAL
-    - RITUXIMAB-DEFINITIVE WITH RENAL
-    - RITUXIMAB-NONE
-    - RITUXIMAB-PROBABLE BIOPSY
-    - RITUXIMAB-PROBABLE WITH DX
-    - RITUXIMAB-PROBABLE WITH PROTEINURIA
-    - RITUXIMAB-PROBABLE WITH RENAL
-    - SAPHNELO-DEFINITIVE WITH DX
-    - SAPHNELO-DEFINITIVE WITH DX AND RENAL
-    - SAPHNELO-DEFINITIVE WITH RENAL
-    - SAPHNELO-NONE
-    - SAPHNELO-PROBABLE BIOPSY
-    - SAPHNELO-PROBABLE WITH DX
-    - SAPHNELO-PROBABLE WITH PROTEINURIA
-    - SAPHNELO-PROBABLE WITH RENAL
-    - SAPHNELO-SLE ONLY
-    - TEZSPIRE-ASTHMA - OTHER/UNSPECIFIED
-    - TEZSPIRE-ATOPIC DERMATITIS
-    - TEZSPIRE-CIU
-    - TEZSPIRE-COPD
-    - TEZSPIRE-COPD_ASTHMA
-    - TEZSPIRE-EGPA
-    - TEZSPIRE-EOE
-    - TEZSPIRE-HES
-    - TEZSPIRE-NASAL POLYPS
-    - TEZSPIRE-NONE
-    - TEZSPIRE-OTHER
-    - TEZSPIRE-SEVERE ASTHMA
-    - TEZSPIRE-SUA
-    - XOLAIR-ASTHMA - OTHER/UNSPECIFIED
-    - XOLAIR-ATOPIC DERMATITIS
-    - XOLAIR-CIU
-    - XOLAIR-COPD
-    - XOLAIR-COPD_ASTHMA
-    - XOLAIR-EGPA
-    - XOLAIR-EOE
-    - XOLAIR-HES
-    - XOLAIR-NASAL POLYPS
-    - XOLAIR-NONE
-    - XOLAIR-OTHER
-    - XOLAIR-OTHER ASTHMA
-    - XOLAIR-SEVERE ASTHMA
-    - XOLAIR-SUA
+    - benlysta-probable with dx
+    - benlysta-probable with proteinuria
+    - benlysta-probable with renal
+    - benlysta-saphnelo-gazyva w/o onc-definitive with dx
+    - benlysta-saphnelo-gazyva w/o onc-definitive with dx and renal
+    - benlysta-saphnelo-gazyva w/o onc-definitive with renal
+    - benlysta-saphnelo-gazyva w/o onc-none
+    - benlysta-saphnelo-gazyva w/o onc-probable biopsy
+    - benlysta-saphnelo-gazyva w/o onc-probable with dx
+    - benlysta-saphnelo-gazyva w/o onc-probable with proteinuria
+    - benlysta-saphnelo-gazyva w/o onc-probable with renal
+    - benlysta-saphnelo-gazyva w/o onc-sle only
+    - benlysta-saphnelo-gazyva-definitive with dx
+    - benlysta-saphnelo-gazyva-definitive with dx and renal
+    - benlysta-saphnelo-gazyva-definitive with renal
+    - benlysta-saphnelo-gazyva-none
+    - benlysta-saphnelo-gazyva-probable biopsy
+    - benlysta-saphnelo-gazyva-probable with dx
+    - benlysta-saphnelo-gazyva-probable with proteinuria
+    - benlysta-saphnelo-gazyva-probable with renal
+    - benlysta-saphnelo-gazyva-sle only
+    - benlysta-sle only
+    - cinqair-asthma - other/unspecified
+    - cinqair-ciu
+    - cinqair-copd
+    - cinqair-copd_asthma
+    - cinqair-egpa
+    - cinqair-eoe
+    - cinqair-hes
+    - cinqair-nasal polyps
+    - cinqair-none
+    - cinqair-severe asthma
+    - cinqair-sua
+    - dupixent-asthma - other/unspecified
+    - dupixent-atopic dermatitis
+    - dupixent-ciu
+    - dupixent-copd
+    - dupixent-copd_asthma
+    - dupixent-egpa
+    - dupixent-eoe
+    - dupixent-hes
+    - dupixent-nasal polyps
+    - dupixent-none
+    - dupixent-other
+    - dupixent-other asthma
+    - dupixent-severe asthma
+    - dupixent-sua
+    - exdensur-none
+    - exdensur-severe asthma
+    - exdensur-sua
+    - fasenra-asthma - other/unspecified
+    - fasenra-atopic dermatitis
+    - fasenra-ciu
+    - fasenra-copd
+    - fasenra-copd_asthma
+    - fasenra-egpa
+    - fasenra-eoe
+    - fasenra-hes
+    - fasenra-nasal polyps
+    - fasenra-none
+    - fasenra-other
+    - fasenra-severe asthma
+    - fasenra-sua
+    - gazyva w/o onc-definitive with dx
+    - gazyva w/o onc-definitive with dx and renal
+    - gazyva w/o onc-definitive with renal
+    - gazyva w/o onc-none
+    - gazyva w/o onc-probable with dx
+    - gazyva w/o onc-probable with proteinuria
+    - gazyva w/o onc-probable with renal
+    - gazyva w/o onc-sle only
+    - gazyva-definitive with dx
+    - gazyva-definitive with dx and renal
+    - gazyva-definitive with renal
+    - gazyva-none
+    - gazyva-probable biopsy
+    - gazyva-probable with dx
+    - gazyva-probable with proteinuria
+    - gazyva-probable with renal
+    - gazyva-sle only
+    - lupkynis-definitive with dx
+    - lupkynis-none
+    - nucala-asthma - other/unspecified
+    - nucala-atopic dermatitis
+    - nucala-ciu
+    - nucala-copd
+    - nucala-copd_asthma
+    - nucala-egpa
+    - nucala-eoe
+    - nucala-hes
+    - nucala-nasal polyps
+    - nucala-none
+    - nucala-other
+    - nucala-severe asthma
+    - nucala-sua
+    - rituximab-definitive with dx
+    - rituximab-definitive with dx and renal
+    - rituximab-definitive with renal
+    - rituximab-none
+    - rituximab-probable biopsy
+    - rituximab-probable with dx
+    - rituximab-probable with proteinuria
+    - rituximab-probable with renal
+    - saphnelo-definitive with dx
+    - saphnelo-definitive with dx and renal
+    - saphnelo-definitive with renal
+    - saphnelo-none
+    - saphnelo-probable biopsy
+    - saphnelo-probable with dx
+    - saphnelo-probable with proteinuria
+    - saphnelo-probable with renal
+    - saphnelo-sle only
+    - tezspire-asthma - other/unspecified
+    - tezspire-atopic dermatitis
+    - tezspire-ciu
+    - tezspire-copd
+    - tezspire-copd_asthma
+    - tezspire-egpa
+    - tezspire-eoe
+    - tezspire-hes
+    - tezspire-nasal polyps
+    - tezspire-none
+    - tezspire-other
+    - tezspire-severe asthma
+    - tezspire-sua
+    - xolair-asthma - other/unspecified
+    - xolair-atopic dermatitis
+    - xolair-ciu
+    - xolair-copd
+    - xolair-copd_asthma
+    - xolair-egpa
+    - xolair-eoe
+    - xolair-hes
+    - xolair-nasal polyps
+    - xolair-none
+    - xolair-other
+    - xolair-other asthma
+    - xolair-severe asthma
+    - xolair-sua
+    - NUCALA
     is_mandatory: true
     is_single_value: false
     display_name: ""
@@ -2685,11 +2686,9 @@ liveboard:
   - key: 838e72ba-28a1-470b-a5f9-da775e1898ce
     value:
       name: Source of Business Special Time Period::Metric Selection
-      override_value: Continue Patients
   - key: eeb1fec6-fa72-41b4-9aa7-cb637df3bf51
     value:
       name: Source of Business Special Time Period::Report-Type
-      override_value: PRODUCT+DIAGNOSIS CATEGORY
   ordered_chips:
   - name: Source Of Business::Current Channel Desc
     type: FILTER
@@ -2701,349 +2700,6 @@ liveboard:
     type: PARAMETER
   - name: Source of Business Special Time Period::Report Type Value
     type: FILTER
-  views:
-  - view_guid: c02aaa2d-bf42-4335-8897-e714629aeb74
-    name: Lupus
-    view_filters:
-    - column:
-      - Source Of Business::Current Channel Desc
-      oper: in
-    - column:
-      - Source Of Business::Pay Type
-      oper: in
-    - column:
-      - Source of Business Special Time Period::Report Type Value
-      oper: not in
-      values:
-      - "{null}"
-    - column:
-      - Source of Business Special Time Period::Report Type Value
-      oper: in
-      values:
-      - benlysta-definitive with dx
-      - benlysta-definitive with dx and renal
-      - benlysta-definitive with renal
-      - benlysta-none
-      - benlysta-probable biopsy
-      - "{null}"
-      - BENLYSTA-PROBABLE WITH DX
-      - BENLYSTA-PROBABLE WITH PROTEINURIA
-      - BENLYSTA-PROBABLE WITH RENAL
-      - BENLYSTA-SAPHNELO-GAZYVA W/O ONC-DEFINITIVE WITH DX
-      - BENLYSTA-SAPHNELO-GAZYVA W/O ONC-DEFINITIVE WITH DX AND RENAL
-      - BENLYSTA-SAPHNELO-GAZYVA W/O ONC-DEFINITIVE WITH RENAL
-      - BENLYSTA-SAPHNELO-GAZYVA W/O ONC-NONE
-      - BENLYSTA-SAPHNELO-GAZYVA W/O ONC-PROBABLE BIOPSY
-      - BENLYSTA-SAPHNELO-GAZYVA W/O ONC-PROBABLE WITH DX
-      - BENLYSTA-SAPHNELO-GAZYVA W/O ONC-PROBABLE WITH PROTEINURIA
-      - BENLYSTA-SAPHNELO-GAZYVA W/O ONC-PROBABLE WITH RENAL
-      - BENLYSTA-SAPHNELO-GAZYVA W/O ONC-SLE ONLY
-      - BENLYSTA-SAPHNELO-GAZYVA-DEFINITIVE WITH DX
-      - BENLYSTA-SAPHNELO-GAZYVA-DEFINITIVE WITH DX AND RENAL
-      - BENLYSTA-SAPHNELO-GAZYVA-DEFINITIVE WITH RENAL
-      - BENLYSTA-SAPHNELO-GAZYVA-NONE
-      - BENLYSTA-SAPHNELO-GAZYVA-PROBABLE BIOPSY
-      - BENLYSTA-SAPHNELO-GAZYVA-PROBABLE WITH DX
-      - BENLYSTA-SAPHNELO-GAZYVA-PROBABLE WITH PROTEINURIA
-      - BENLYSTA-SAPHNELO-GAZYVA-PROBABLE WITH RENAL
-      - BENLYSTA-SAPHNELO-GAZYVA-SLE ONLY
-      - BENLYSTA-SLE ONLY
-      - CINQAIR-ASTHMA - OTHER/UNSPECIFIED
-      - CINQAIR-CIU
-      - CINQAIR-COPD
-      - CINQAIR-COPD_ASTHMA
-      - CINQAIR-EGPA
-      - CINQAIR-EOE
-      - CINQAIR-HES
-      - CINQAIR-NASAL POLYPS
-      - CINQAIR-NONE
-      - CINQAIR-SEVERE ASTHMA
-      - CINQAIR-SUA
-      - DUPIXENT-ASTHMA - OTHER/UNSPECIFIED
-      - DUPIXENT-ATOPIC DERMATITIS
-      - DUPIXENT-CIU
-      - DUPIXENT-COPD
-      - DUPIXENT-COPD_ASTHMA
-      - DUPIXENT-EGPA
-      - DUPIXENT-EOE
-      - DUPIXENT-HES
-      - DUPIXENT-NASAL POLYPS
-      - DUPIXENT-NONE
-      - DUPIXENT-OTHER
-      - DUPIXENT-OTHER ASTHMA
-      - DUPIXENT-SEVERE ASTHMA
-      - DUPIXENT-SUA
-      - EXDENSUR-NONE
-      - EXDENSUR-SEVERE ASTHMA
-      - EXDENSUR-SUA
-      - FASENRA-ASTHMA - OTHER/UNSPECIFIED
-      - FASENRA-ATOPIC DERMATITIS
-      - FASENRA-CIU
-      - FASENRA-COPD
-      - FASENRA-COPD_ASTHMA
-      - FASENRA-EGPA
-      - FASENRA-EOE
-      - FASENRA-HES
-      - FASENRA-NASAL POLYPS
-      - FASENRA-NONE
-      - FASENRA-OTHER
-      - FASENRA-SEVERE ASTHMA
-      - FASENRA-SUA
-      - GAZYVA W/O ONC-DEFINITIVE WITH DX
-      - GAZYVA W/O ONC-DEFINITIVE WITH DX AND RENAL
-      - GAZYVA W/O ONC-DEFINITIVE WITH RENAL
-      - GAZYVA W/O ONC-NONE
-      - GAZYVA W/O ONC-PROBABLE WITH DX
-      - GAZYVA W/O ONC-PROBABLE WITH PROTEINURIA
-      - GAZYVA W/O ONC-PROBABLE WITH RENAL
-      - GAZYVA W/O ONC-SLE ONLY
-      - GAZYVA-DEFINITIVE WITH DX
-      - GAZYVA-DEFINITIVE WITH DX AND RENAL
-      - GAZYVA-DEFINITIVE WITH RENAL
-      - GAZYVA-NONE
-      - GAZYVA-PROBABLE BIOPSY
-      - GAZYVA-PROBABLE WITH DX
-      - GAZYVA-PROBABLE WITH PROTEINURIA
-      - GAZYVA-PROBABLE WITH RENAL
-      - GAZYVA-SLE ONLY
-      - LUPKYNIS-DEFINITIVE WITH DX
-      - LUPKYNIS-NONE
-      - NUCALA-ASTHMA - OTHER/UNSPECIFIED
-      - NUCALA-ATOPIC DERMATITIS
-      - NUCALA-CIU
-      - NUCALA-COPD
-      - NUCALA-COPD_ASTHMA
-      - NUCALA-EGPA
-      - NUCALA-EOE
-      - NUCALA-HES
-      - NUCALA-NASAL POLYPS
-      - NUCALA-NONE
-      - NUCALA-OTHER
-      - NUCALA-SEVERE ASTHMA
-      - NUCALA-SUA
-      - RITUXIMAB-DEFINITIVE WITH DX
-      - RITUXIMAB-DEFINITIVE WITH DX AND RENAL
-      - RITUXIMAB-DEFINITIVE WITH RENAL
-      - RITUXIMAB-NONE
-      - RITUXIMAB-PROBABLE BIOPSY
-      - RITUXIMAB-PROBABLE WITH DX
-      - RITUXIMAB-PROBABLE WITH PROTEINURIA
-      - RITUXIMAB-PROBABLE WITH RENAL
-      - SAPHNELO-DEFINITIVE WITH DX
-      - SAPHNELO-DEFINITIVE WITH DX AND RENAL
-      - SAPHNELO-DEFINITIVE WITH RENAL
-      - SAPHNELO-NONE
-      - SAPHNELO-PROBABLE BIOPSY
-      - SAPHNELO-PROBABLE WITH DX
-      - SAPHNELO-PROBABLE WITH PROTEINURIA
-      - SAPHNELO-PROBABLE WITH RENAL
-      - SAPHNELO-SLE ONLY
-      - TEZSPIRE-ASTHMA - OTHER/UNSPECIFIED
-      - TEZSPIRE-ATOPIC DERMATITIS
-      - TEZSPIRE-CIU
-      - TEZSPIRE-COPD
-      - TEZSPIRE-COPD_ASTHMA
-      - TEZSPIRE-EGPA
-      - TEZSPIRE-EOE
-      - TEZSPIRE-HES
-      - TEZSPIRE-NASAL POLYPS
-      - TEZSPIRE-NONE
-      - TEZSPIRE-OTHER
-      - TEZSPIRE-SEVERE ASTHMA
-      - TEZSPIRE-SUA
-      - XOLAIR-ASTHMA - OTHER/UNSPECIFIED
-      - XOLAIR-ATOPIC DERMATITIS
-      - XOLAIR-CIU
-      - XOLAIR-COPD
-      - XOLAIR-COPD_ASTHMA
-      - XOLAIR-EGPA
-      - XOLAIR-EOE
-      - XOLAIR-HES
-      - XOLAIR-NASAL POLYPS
-      - XOLAIR-NONE
-      - XOLAIR-OTHER
-      - XOLAIR-OTHER ASTHMA
-      - XOLAIR-SEVERE ASTHMA
-      - XOLAIR-SUA
-    is_public: true
-    view_parameters:
-    - name: ""
-      id: 838e72ba-28a1-470b-a5f9-da775e1898ce
-      override_value: Continue Patients
-    - name: Report Type Selection
-      id: eeb1fec6-fa72-41b4-9aa7-cb637df3bf51
-      override_value: PRODUCT+DIAGNOSIS CATEGORY
-  - view_guid: 9025740b-1d50-4f56-865f-a6f9ba1b38e2
-    name: Resp Bio
-    view_filters:
-    - column:
-      - Source Of Business::Current Channel Desc
-      oper: in
-    - column:
-      - Source Of Business::Pay Type
-      oper: in
-    - column:
-      - Source of Business Special Time Period::Report Type Value
-      oper: not in
-      values:
-      - "{null}"
-    - column:
-      - Source of Business Special Time Period::Report Type Value
-      oper: in
-      values:
-      - benlysta-definitive with dx
-      - benlysta-definitive with dx and renal
-      - benlysta-definitive with renal
-      - benlysta-none
-      - benlysta-probable biopsy
-      - "{null}"
-      - BENLYSTA-PROBABLE WITH DX
-      - BENLYSTA-PROBABLE WITH PROTEINURIA
-      - BENLYSTA-PROBABLE WITH RENAL
-      - BENLYSTA-SAPHNELO-GAZYVA W/O ONC-DEFINITIVE WITH DX
-      - BENLYSTA-SAPHNELO-GAZYVA W/O ONC-DEFINITIVE WITH DX AND RENAL
-      - BENLYSTA-SAPHNELO-GAZYVA W/O ONC-DEFINITIVE WITH RENAL
-      - BENLYSTA-SAPHNELO-GAZYVA W/O ONC-NONE
-      - BENLYSTA-SAPHNELO-GAZYVA W/O ONC-PROBABLE BIOPSY
-      - BENLYSTA-SAPHNELO-GAZYVA W/O ONC-PROBABLE WITH DX
-      - BENLYSTA-SAPHNELO-GAZYVA W/O ONC-PROBABLE WITH PROTEINURIA
-      - BENLYSTA-SAPHNELO-GAZYVA W/O ONC-PROBABLE WITH RENAL
-      - BENLYSTA-SAPHNELO-GAZYVA W/O ONC-SLE ONLY
-      - BENLYSTA-SAPHNELO-GAZYVA-DEFINITIVE WITH DX
-      - BENLYSTA-SAPHNELO-GAZYVA-DEFINITIVE WITH DX AND RENAL
-      - BENLYSTA-SAPHNELO-GAZYVA-DEFINITIVE WITH RENAL
-      - BENLYSTA-SAPHNELO-GAZYVA-NONE
-      - BENLYSTA-SAPHNELO-GAZYVA-PROBABLE BIOPSY
-      - BENLYSTA-SAPHNELO-GAZYVA-PROBABLE WITH DX
-      - BENLYSTA-SAPHNELO-GAZYVA-PROBABLE WITH PROTEINURIA
-      - BENLYSTA-SAPHNELO-GAZYVA-PROBABLE WITH RENAL
-      - BENLYSTA-SAPHNELO-GAZYVA-SLE ONLY
-      - BENLYSTA-SLE ONLY
-      - CINQAIR-ASTHMA - OTHER/UNSPECIFIED
-      - CINQAIR-CIU
-      - CINQAIR-COPD
-      - CINQAIR-COPD_ASTHMA
-      - CINQAIR-EGPA
-      - CINQAIR-EOE
-      - CINQAIR-HES
-      - CINQAIR-NASAL POLYPS
-      - CINQAIR-NONE
-      - CINQAIR-SEVERE ASTHMA
-      - CINQAIR-SUA
-      - DUPIXENT-ASTHMA - OTHER/UNSPECIFIED
-      - DUPIXENT-ATOPIC DERMATITIS
-      - DUPIXENT-CIU
-      - DUPIXENT-COPD
-      - DUPIXENT-COPD_ASTHMA
-      - DUPIXENT-EGPA
-      - DUPIXENT-EOE
-      - DUPIXENT-HES
-      - DUPIXENT-NASAL POLYPS
-      - DUPIXENT-NONE
-      - DUPIXENT-OTHER
-      - DUPIXENT-OTHER ASTHMA
-      - DUPIXENT-SEVERE ASTHMA
-      - DUPIXENT-SUA
-      - EXDENSUR-NONE
-      - EXDENSUR-SEVERE ASTHMA
-      - EXDENSUR-SUA
-      - FASENRA-ASTHMA - OTHER/UNSPECIFIED
-      - FASENRA-ATOPIC DERMATITIS
-      - FASENRA-CIU
-      - FASENRA-COPD
-      - FASENRA-COPD_ASTHMA
-      - FASENRA-EGPA
-      - FASENRA-EOE
-      - FASENRA-HES
-      - FASENRA-NASAL POLYPS
-      - FASENRA-NONE
-      - FASENRA-OTHER
-      - FASENRA-SEVERE ASTHMA
-      - FASENRA-SUA
-      - GAZYVA W/O ONC-DEFINITIVE WITH DX
-      - GAZYVA W/O ONC-DEFINITIVE WITH DX AND RENAL
-      - GAZYVA W/O ONC-DEFINITIVE WITH RENAL
-      - GAZYVA W/O ONC-NONE
-      - GAZYVA W/O ONC-PROBABLE WITH DX
-      - GAZYVA W/O ONC-PROBABLE WITH PROTEINURIA
-      - GAZYVA W/O ONC-PROBABLE WITH RENAL
-      - GAZYVA W/O ONC-SLE ONLY
-      - GAZYVA-DEFINITIVE WITH DX
-      - GAZYVA-DEFINITIVE WITH DX AND RENAL
-      - GAZYVA-DEFINITIVE WITH RENAL
-      - GAZYVA-NONE
-      - GAZYVA-PROBABLE BIOPSY
-      - GAZYVA-PROBABLE WITH DX
-      - GAZYVA-PROBABLE WITH PROTEINURIA
-      - GAZYVA-PROBABLE WITH RENAL
-      - GAZYVA-SLE ONLY
-      - LUPKYNIS-DEFINITIVE WITH DX
-      - LUPKYNIS-NONE
-      - NUCALA-ASTHMA - OTHER/UNSPECIFIED
-      - NUCALA-ATOPIC DERMATITIS
-      - NUCALA-CIU
-      - NUCALA-COPD
-      - NUCALA-COPD_ASTHMA
-      - NUCALA-EGPA
-      - NUCALA-EOE
-      - NUCALA-HES
-      - NUCALA-NASAL POLYPS
-      - NUCALA-NONE
-      - NUCALA-OTHER
-      - NUCALA-SEVERE ASTHMA
-      - NUCALA-SUA
-      - RITUXIMAB-DEFINITIVE WITH DX
-      - RITUXIMAB-DEFINITIVE WITH DX AND RENAL
-      - RITUXIMAB-DEFINITIVE WITH RENAL
-      - RITUXIMAB-NONE
-      - RITUXIMAB-PROBABLE BIOPSY
-      - RITUXIMAB-PROBABLE WITH DX
-      - RITUXIMAB-PROBABLE WITH PROTEINURIA
-      - RITUXIMAB-PROBABLE WITH RENAL
-      - SAPHNELO-DEFINITIVE WITH DX
-      - SAPHNELO-DEFINITIVE WITH DX AND RENAL
-      - SAPHNELO-DEFINITIVE WITH RENAL
-      - SAPHNELO-NONE
-      - SAPHNELO-PROBABLE BIOPSY
-      - SAPHNELO-PROBABLE WITH DX
-      - SAPHNELO-PROBABLE WITH PROTEINURIA
-      - SAPHNELO-PROBABLE WITH RENAL
-      - SAPHNELO-SLE ONLY
-      - TEZSPIRE-ASTHMA - OTHER/UNSPECIFIED
-      - TEZSPIRE-ATOPIC DERMATITIS
-      - TEZSPIRE-CIU
-      - TEZSPIRE-COPD
-      - TEZSPIRE-COPD_ASTHMA
-      - TEZSPIRE-EGPA
-      - TEZSPIRE-EOE
-      - TEZSPIRE-HES
-      - TEZSPIRE-NASAL POLYPS
-      - TEZSPIRE-NONE
-      - TEZSPIRE-OTHER
-      - TEZSPIRE-SEVERE ASTHMA
-      - TEZSPIRE-SUA
-      - XOLAIR-ASTHMA - OTHER/UNSPECIFIED
-      - XOLAIR-ATOPIC DERMATITIS
-      - XOLAIR-CIU
-      - XOLAIR-COPD
-      - XOLAIR-COPD_ASTHMA
-      - XOLAIR-EGPA
-      - XOLAIR-EOE
-      - XOLAIR-HES
-      - XOLAIR-NASAL POLYPS
-      - XOLAIR-NONE
-      - XOLAIR-OTHER
-      - XOLAIR-OTHER ASTHMA
-      - XOLAIR-SEVERE ASTHMA
-      - XOLAIR-SUA
-    is_public: true
-    view_parameters:
-    - name: ""
-      id: 838e72ba-28a1-470b-a5f9-da775e1898ce
-      override_value: Continue Patients
-    - name: Report Type Selection
-      id: eeb1fec6-fa72-41b4-9aa7-cb637df3bf51
-      override_value: PRODUCT+DIAGNOSIS CATEGORY
   style:
     style_properties:
     - name: lb_border_type
