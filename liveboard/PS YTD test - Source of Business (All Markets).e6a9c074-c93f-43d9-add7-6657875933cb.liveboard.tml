@@ -2300,6 +2300,11 @@ liveboard:
     display_name: ""
   - column:
     - Source of Business Special Time Period::Report Type Value
+    oper: not in
+    values:
+    - "{null}"
+    excluded_visualizations:
+    - Viz_40
     is_mandatory: false
     is_single_value: false
     display_name: ""
@@ -2530,9 +2535,11 @@ liveboard:
   - key: 838e72ba-28a1-470b-a5f9-da775e1898ce
     value:
       name: Source of Business Special Time Period::Metric Selection
+      override_value: Continue Patients
   - key: eeb1fec6-fa72-41b4-9aa7-cb637df3bf51
     value:
       name: Source of Business Special Time Period::Report-Type
+      override_value: PRODUCT+DIAGNOSIS CATEGORY
   ordered_chips:
   - name: Source Of Business::Current Channel Desc
     type: FILTER
@@ -2556,13 +2563,17 @@ liveboard:
       oper: in
     - column:
       - Source of Business Special Time Period::Report Type Value
-      oper: in
+      oper: not in
+      values:
+      - "{null}"
     is_public: true
     view_parameters:
     - name: ""
       id: 838e72ba-28a1-470b-a5f9-da775e1898ce
+      override_value: Continue Patients
     - name: Report Type Selection
       id: eeb1fec6-fa72-41b4-9aa7-cb637df3bf51
+      override_value: PRODUCT+DIAGNOSIS CATEGORY
   - view_guid: 9025740b-1d50-4f56-865f-a6f9ba1b38e2
     name: Resp Bio
     view_filters:
@@ -2574,13 +2585,17 @@ liveboard:
       oper: in
     - column:
       - Source of Business Special Time Period::Report Type Value
-      oper: in
+      oper: not in
+      values:
+      - "{null}"
     is_public: true
     view_parameters:
     - name: ""
       id: 838e72ba-28a1-470b-a5f9-da775e1898ce
+      override_value: Continue Patients
     - name: Report Type Selection
       id: eeb1fec6-fa72-41b4-9aa7-cb637df3bf51
+      override_value: PRODUCT+DIAGNOSIS CATEGORY
   style:
     style_properties:
     - name: lb_border_type
