@@ -1679,7 +1679,7 @@ liveboard:
       - id: Source of Business Special Time Period
         name: Source of Business Special Time Period
         fqn: 4bb1b923-3e6a-48c8-96fd-3a0cd07decbb
-      search_query: "[Month Range] [Is Ytd].'Year to date' [Special Year] [Report Type Value] [Metric]"
+      search_query: "[Month Range] [Is Ytd].'Year to date' [Special Year] [Report Type Value] [Metric] [Metric] != {null}"
       answer_columns:
       - name: Metric
       - name: Month Range
