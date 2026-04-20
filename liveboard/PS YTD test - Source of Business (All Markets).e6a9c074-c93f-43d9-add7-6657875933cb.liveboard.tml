@@ -2298,163 +2298,7 @@ liveboard:
     display_name: ""
   - column:
     - Source of Business Special Time Period::Report Type Value
-    oper: not in
-    values:
-    - "{null}"
-    is_mandatory: true
-    is_single_value: false
-    display_name: ""
-  - column:
-    - Source of Business Special Time Period::Report Type Value
-    oper: in
-    values:
-    - "{null}"
-    - benlysta-definitive with dx
-    - benlysta-definitive with dx and renal
-    - benlysta-definitive with renal
-    - benlysta-none
-    - benlysta-probable biopsy
-    - benlysta-probable with dx
-    - benlysta-probable with proteinuria
-    - benlysta-probable with renal
-    - benlysta-saphnelo-gazyva w/o onc-definitive with dx
-    - benlysta-saphnelo-gazyva w/o onc-definitive with dx and renal
-    - benlysta-saphnelo-gazyva w/o onc-definitive with renal
-    - benlysta-saphnelo-gazyva w/o onc-none
-    - benlysta-saphnelo-gazyva w/o onc-probable biopsy
-    - benlysta-saphnelo-gazyva w/o onc-probable with dx
-    - benlysta-saphnelo-gazyva w/o onc-probable with proteinuria
-    - benlysta-saphnelo-gazyva w/o onc-probable with renal
-    - benlysta-saphnelo-gazyva w/o onc-sle only
-    - benlysta-saphnelo-gazyva-definitive with dx
-    - benlysta-saphnelo-gazyva-definitive with dx and renal
-    - benlysta-saphnelo-gazyva-definitive with renal
-    - benlysta-saphnelo-gazyva-none
-    - benlysta-saphnelo-gazyva-probable biopsy
-    - benlysta-saphnelo-gazyva-probable with dx
-    - benlysta-saphnelo-gazyva-probable with proteinuria
-    - benlysta-saphnelo-gazyva-probable with renal
-    - benlysta-saphnelo-gazyva-sle only
-    - benlysta-sle only
-    - cinqair-asthma - other/unspecified
-    - cinqair-ciu
-    - cinqair-copd
-    - cinqair-copd_asthma
-    - cinqair-egpa
-    - cinqair-eoe
-    - cinqair-hes
-    - cinqair-nasal polyps
-    - cinqair-none
-    - cinqair-severe asthma
-    - cinqair-sua
-    - dupixent-asthma - other/unspecified
-    - dupixent-atopic dermatitis
-    - dupixent-ciu
-    - dupixent-copd
-    - dupixent-copd_asthma
-    - dupixent-egpa
-    - dupixent-eoe
-    - dupixent-hes
-    - dupixent-nasal polyps
-    - dupixent-none
-    - dupixent-other
-    - dupixent-other asthma
-    - dupixent-severe asthma
-    - dupixent-sua
-    - exdensur-none
-    - exdensur-severe asthma
-    - exdensur-sua
-    - fasenra-asthma - other/unspecified
-    - fasenra-atopic dermatitis
-    - fasenra-ciu
-    - fasenra-copd
-    - fasenra-copd_asthma
-    - fasenra-egpa
-    - fasenra-eoe
-    - fasenra-hes
-    - fasenra-nasal polyps
-    - fasenra-none
-    - fasenra-other
-    - fasenra-severe asthma
-    - fasenra-sua
-    - gazyva w/o onc-definitive with dx
-    - gazyva w/o onc-definitive with dx and renal
-    - gazyva w/o onc-definitive with renal
-    - gazyva w/o onc-none
-    - gazyva w/o onc-probable with dx
-    - gazyva w/o onc-probable with proteinuria
-    - gazyva w/o onc-probable with renal
-    - gazyva w/o onc-sle only
-    - gazyva-definitive with dx
-    - gazyva-definitive with dx and renal
-    - gazyva-definitive with renal
-    - gazyva-none
-    - gazyva-probable biopsy
-    - gazyva-probable with dx
-    - gazyva-probable with proteinuria
-    - gazyva-probable with renal
-    - gazyva-sle only
-    - lupkynis-definitive with dx
-    - lupkynis-none
-    - nucala-asthma - other/unspecified
-    - nucala-atopic dermatitis
-    - nucala-ciu
-    - nucala-copd
-    - nucala-copd_asthma
-    - nucala-egpa
-    - nucala-eoe
-    - nucala-hes
-    - nucala-nasal polyps
-    - nucala-none
-    - nucala-other
-    - nucala-severe asthma
-    - nucala-sua
-    - rituximab-definitive with dx
-    - rituximab-definitive with dx and renal
-    - rituximab-definitive with renal
-    - rituximab-none
-    - rituximab-probable biopsy
-    - rituximab-probable with dx
-    - rituximab-probable with proteinuria
-    - rituximab-probable with renal
-    - saphnelo-definitive with dx
-    - saphnelo-definitive with dx and renal
-    - saphnelo-definitive with renal
-    - saphnelo-none
-    - saphnelo-probable biopsy
-    - saphnelo-probable with dx
-    - saphnelo-probable with proteinuria
-    - saphnelo-probable with renal
-    - saphnelo-sle only
-    - tezspire-asthma - other/unspecified
-    - tezspire-atopic dermatitis
-    - tezspire-ciu
-    - tezspire-copd
-    - tezspire-copd_asthma
-    - tezspire-egpa
-    - tezspire-eoe
-    - tezspire-hes
-    - tezspire-nasal polyps
-    - tezspire-none
-    - tezspire-other
-    - tezspire-severe asthma
-    - tezspire-sua
-    - xolair-asthma - other/unspecified
-    - xolair-atopic dermatitis
-    - xolair-ciu
-    - xolair-copd
-    - xolair-copd_asthma
-    - xolair-egpa
-    - xolair-eoe
-    - xolair-hes
-    - xolair-nasal polyps
-    - xolair-none
-    - xolair-other
-    - xolair-other asthma
-    - xolair-severe asthma
-    - xolair-sua
-    - NUCALA
-    is_mandatory: true
+    is_mandatory: false
     is_single_value: false
     display_name: ""
   layout:
@@ -2698,6 +2542,43 @@ liveboard:
     type: PARAMETER
   - name: Source of Business Special Time Period::Report Type Value
     type: FILTER
+  views:
+  - view_guid: c02aaa2d-bf42-4335-8897-e714629aeb74
+    name: Lupus
+    view_filters:
+    - column:
+      - Source Of Business::Current Channel Desc
+      oper: in
+    - column:
+      - Source Of Business::Pay Type
+      oper: in
+    - column:
+      - Source of Business Special Time Period::Report Type Value
+      oper: in
+    is_public: true
+    view_parameters:
+    - name: ""
+      id: 838e72ba-28a1-470b-a5f9-da775e1898ce
+    - name: Report Type Selection
+      id: eeb1fec6-fa72-41b4-9aa7-cb637df3bf51
+  - view_guid: 9025740b-1d50-4f56-865f-a6f9ba1b38e2
+    name: Resp Bio
+    view_filters:
+    - column:
+      - Source Of Business::Current Channel Desc
+      oper: in
+    - column:
+      - Source Of Business::Pay Type
+      oper: in
+    - column:
+      - Source of Business Special Time Period::Report Type Value
+      oper: in
+    is_public: true
+    view_parameters:
+    - name: ""
+      id: 838e72ba-28a1-470b-a5f9-da775e1898ce
+    - name: Report Type Selection
+      id: eeb1fec6-fa72-41b4-9aa7-cb637df3bf51
   style:
     style_properties:
     - name: lb_border_type
