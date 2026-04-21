@@ -4631,6 +4631,10 @@ liveboard:
         height: 4
         width: 3
       - visualization_id: Viz_40
+        x: 6
+        "y": 8
+        height: 4
+        width: 6
       id: 54ade2a8-71dd-4030-97ba-8854642bab9f
     - name: NTB Patients
       description: ""
