@@ -4404,86 +4404,6 @@ liveboard:
       dynamic_name: Anuj - Market Share (R4W)
       dynamic_description: Total Patients
     viz_guid: ca88555d-2ad5-41ae-a665-bebbe8c95647
-  - id: Viz_40
-    answer:
-      name: AJ Muze Weekly New Referrals
-      tables:
-      - id: Source Of Business
-        name: Source Of Business
-        fqn: 99515b8e-6cab-4177-850a-d1309b319ab3
-      formulas:
-      - id: formula_Current
-        name: Current
-        expr: "group_aggregate ( sum ( [New Referrals] ) , { } , { } + { [Months Ago] = 1 } )"
-        was_auto_generated: false
-      - id: formula_Goal
-        name: Goal
-        expr: "group_aggregate ( [Referral Goal] , { } , { } + { [Months Ago] = 1 } )"
-        was_auto_generated: false
-      - id: formula_Previous
-        name: Previous
-        expr: "group_aggregate ( sum ( [New Referrals] ) , { } , { } + { [Months Ago] = 2 } )"
-        was_auto_generated: false
-      search_query: "[Current Product Group].nucala [formula_Current] [formula_Previous] [formula_Goal] [Current Brand] [Week ID] [Week ID].weekly [New To Brand Patients] [New To Brand Patients (Plan)]"
-      answer_columns:
-      - name: Current
-      - name: Current Brand
-      - name: Goal
-      - name: Previous
-      - name: Total New To Brand Patients
-      - name: Total New To Brand Patients (Plan)
-      - name: Week(Week ID)
-      table:
-        table_columns:
-        - column_id: Current
-          show_headline: false
-        - column_id: Current Brand
-          show_headline: false
-        - column_id: Goal
-          show_headline: false
-        - column_id: Previous
-          show_headline: false
-        - column_id: Total New To Brand Patients
-          show_headline: false
-        - column_id: Total New To Brand Patients (Plan)
-          show_headline: false
-        - column_id: Week(Week ID)
-          show_headline: false
-        ordered_column_ids:
-        - Current Brand
-        - Week(Week ID)
-        - Current
-        - Previous
-        - Goal
-        - Total New To Brand Patients
-        - Total New To Brand Patients (Plan)
-        client_state: ""
-        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
-      chart:
-        type: MUZE_STUDIO
-        chart_columns:
-        - column_id: Current
-        - column_id: Current Brand
-        - column_id: Goal
-        - column_id: Previous
-        - column_id: Total New To Brand Patients
-        - column_id: Total New To Brand Patients (Plan)
-        - column_id: Week(Week ID)
-        client_state: ""
-        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"showLinearRegressionLine\": false,\"chartSpecific\": {\"stackedAsPercentFormat\": {\"category\": \"PERCENTAGE\",\"percentageFormatConfig\": {\"decimals\": 2.0,\"removeTrailingZeroes\": false},\"isCategoryEditable\": false},\"customProps\": \"{\\\"tileType\\\":null,\\\"advancedProperties\\\":{\\\"tooltip\\\":{\\\"enabled\\\":true,\\\"borderWidth\\\":\\\"1\\\",\\\"opacity\\\":\\\"\\\",\\\"label\\\":{},\\\"value\\\":{}},\\\"regression\\\":{\\\"lineWidth\\\":\\\"\\\"},\\\"gridlines\\\":{\\\"xAxis\\\":{},\\\"yAxis\\\":{}},\\\"answerLevelSettings\\\":{\\\"chart\\\":{\\\"backgroundStyle\\\":null},\\\"plotArea\\\":{\\\"backgroundStyle\\\":null},\\\"borderColor\\\":\\\"\\\",\\\"borderWidth\\\":\\\"\\\",\\\"connectingLines\\\":false},\\\"stackLabelStyles\\\":{\\\"align\\\":\\\"center\\\",\\\"backgroundColor\\\":\\\"\\\",\\\"borderColor\\\":\\\"\\\",\\\"borderWidth\\\":\\\"1\\\",\\\"maxCharacters\\\":\\\"\\\",\\\"style\\\":{}}},\\\"showLabel\\\":true,\\\"showComparison\\\":true,\\\"showSparkline\\\":false,\\\"showAnalyseChangeCta\\\":false,\\\"showAnomalies\\\":null,\\\"customCompare\\\":\\\"PREV_AVAILABLE\\\"}\",\"pivotSummariesState\": {}},\"showStackedLabels\": true,\"allLabels\": true,\"kpiDisplayProperties\": {\"showDateLabel\": true,\"showCurrentDateLabel\": true,\"showPreviousDateLabel\": true,\"showPreviousValue\": true,\"showChange\": true,\"showChangeAs\": \"PERCENT\",\"changeInterpretation\": \"UPWARD_IS_GOOD\"}},\"columnProperties\": [{\"columnId\": \"Measure names\",\"columnProperty\": {\"dataLabels\": true,\"customProps\": \"{\\\"advancedProperties\\\":{\\\"dataLabels\\\":{\\\"align\\\":\\\"center\\\",\\\"backgroundColor\\\":\\\"\\\",\\\"borderColor\\\":\\\"\\\",\\\"borderWidth\\\":\\\"1\\\",\\\"filter\\\":null,\\\"maxCharacters\\\":\\\"\\\",\\\"style\\\":{\\\"isLinked\\\":false,\\\"linkedTo\\\":null}},\\\"enableMarkers\\\":null,\\\"lineStyle\\\":null,\\\"markerStyle\\\":null}}\",\"kpiColumnProperties\": {\"showAbbreviatedPreviousDate\": false,\"abbreviatedPreviousDate\": \"\",\"showSparkline\": true,\"showComparisonDate\": true}}},{\"columnId\": \"Measure values\",\"columnProperty\": {\"dataLabels\": true,\"customProps\": \"{\\\"advancedProperties\\\":{\\\"dataLabels\\\":{\\\"align\\\":\\\"center\\\",\\\"backgroundColor\\\":\\\"\\\",\\\"borderColor\\\":\\\"\\\",\\\"borderWidth\\\":\\\"1\\\",\\\"filter\\\":null,\\\"maxCharacters\\\":\\\"\\\",\\\"style\\\":{\\\"isLinked\\\":false,\\\"linkedTo\\\":null}},\\\"enableMarkers\\\":null,\\\"lineStyle\\\":null,\\\"markerStyle\\\":null}}\",\"kpiColumnProperties\": {\"showAbbreviatedPreviousDate\": false,\"abbreviatedPreviousDate\": \"\",\"showSparkline\": true,\"showComparisonDate\": true}}},{\"columnId\": \"Current\",\"columnProperty\": {\"dataLabels\": true,\"kpiColumnProperties\": {\"showAbbreviatedPreviousDate\": false,\"abbreviatedPreviousDate\": \"\",\"showSparkline\": true,\"showComparisonDate\": true}}},{\"columnId\": \"Previous\",\"columnProperty\": {\"dataLabels\": true,\"kpiColumnProperties\": {\"showAbbreviatedPreviousDate\": false,\"abbreviatedPreviousDate\": \"\",\"showSparkline\": true,\"showComparisonDate\": true}}},{\"columnId\": \"Goal\",\"columnProperty\": {\"dataLabels\": true,\"kpiColumnProperties\": {\"showAbbreviatedPreviousDate\": false,\"abbreviatedPreviousDate\": \"\",\"showSparkline\": true,\"showComparisonDate\": true}}}],\"axisProperties\": [{\"id\": \"3a479479-54df-44a1-ba60-605b2d4b1703\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Current\"],\"isOpposite\": false}},{\"id\": \"677c5fdb-bd05-4e47-8fd1-31b8392bec53\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Previous\"],\"isOpposite\": true}},{\"id\": \"3a949617-2d30-4612-84f8-96f327a529d8\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Goal\"],\"isOpposite\": true}},{\"id\": \"6341915a-824f-408d-a3e2-a6a23811713c\",\"properties\": {\"axisType\": \"X\"}}],\"seriesColors\": [{\"serieName\": \"3175ddd5-aeea-4d19-b123-04963f8e77c2\",\"color\": \"#5B84B1\"}]}"
-        custom_chart_config:
-        - key: basic
-          dimensions:
-          - key: fields
-            columns:
-            - Current
-            - Previous
-            - Goal
-            mode: COLUMN_DRIVEN
-        custom_visual_props: "{\"clientState\":\"{\\\"version\\\":1,\\\"playground\\\":{\\\"version\\\":\\\"v1\\\",\\\"code\\\":{\\\"jsCodeBase64\\\":\\\"LyoqCiAqIEF2YWlsYWJsZSBDb2x1bW5zOgogKiAiQ3VycmVudCBCcmFuZCIKICogIldlZWsoV2VlayBJRCkiCiAqICJDdXJyZW50IgogKiAiUHJldmlvdXMiCiAqICJHb2FsIgogKiAiVG90YWwgTmV3IFRvIEJyYW5kIFBhdGllbnRzIgogKiAiVG90YWwgTmV3IFRvIEJyYW5kIFBhdGllbnRzIChQbGFuKSIKICogIk1lYXN1cmUgbmFtZXMiIC8vIElmICdtZWFzdXJlVmFsdWVzJyBpcyBlbmFibGVkLgogKiAiTWVhc3VyZSB2YWx1ZXMiIC8vIElmICdtZWFzdXJlVmFsdWVzJyBpcyBlbmFibGVkLgogKiAtLS0gRU5EIC0tLSAKICovCgpjb25zdCB7IG11emUsIGdldERhdGFGcm9tU2VhcmNoUXVlcnkgfSA9IHZpejsKCi8vIOKUgOKUgCBDb2x1bW4gTmFtZXMgKHVwZGF0ZSB0aGVzZSB0byBtYXRjaCB5b3VyIFRob3VnaHRTcG90IGNvbHVtbnMpIOKUgOKUgApjb25zdCBNRVRSSUNfRklFTEQgPSAnQ3VycmVudCBCcmFuZCc7CmNvbnN0IFRSWF9USElTX1lFQVJfRklFTEQgPSAnQ3VycmVudCc7CmNvbnN0IEdPQUxfVFJYX0ZJRUxEID0gJ0dvYWwnOwpjb25zdCBUUlhfTEFTVF9ZRUFSX0ZJRUxEID0gJ1ByZXZpb3VzJzsKCi8vIGxpbmUgY2hhcnQKY29uc3QgV0VFS19JRF9GSUVMRCAgICAgICA9ICdXZWVrKFdlZWsgSUQpJzsgICAKY29uc3QgTUVBU1VSRV9MSU5FID0gJ1RvdGFsIE5ldyBUbyBCcmFuZCBQYXRpZW50cycKCi8vIGdldERhdGFGcm9tU2VhcmNoUXVlcnkoKSByZXR1cm5zIGEgRGF0YU1vZGVsIGRpcmVjdGx5IGluIFRob3VnaHRTcG90CmNvbnN0IGRtID0gZ2V0RGF0YUZyb21TZWFyY2hRdWVyeSgpOwoKLy8g4pSA4pSAIERFQlVHOiBsb2cgYWxsIGF2YWlsYWJsZSBjb2x1bW4gbmFtZXMg4pSA4pSACmNvbnN0IGRlYnVnUmVzdWx0ID0gZG0uZ2V0RGF0YSgpOwpjb25zb2xlLmxvZygnQXZhaWxhYmxlIGNvbHVtbnM6JywgZGVidWdSZXN1bHQuc2NoZW1hLm1hcChzID0+IHMubmFtZSkpOwoKLy8g4pSA4pSAIENyZWF0ZSBzdGFja2VkIGxheW91dCBpbnNpZGUgI2NoYXJ0IOKUgOKUgApjb25zdCByb290ID0gZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoJ2NoYXJ0Jyk7CnJvb3Quc3R5bGUuY3NzVGV4dCA9ICdkaXNwbGF5OmZsZXg7IGZsZXgtZGlyZWN0aW9uOmNvbHVtbjsgd2lkdGg6MTAwJTsgaGVpZ2h0OjEwMCU7JzsKCmNvbnN0IGtwaURpdiA9IGRvY3VtZW50LmNyZWF0ZUVsZW1lbnQoJ2RpdicpOwprcGlEaXYuaWQgPSAna3BpLWNoYXJ0JzsKa3BpRGl2LnN0eWxlLmNzc1RleHQgPSAnZmxleDogMDAgMCBhdXRvOyc7CnJvb3QuYXBwZW5kQ2hpbGQoa3BpRGl2KTsKCmNvbnN0IGxpbmVEaXYgPSBkb2N1bWVudC5jcmVhdGVFbGVtZW50KCdkaXYnKTsKbGluZURpdi5pZCA9ICdsaW5lLWNoYXJ0JzsKbGluZURpdi5zdHlsZS5jc3NUZXh0ID0gJ2ZsZXg6IDEgMSBhdXRvOyc7CnJvb3QuYXBwZW5kQ2hpbGQobGluZURpdik7CgovLyBFeHRyYWN0IGZpcnN0IHJvdyBmb3IgY29tcHV0aW5nIHZhbHVlcwpjb25zdCBkbVJlc3VsdCA9IGRtLmdldERhdGEoKTsKY29uc3QgY29sTmFtZXMgPSBkbVJlc3VsdC5zY2hlbWEubWFwKHMgPT4gcy5uYW1lKTsKY29uc3QgZmlyc3RSb3cgPSBkbVJlc3VsdC5kYXRhWzBdIHx8IFtdOwpjb25zdCByb3cgPSB7fTsKY29sTmFtZXMuZm9yRWFjaCgoY29sLCBpKSA9PiB7IHJvd1tjb2xdID0gZmlyc3RSb3dbaV07IH0pOwoKLy8gUHJlLWNvbXB1dGUgZGlzcGxheSB2YWx1ZXMKY29uc3QgYWN0dWFsVmFsID0gcm93W1RSWF9USElTX1lFQVJfRklFTERdIHx8IDA7CmNvbnN0IGdvYWxWYWwgPSByb3dbR09BTF9UUlhfRklFTERdIHx8IDA7CmNvbnN0IHN0bHlWYWwgPSByb3dbVFJYX0xBU1RfWUVBUl9GSUVMRF0gfHwgMDsKCmNvbnN0IHBsYW5WYXJpYW5jZVBjdCA9IGdvYWxWYWwgIT09IDAKICA/ICgoYWN0dWFsVmFsIC0gZ29hbFZhbCkgLyBnb2FsVmFsICogMTAwKS50b0ZpeGVkKDEpCiAgOiAnMC4wJzsKY29uc3Qgc3RseVZhcmlhbmNlUGN0ID0gc3RseVZhbCAhPT0gMAogID8gKChhY3R1YWxWYWwgLSBzdGx5VmFsKSAvIHN0bHlWYWwgKiAxMDApLnRvRml4ZWQoMSkKICA6ICcwLjAnOwoKY29uc3QgcGxhblZhcmlhbmNlQ29sb3IgPSBOdW1iZXIocGxhblZhcmlhbmNlUGN0KSA+PSAwID8gJyMyZTdkMzInIDogJyNjNjI4MjgnOwpjb25zdCBzdGx5VmFyaWFuY2VDb2xvciA9IE51bWJlcihzdGx5VmFyaWFuY2VQY3QpID49IDAgPyAnIzJlN2QzMicgOiAnI2M2MjgyOCc7CgovLyDilIDilIAgRHluYW1pYyBudW1iZXIgZm9ybWF0dGVyIOKUgOKUgApjb25zdCBmb3JtYXROdW0gPSAodmFsKSA9PiB7CiAgY29uc3QgYWJzID0gTWF0aC5hYnModmFsKTsKICBpZiAoYWJzID49IDFlOSkgcmV0dXJuICh2YWwgLyAxZTkpLnRvRml4ZWQoMikgKyAnQic7CiAgaWYgKGFicyA+PSAxZTYpIHJldHVybiAodmFsIC8gMWU2KS50b0ZpeGVkKDIpICsgJ00nOwogIGlmIChhYnMgPj0gMWUzKSByZXR1cm4gKHZhbCAvIDFlMykudG9GaXhlZCgyKSArICdLJzsKICByZXR1cm4gdmFsLnRvTG9jYWxlU3RyaW5nKCk7Cn07Cgpjb25zdCBmb3JtYXRQY3QgPSAocGN0KSA9PiBgJHtOdW1iZXIocGN0KSA+PSAwID8gJysnIDogJyd9JHtwY3R9JWA7Cgpjb25zdCBrcGlDYW52YXMgPSBtdXplLmNhbnZhcygpOwoKa3BpQ2FudmFzCiAgLmRhdGEoZG0pCiAgLnJvd3MoW1RSWF9USElTX1lFQVJfRklFTERdKQogIC5jb2x1bW5zKFtNRVRSSUNfRklFTERdKQogIC5sYXllcnMoWwogICAgLy8gTGF5ZXIgMTogTWFpbiBLUEkgdmFsdWUg4oCUIGxhcmdlIGFuZCBib2xkCiAgICB7CiAgICAgIG1hcms6ICd0ZXh0JywKICAgICAgZW5jb2Rpbmc6IHsKICAgICAgICB0ZXh0OiB7IGZpZWxkOiBUUlhfVEhJU19ZRUFSX0ZJRUxELCBmb3JtYXR0ZXI6ICgpID0+IGZvcm1hdE51bShhY3R1YWxWYWwpIH0sCiAgICAgICAgY29sb3I6IHsgdmFsdWU6ICgpID0+ICcjMWExYTFhJyB9LAogICAgICAgIHNpemU6IHsgdmFsdWU6ICgpID0+IDIwMCB9CiAgICAgIH0sCiAgICAgIGVuY29kaW5nVHJhbnNmb3JtOiAocG9pbnRzKSA9PiB7CiAgICAgICAgcG9pbnRzLmZvckVhY2gocCA9PiB7CiAgICAgICAgICBwLnVwZGF0ZS54ID0gMTA7CiAgICAgICAgICBwLnVwZGF0ZS55ID0gMzA7CiAgICAgICAgICBwLnN0eWxlID0gT2JqZWN0LmFzc2lnbihwLnN0eWxlIHx8IHt9LCB7CiAgICAgICAgICAgICd0ZXh0LWFuY2hvcic6ICdzdGFydCcsICdmb250LXdlaWdodCc6ICdub3JtYWwnLCAnZm9udC1zaXplJzogJzMycHgnCiAgICAgICAgICB9KTsKICAgICAgICB9KTsKICAgICAgICByZXR1cm4gcG9pbnRzOwogICAgICB9CiAgICB9LAoKICAgIC8vIExheWVyIDJhOiAiUGxhbiIgbGFiZWwg4oCUIGJvbGQsIGRhcmsKICAgIHsKICAgICAgbWFyazogJ3RleHQnLAogICAgICBlbmNvZGluZzogewogICAgICAgIHRleHQ6IHsgZmllbGQ6IEdPQUxfVFJYX0ZJRUxELCBmb3JtYXR0ZXI6ICgpID0+IGAke3Jvd1tNRVRSSUNfRklFTERdfWAgfSwKICAgICAgICBjb2xvcjogeyB2YWx1ZTogKCkgPT4gJyM0NDQ0NDQnIH0sCiAgICAgICAgc2l6ZTogeyB2YWx1ZTogKCkgPT4gNjAgfQogICAgICB9LAogICAgICBlbmNvZGluZ1RyYW5zZm9ybTogKHBvaW50cykgPT4gewogICAgICAgIHBvaW50cy5mb3JFYWNoKHAgPT4gewogICAgICAgICAgcC51cGRhdGUueCA9IDEwOwogICAgICAgICAgcC51cGRhdGUueSA9IDY1OwogICAgICAgICAgcC5zdHlsZSA9IE9iamVjdC5hc3NpZ24ocC5zdHlsZSB8fCB7fSwgewogICAgICAgICAgICAndGV4dC1hbmNob3InOiAnc3RhcnQnLCAnZm9udC1zaXplJzogJzEycHgnLCAnZm9udC13ZWlnaHQnOiAnbm9ybWFsJwogICAgICAgICAgfSk7CiAgICAgICAgfSk7CiAgICAgICAgcmV0dXJuIHBvaW50czsKICAgICAgfQogICAgfSwKICAgIC8vIExheWVyIDJhLXZhbHVlOiBQbGFuIG51bWJlciDigJQgbm9ybWFsIHdlaWdodAogICAgewogICAgICBtYXJrOiAndGV4dCcsCiAgICAgIGVuY29kaW5nOiB7CiAgICAgICAgdGV4dDogeyBmaWVsZDogR09BTF9UUlhfRklFTEQsIGZvcm1hdHRlcjogKCkgPT4gZm9ybWF0TnVtKGdvYWxWYWwpIH0sCiAgICAgICAgY29sb3I6IHsgdmFsdWU6ICgpID0+ICcjNDQ0NDQ0JyB9LAogICAgICAgIHNpemU6IHsgdmFsdWU6ICgpID0+IDYwIH0KICAgICAgfSwKICAgICAgZW5jb2RpbmdUcmFuc2Zvcm06IChwb2ludHMpID0+IHsKICAgICAgICBwb2ludHMuZm9yRWFjaChwID0+IHsKICAgICAgICAgIHAudXBkYXRlLnggPSA3NTsKICAgICAgICAgIHAudXBkYXRlLnkgPSA2NTsKICAgICAgICAgIHAuc3R5bGUgPSBPYmplY3QuYXNzaWduKHAuc3R5bGUgfHwge30sIHsKICAgICAgICAgICAgJ3RleHQtYW5jaG9yJzogJ3N0YXJ0JywgJ2ZvbnQtc2l6ZSc6ICcxMnB4JywgJ2ZvbnQtd2VpZ2h0JzogJ25vcm1hbCcKICAgICAgICAgIH0pOwogICAgICAgIH0pOwogICAgICAgIHJldHVybiBwb2ludHM7CiAgICAgIH0KICAgIH0sCiAgICAvLyBMYXllciAyYjogUGxhbiAlIHZhcmlhbmNlIOKAlCBjb2xvciBjb2RlZCwgYm9sZAogICAgewogICAgICBtYXJrOiAndGV4dCcsCiAgICAgIGVuY29kaW5nOiB7CiAgICAgICAgdGV4dDogeyBmaWVsZDogR09BTF9UUlhfRklFTEQsIGZvcm1hdHRlcjogKCkgPT4gZm9ybWF0UGN0KHBsYW5WYXJpYW5jZVBjdCkgfSwKICAgICAgICBjb2xvcjogeyB2YWx1ZTogKCkgPT4gcGxhblZhcmlhbmNlQ29sb3IgfSwKICAgICAgICBzaXplOiB7IHZhbHVlOiAoKSA9PiA2MCB9CiAgICAgIH0sCiAgICAgIGVuY29kaW5nVHJhbnNmb3JtOiAocG9pbnRzKSA9PiB7CiAgICAgICAgcG9pbnRzLmZvckVhY2gocCA9PiB7CiAgICAgICAgICBwLnVwZGF0ZS54ID0gMTM1OwogICAgICAgICAgcC51cGRhdGUueSA9IDY1OwogICAgICAgICAgcC5zdHlsZSA9IE9iamVjdC5hc3NpZ24ocC5zdHlsZSB8fCB7fSwgewogICAgICAgICAgICAndGV4dC1hbmNob3InOiAnc3RhcnQnLCAnZm9udC1zaXplJzogJzEycHgnLCAnZm9udC13ZWlnaHQnOiAnbm9ybWFsJwogICAgICAgICAgfSk7CiAgICAgICAgfSk7CiAgICAgICAgcmV0dXJuIHBvaW50czsKICAgICAgfQogICAgfSwKCiAgICAvLyBMYXllciAzYTogIlNUTFkiIGxhYmVsIOKAlCBib2xkLCBkYXJrCgogICAgLy8gTGF5ZXIgM2EtdmFsdWU6IFNUTFkgbnVtYmVyIOKAlCBub3JtYWwgd2VpZ2h0CgogICAgLy8gTGF5ZXIgM2I6IFNUTFkgJSB2YXJpYW5jZSDigJQgY29sb3IgY29kZWQsIGJvbGQKICAKICAgIAogIF0pCiAgLmNvbmZpZyh7CiAgICBhdXRvR3JvdXBCeTogeyBkaXNhYmxlZDogdHJ1ZSB9LAogICAgYXhlczogewogICAgICB4OiB7IHNob3c6IGZhbHNlLCBzaG93QXhpc05hbWU6IGZhbHNlIH0sCiAgICAgIHk6IHsgc2hvdzogZmFsc2UsIHNob3dBeGlzTmFtZTogZmFsc2UgfQogICAgfSwKICAgIGdyaWRMaW5lczogeyB4OiB7IHNob3c6IGZhbHNlIH0sIHk6IHsgc2hvdzogZmFsc2UgfSB9LAogICAgZ3JpZEJhbmRzOiB7IHg6IHsgc2hvdzogZmFsc2UgfSwgeTogeyBzaG93OiBmYWxzZSB9IH0sCiAgICBib3JkZXI6IHsKICAgICAgc2hvd1Jvd0JvcmRlcnM6IHsgdG9wOiBmYWxzZSwgYm90dG9tOiBmYWxzZSwgbGVmdDogZmFsc2UsIHJpZ2h0OiBmYWxzZSB9LAogICAgICBzaG93Q29sQm9yZGVyczogeyB0b3A6IGZhbHNlLCBib3R0b206IGZhbHNlLCBsZWZ0OiBmYWxzZSwgcmlnaHQ6IGZhbHNlIH0sCiAgICAgIHNob3dWYWx1ZUJvcmRlcnM6IHsgdG9wOiBmYWxzZSwgYm90dG9tOiBmYWxzZSwgbGVmdDogZmFsc2UsIHJpZ2h0OiBmYWxzZSB9CiAgICB9LAogICAgbGVnZW5kOiB7IHNob3c6IGZhbHNlIH0sCiAgICBzaG93SGVhZGVyczogZmFsc2UsCiAgICBjb2x1bW5zOiB7IGhlYWRlcnM6IHsgc2hvdzogZmFsc2UgfSB9LAogICAgcm93czogeyBoZWFkZXJzOiB7IHNob3c6IGZhbHNlIH0gfQogIH0pCiAgLndpZHRoKDI1MCkKICAuaGVpZ2h0KDEwMCkKICAubW91bnQoJyNrcGktY2hhcnQnKTsKCiAgY29uc3QgbGluZUNhbnZhcyA9IG11emUuY2FudmFzKCk7Ci8vTElORSBDSEFSVApsaW5lQ2FudmFzCiAgLmRhdGEoZG0pCiAgLnJvd3MoW01FQVNVUkVfTElORV0pCiAgLmNvbHVtbnMoW1dFRUtfSURfRklFTERdKQogIC5sYXllcnMoWwogICAgLy8gQ3VycmVudCAoc29saWQgbGluZSkKICAgIHsKICAgICAgbWFyazogJ2xpbmUnLAogICAgICBlbmNvZGluZzogeyBjb2xvcjogeyB2YWx1ZTogKCkgPT4gJyMxNTY1YzAnIH0gfQogICAgfSwKICAgIC8vIEdvYWwgKGRhc2hlZCBsaW5lKQogICAgLy8gewogICAgLy8gICBtYXJrOiAnbGluZScsCiAgICAvLyAgIGVuY29kaW5nOiB7CiAgICAvLyAgICAgeTogICAgIHsgZmllbGQ6IE1FQVNVUkVfTElORSB9LAogICAgLy8gICAgIGNvbG9yOiB7IHZhbHVlOiAoKSA9PiAnI2Y1N2MwMCcgfQogICAgLy8gICB9LAogICAgLy8gICBzdHlsZTogeyAnc3Ryb2tlLWRhc2hhcnJheSc6ICc2LDMnIH0KICAgIC8vIH0sCiAgICAvLyBQcmV2aW91cyAvIFNUTFkgKGRhc2hlZCBncmV5IGxpbmUpCiAgICB7CiAgICAgIG1hcms6ICdsaW5lJywKICAgICAgY29ubmVjdE51bGxEYXRhOiB0cnVlLAogICAgICBudWxsRGF0YUxpbmVTdHlsZTogeyBzdHJva2U6ICdncmV5JyB9LAogICAgICBlbmNvZGluZzogewogICAgICAgIHk6ICAgICB7IGZpZWxkOiBNRUFTVVJFX0xJTkUgfSwKICAgICAgICBjb2xvcjogeyB2YWx1ZTogKCkgPT4gJyM5ZTllOWUnIH0KICAgICAgfSwKICAgICAgc3R5bGU6IHsgJ3N0cm9rZS1kYXNoYXJyYXknOiAnNCw0JyB9CiAgICB9CiAgXSkKICAuY29uZmlnKHsKICAgIGF4ZXM6IHsKICAgICAgeDogeyBzaG93QXhpc05hbWU6IHRydWUgfSwKICAgICAgeTogeyBzaG93QXhpc05hbWU6IHRydWUgfQogICAgfSwKICAgIGxlZ2VuZDogeyBzaG93OiB0cnVlIH0sCiAgICBzaG93SGVhZGVyczogZmFsc2UsICAgICAgICAgICAgICAgICAgICAgICAgLy8g4oaQIGFkZCB0aGlzCiAgICBjb2x1bW5zOiB7IGhlYWRlcnM6IHsgc2hvdzogZmFsc2UgfSB9LCAgICAgLy8g4oaQIGFkZCB0aGlzCiAgICByb3dzOiAgICB7IGhlYWRlcnM6IHsgc2hvdzogZmFsc2UgfSB9ICAgICAgLy8g4oaQIGFkZCB0aGlzCiAgfSkKICAud2lkdGgoNTApCiAgLmhlaWdodCg1MCkKICAubW91bnQoJyNsaW5lLWNoYXJ0Jyk7\\\",\\\"cssCodeBase64\\\":\\\"aHRtbCwgYm9keSB7CiAgbWFyZ2luOiAwOwogIHBhZGRpbmc6IDA7CiAgd2lkdGg6IDEwMHZ3OwogIGhlaWdodDogMTAwdmg7CiAgb3ZlcmZsb3c6IGhpZGRlbjsKfQoKI2NoYXJ0IHsKICB3aWR0aDogMTAwJTsKICBoZWlnaHQ6IDEwMCU7Cn0\\u003d\\\",\\\"htmlCodeBase64\\\":\\\"PGRpdiBpZD0iY2hhcnQiPjwvZGl2Pg\\u003d\\u003d\\\"},\\\"splitSizes\\\":[35.34455076347912,64.65544923652088],\\\"editorConsoleSplitSizes\\\":[70,30]}}\",\"axisVisualProps\":{},\"columnVisualProps\":{},\"dataLabelVisualProps\":{},\"tooltipVisualProps\":{},\"legendVisualProps\":{},\"displayVisualProps\":{}}"
-      display_mode: CHART_MODE
-      dynamic_name: AJ Muze Weekly New Referrals
-    viz_guid: bfd7ef2a-aa5a-4608-b9d7-a9d5dc3e0f61
   layout:
     tabs:
     - name: Growth
@@ -4630,11 +4550,6 @@ liveboard:
         "y": 8
         height: 4
         width: 3
-      - visualization_id: Viz_40
-        x: 6
-        "y": 8
-        height: 4
-        width: 6
       id: 54ade2a8-71dd-4030-97ba-8854642bab9f
     - name: NTB Patients
       description: ""
