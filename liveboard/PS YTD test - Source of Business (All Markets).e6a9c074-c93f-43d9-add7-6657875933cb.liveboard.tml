@@ -2320,14 +2320,6 @@ liveboard:
     is_mandatory: false
     is_single_value: false
     display_name: ""
-  - column:
-    - Source of Business Special Time Period::Metric
-    oper: '>'
-    values:
-    - "0.0"
-    is_mandatory: false
-    is_single_value: false
-    display_name: ""
   layout:
     tabs:
     - name: Monthly Summary
@@ -2568,8 +2560,6 @@ liveboard:
   - name: Source of Business Special Time Period::Report-Type
     type: PARAMETER
   - name: Source of Business Special Time Period::Report Type Value
-    type: FILTER
-  - name: Source of Business Special Time Period::Metric
     type: FILTER
   style:
     style_properties:
