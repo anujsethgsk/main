@@ -1,0 +1,63 @@
+guid: 104f7c88-25d0-4766-b3e1-5fd09ecfe5ff
+liveboard:
+  name: Testing
+  visualizations:
+  - id: Viz_1
+    answer:
+      name: "Total quantity purchased by city, state, Yearly date, item type"
+      tables:
+      - id: (Sample) Retail - Apparel
+        name: (Sample) Retail - Apparel
+        fqn: cd252e5c-b552-49a8-821d-3eadaa049cca
+      search_query: "[quantity purchased] [city] [state] [date] [date].yearly [item type] sort by [item type]"
+      answer_columns:
+      - name: Total quantity purchased
+      - name: Year(date)
+      - name: city
+      - name: item type
+        sort_info:
+          category: ALPHA
+      - name: state
+      table:
+        table_columns:
+        - column_id: Total quantity purchased
+          show_headline: false
+        - column_id: Year(date)
+          show_headline: false
+        - column_id: city
+          show_headline: false
+        - column_id: item type
+          show_headline: false
+        - column_id: state
+          show_headline: false
+        ordered_column_ids:
+        - city
+        - state
+        - Year(date)
+        - item type
+        - Total quantity purchased
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: COLUMN
+        chart_columns:
+        - column_id: Total quantity purchased
+        - column_id: Year(date)
+        - column_id: city
+        - column_id: item type
+        - column_id: state
+        axis_configs:
+        - x:
+          - Year(date)
+          "y":
+          - Total quantity purchased
+          color:
+          - item type
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"city\",\"columnProperty\": {}},{\"columnId\": \"state\",\"columnProperty\": {}},{\"columnId\": \"Year(date)\",\"columnProperty\": {}},{\"columnId\": \"Total quantity purchased\",\"columnProperty\": {}},{\"columnId\": \"Measure names\",\"columnProperty\": {}},{\"columnId\": \"Measure values\",\"columnProperty\": {}},{\"columnId\": \"item type\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"da50296f-d4c9-450b-b533-68d4e0e5b096\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total quantity purchased\"],\"isOpposite\": false}},{\"id\": \"2fb77cd1-6007-4132-9ac4-1bb2fb282825\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Year(date)\"]}}],\"systemSeriesColors\": [{\"serieName\": \"arizona\",\"color\": \"#2E75F0\"},{\"serieName\": \"california\",\"color\": \"#48D1E0\"},{\"serieName\": \"colorado\",\"color\": \"#FCC838\"},{\"serieName\": \"connecticut\",\"color\": \"#06BF7F\"},{\"serieName\": \"delaware\",\"color\": \"#8C62F5\"},{\"serieName\": \"georgia\",\"color\": \"#fd7e14\"},{\"serieName\": \"idaho\",\"color\": \"#ABC7F9\"},{\"serieName\": \"illinois\",\"color\": \"#B5ECF2\"},{\"serieName\": \"indiana\",\"color\": \"#FDE9AF\"},{\"serieName\": \"iowa\",\"color\": \"#9BE5CB\"},{\"serieName\": \"maryland\",\"color\": \"#D1C0FB\"},{\"serieName\": \"massachusetts\",\"color\": \"#feb272\"},{\"serieName\": \"michigan\",\"color\": \"#2359B6\"},{\"serieName\": \"minnesota\",\"color\": \"#369FAA\"},{\"serieName\": \"missouri\",\"color\": \"#BF982A\"},{\"serieName\": \"montana\",\"color\": \"#049160\"},{\"serieName\": \"nevada\",\"color\": \"#6A4ABA\"},{\"serieName\": \"new hampshire\",\"color\": \"#ca6510\"},{\"serieName\": \"new jersey\",\"color\": \"#71A1F4\"}]}"
+      display_mode: TABLE_MODE
+      dynamic_name: "Total quantity purchased by city, state, Yearly date, item type"
+    viz_guid: e67dd521-038e-4180-b643-c968ab50cfa8
+  layout:
+    tiles:
+    - visualization_id: Viz_1
