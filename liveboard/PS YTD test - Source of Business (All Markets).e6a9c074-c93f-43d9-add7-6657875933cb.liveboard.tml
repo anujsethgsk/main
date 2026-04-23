@@ -2311,6 +2311,16 @@ liveboard:
     is_single_value: false
     display_name: ""
   - column:
+    - Source of Business Special Time Period::Report Type Value
+    oper: in
+    values:
+    - nucala
+    excluded_visualizations:
+    - Viz_40
+    is_mandatory: false
+    is_single_value: false
+    display_name: ""
+  - column:
     - Source of Business Special Time Period::Metric
     oper: '>'
     values:
