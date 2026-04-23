@@ -2303,6 +2303,8 @@ liveboard:
     oper: not in
     values:
     - "{null}"
+    - BENLYSTA-SAPHNELO-GAZYVA
+    - BENLYSTA-SAPHNELO-GAZYVA W/O ONC
     excluded_visualizations:
     - Viz_40
     is_mandatory: false
