@@ -12,15 +12,15 @@ liveboard:
       formulas:
       - id: formula_NTB Benlysta
         name: NTB Benlysta
-        expr: "group_aggregate ( sum ( [New To Brand Patients] ) , query_groups ( ) , query_filters ( ) + { [Current Brand] = 'BENLYSTA' } )"
+        expr: "group_aggregate ( sum ( ifnull ( [New To Brand Patients] , 0 ) ) , query_groups ( ) , query_filters ( ) + { [Current Brand] = 'BENLYSTA' } )"
         was_auto_generated: false
       - id: formula_NTB Gazyva
         name: NTB Gazyva
-        expr: "group_aggregate ( sum ( [New To Brand Patients] ) , query_groups ( ) , query_filters ( ) + { [Current Brand] = 'GAZYVA' } + { [Specialty] != 'ONC' } )"
+        expr: "group_aggregate ( sum ( ifnull ( [New To Brand Patients] , 0 ) ) , query_groups ( ) , query_filters ( ) + { [Current Brand] = 'GAZYVA' } + { [Specialty] != 'ONC' } )"
         was_auto_generated: false
       - id: formula_NTB Saphnelo
         name: NTB Saphnelo
-        expr: "group_aggregate ( sum ( [New To Brand Patients] ) , query_groups ( ) , query_filters ( ) + { [Current Brand] = 'SAPHNELO' } )"
+        expr: "group_aggregate ( sum ( ifnull ( [New To Brand Patients] , 0 ) ) , query_groups ( ) , query_filters ( ) + { [Current Brand] = 'SAPHNELO' } )"
         was_auto_generated: false
       search_query: "[Current Product Group] sort by [Week ID] [Weeks Ago] <= 13 [Market Desc] = 'lupus' [Week ID].weekly [formula_NTB Benlysta] [formula_NTB Saphnelo] [formula_NTB Gazyva]"
       answer_columns:
