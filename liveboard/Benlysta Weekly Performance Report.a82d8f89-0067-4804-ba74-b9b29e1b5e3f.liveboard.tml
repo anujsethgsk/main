@@ -1817,7 +1817,7 @@ liveboard:
         name: NTB Share of SLE
         expr: "group_aggregate ( moving_average ( ifnull ( [New To Brand Patients] , 0 ) , 3 , 0 , [Week ID] ) , query_groups ( ) , query_filters ( ) - { [Week ID] } + { [Week ID] != null } - { [Weeks Ago] } - { [Years Ago] } ) / group_aggregate ( moving_average ( ifnull ( [New To Brand Patients] , 0 ) , 3 , 0 , [Week ID] ) , query_groups ( ) , query_filters ( ) - { [Week ID] } + { [Week ID] != null } - { [Weeks Ago] } - { [Years Ago] } - { [Diagnosis Category] } - { [Mode Of Administration] } )"
         was_auto_generated: false
-      search_query: "[formula_NTB Share of SLE] [Weeks Ago] <= 113 [Week ID] != '{null}' [Week ID].'week of year' [Week ID].yearly [Current Product Group].benlysta [Mode Of Administration].sc [Market Desc].lupus"
+      search_query: "[formula_NTB Share of SLE] [Week ID] != '{null}' [Week ID].'week of year' [Week ID].yearly [Current Product Group].benlysta [Mode Of Administration].sc [Market Desc].lupus [Years Ago].1 [Years Ago].2 [Years Ago].3"
       answer_columns:
       - name: NTB Share of SLE
         format:
