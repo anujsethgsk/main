@@ -1745,7 +1745,7 @@ liveboard:
         name: Total Patients
         expr: "group_aggregate ( moving_average ( [Total Patients Weekly] , 3 , 0 , [Week ID] ) , query_groups ( ) , query_filters ( ) - { [Week ID] } + { [Week ID] != null } - { [Weeks Ago] } - { [Years Ago] } )"
         was_auto_generated: false
-      search_query: "[Current Product Group] [Week ID] != '{null}' [Week ID].'week of year' [Week ID].yearly [Current Product Group].benlysta [Market Desc].lupus [formula_NTB Patients] [Weeks Ago] <= 165"
+      search_query: "[Current Product Group] [Week ID] != '{null}' [Week ID].'week of year' [Week ID].yearly [Current Product Group].benlysta [Market Desc].lupus [formula_NTB Patients] [Years Ago].1 [Years Ago].2 [Years Ago].3 [Years Ago].4 [Years Ago]"
       answer_columns:
       - name: Current Product Group
       - name: NTB Patients
@@ -1764,6 +1764,7 @@ liveboard:
       - name: Year(Week ID)
         custom_name: Year
         dynamic_title: Year
+      - name: Years Ago
       table:
         table_columns:
         - column_id: Current Product Group
@@ -1774,10 +1775,13 @@ liveboard:
           show_headline: false
         - column_id: Year(Week ID)
           show_headline: false
+        - column_id: Years Ago
+          show_headline: false
         ordered_column_ids:
         - Current Product Group
         - WEEK_OF_YEAR_ISO(Week ID)
         - Year(Week ID)
+        - Years Ago
         - NTB Patients
         client_state: ""
         client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"orderedColumnIds\": [\"Current Product Group\"],\"columnProperties\": [{\"columnId\": \"Current Product Group\",\"columnProperty\": {}}]}"
@@ -1788,6 +1792,7 @@ liveboard:
         - column_id: NTB Patients
         - column_id: WEEK_OF_YEAR_ISO(Week ID)
         - column_id: Year(Week ID)
+        - column_id: Years Ago
         axis_configs:
         - x:
           - WEEK_OF_YEAR_ISO(Week ID)
