@@ -1869,7 +1869,7 @@ liveboard:
       formulas:
       - id: formula_NTB Share of SLE
         name: NTB Share of SLE
-        expr: "group_aggregate ( moving_average ( [New To Brand Patients] , 3 , 0 , [Week ID] ) , query_groups ( ) , query_filters ( ) - { [Week ID] } + { [Week ID] != null } - { [Weeks Ago] } - { [Years Ago] } ) / group_aggregate ( moving_average ( [New To Brand Patients] , 3 , 0 , [Week ID] ) , query_groups ( ) - { [Diagnosis Category] } , query_filters ( ) - { [Week ID] } + { [Week ID] != null } - { [Weeks Ago] } - { [Years Ago] } - { [Diagnosis Category]  } )"
+        expr: "group_aggregate ( moving_average ( ifnull ( [New To Brand Patients] , 0 ) , 3 , 0 , [Week ID] ) , query_groups ( ) , query_filters ( ) - { [Week ID] } + { [Week ID] != null } - { [Weeks Ago] } - { [Years Ago] } ) / group_aggregate ( moving_average ( ifnull ( [New To Brand Patients] , 0 ) , 3 , 0 , [Week ID] ) , query_groups ( ) - { [Diagnosis Category] } , query_filters ( ) - { [Week ID] } + { [Week ID] != null } - { [Weeks Ago] } - { [Years Ago] } - { [Diagnosis Category] } )"
         was_auto_generated: false
       search_query: "[formula_NTB Share of SLE] [Weeks Ago] <= 113 [Week ID] != '{null}' [Week ID].'week of year' [Week ID].yearly [Diagnosis Category].sle [Current Product Group].benlysta [Market Desc].lupus"
       answer_columns:
