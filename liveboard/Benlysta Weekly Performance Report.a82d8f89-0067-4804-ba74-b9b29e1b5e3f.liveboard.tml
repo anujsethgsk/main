@@ -880,15 +880,15 @@ liveboard:
       formulas:
       - id: formula_Naive Benlysta R4W
         name: Naive Benlysta R4W
-        expr: "group_aggregate ( moving_average ( [Naive Patients Weekly] , 3 , 0 , [Week ID] ) , query_groups ( ) , query_filters ( ) + { [Current Brand] = 'BENLYSTA' } )"
+        expr: "group_aggregate ( moving_average ( ifnull ( [Naive Patients Weekly] , 0 ) , 3 , 0 , [Week ID] ) , query_groups ( ) , query_filters ( ) + { [Current Brand] = 'BENLYSTA' } )"
         was_auto_generated: false
       - id: formula_Naive Gazyva R4W
         name: Naive Gazyva R4W
-        expr: "group_aggregate ( moving_average ( [Naive Patients Weekly]  , 3 , 0 , [Week ID] ) , query_groups ( ) , query_filters ( ) + { [Current Brand] = 'GAZYVA' } + { [Specialty] != 'ONC' } )"
+        expr: "ifnull ( group_aggregate ( moving_average ( ifnull ( [Naive Patients Weekly] , 0 ) , 3 , 0 , [Week ID] ) , query_groups ( ) , query_filters ( ) + { [Current Brand] = 'GAZYVA' } + { [Specialty] != 'ONC' } ) , 0 )"
         was_auto_generated: false
       - id: formula_Naive Saphnelo R4W
         name: Naive Saphnelo R4W
-        expr: "group_aggregate ( moving_average ( [Naive Patients Weekly]  , 3 , 0 , [Week ID] ) , query_groups ( ) , query_filters ( ) + { [Current Brand] = 'SAPHNELO' } )"
+        expr: "group_aggregate ( moving_average ( ifnull ( [Naive Patients Weekly] , 0 ) , 3 , 0 , [Week ID] ) , query_groups ( ) , query_filters ( ) + { [Current Brand] = 'SAPHNELO' } )"
         was_auto_generated: false
       - id: formula_NTB Benlysta R4W
         name: NTB Benlysta R4W
