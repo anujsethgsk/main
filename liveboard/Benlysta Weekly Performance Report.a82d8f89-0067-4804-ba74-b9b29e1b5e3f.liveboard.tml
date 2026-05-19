@@ -3307,7 +3307,7 @@ liveboard:
         name: NTB Share of SLE
         expr: "group_aggregate ( moving_average ( [New To Brand Patients] , 3 , 0 , [Week ID] ) , query_groups ( ) , query_filters ( ) - { [Week ID] } + { [Week ID] != null } - { [Weeks Ago] } - { [Years Ago] } + { [Current Brand] = 'BENLYSTA' } ) / ( group_aggregate ( moving_average ( [New To Brand Patients] , 3 , 0 , [Week ID] ) , query_groups ( ) - { [Diagnosis Category] } , query_filters ( ) - { [Week ID] } + { [Week ID] != null } - { [Weeks Ago] } - { [Years Ago] } + { [Current Brand] = 'BENLYSTA' } ) + group_aggregate ( moving_average ( [New To Brand Patients] , 3 , 0 , [Week ID] ) , query_groups ( ) - { [Diagnosis Category] } , query_filters ( ) - { [Week ID] } + { [Week ID] != null } - { [Weeks Ago] } - { [Years Ago] } + { [Current Brand] = 'GAZYVA' } + { [Specialty] != 'ONC' } ) + group_aggregate ( moving_average ( [New To Brand Patients] , 3 , 0 , [Week ID] ) , query_groups ( ) - { [Diagnosis Category] } , query_filters ( ) - { [Week ID] } + { [Week ID] != null } - { [Weeks Ago] } - { [Years Ago] } + { [Current Brand] = 'BENLYSTA' } ) )"
         was_auto_generated: false
-      search_query: "[Weeks Ago] <= 113 [Week ID] != '{null}' [Week ID].'week of year' [Week ID].yearly [Market Desc].lupus [Mode Of Administration].iv [formula_Benlysta NTB Share in IV YoY (R4W)]"
+      search_query: "[Week ID] != '{null}' [Week ID].'week of year' [Week ID].yearly [Market Desc].lupus [Mode Of Administration].iv [formula_Benlysta NTB Share in IV YoY (R4W)] [Years Ago] [Years Ago].1 [Years Ago].2 [Years Ago].3"
       answer_columns:
       - name: Benlysta NTB Share in IV YoY (R4W)
         format:
@@ -3318,6 +3318,7 @@ liveboard:
           isCategoryEditable: true
       - name: WEEK_OF_YEAR_ISO(Week ID)
       - name: Year(Week ID)
+      - name: Years Ago
       table:
         table_columns:
         - column_id: Benlysta NTB Share in IV YoY (R4W)
@@ -3326,9 +3327,12 @@ liveboard:
           show_headline: false
         - column_id: Year(Week ID)
           show_headline: false
+        - column_id: Years Ago
+          show_headline: false
         ordered_column_ids:
         - WEEK_OF_YEAR_ISO(Week ID)
         - Year(Week ID)
+        - Years Ago
         - Benlysta NTB Share in IV YoY (R4W)
         client_state: ""
         client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
@@ -3338,6 +3342,7 @@ liveboard:
         - column_id: Benlysta NTB Share in IV YoY (R4W)
         - column_id: WEEK_OF_YEAR_ISO(Week ID)
         - column_id: Year(Week ID)
+        - column_id: Years Ago
         axis_configs:
         - x:
           - WEEK_OF_YEAR_ISO(Week ID)
