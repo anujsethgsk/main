@@ -1534,11 +1534,11 @@ liveboard:
         was_auto_generated: false
       - id: formula_Naive Benlysta IV R4W
         name: Naive Benlysta IV R4W
-        expr: "group_aggregate ( moving_average ( [Naive Patients Weekly] , 3 , 0 , [Week ID] ) , query_groups ( ) , query_filters ( ) + { [Current Brand] = 'BENLYSTA' } + { [Mode Of Administration] = 'IV' } )"
+        expr: "group_aggregate ( moving_average ( ifnull ( [Naive Patients Weekly] , 0 ) , 3 , 0 , [Week ID] ) , query_groups ( ) , query_filters ( ) + { [Current Brand] = 'BENLYSTA' } + { [Mode Of Administration] = 'IV' } )"
         was_auto_generated: false
       - id: formula_Naive Benlysta SC R4W
         name: Naive Benlysta SC R4W
-        expr: "group_aggregate ( moving_average ( [Naive Patients Weekly] , 3 , 0 , [Week ID] ) , query_groups ( ) , query_filters ( ) + { [Current Brand] = 'BENLYSTA' } + { [Mode Of Administration] = 'SC' } )"
+        expr: "group_aggregate ( moving_average ( ifnull ( [Naive Patients Weekly] , 0 ) , 3 , 0 , [Week ID] ) , query_groups ( ) , query_filters ( ) + { [Current Brand] = 'BENLYSTA' } + { [Mode Of Administration] = 'SC' } )"
         was_auto_generated: false
       - id: formula_Naive Benlysta Share R4W
         name: Naive Benlysta Share R4W
@@ -1550,11 +1550,11 @@ liveboard:
         was_auto_generated: false
       - id: formula_Naive Gazyva R4W
         name: Naive Gazyva R4W
-        expr: "group_aggregate ( moving_average ( [Naive Patients Weekly]  , 3 , 0 , [Week ID] ) , query_groups ( ) , query_filters ( ) + { [Current Brand] = 'GAZYVA' } + { [Specialty] != 'ONC' } )"
+        expr: "group_aggregate ( moving_average ( ifnull ( [Naive Patients Weekly] , 0 ) , 3 , 0 , [Week ID] ) , query_groups ( ) , query_filters ( ) + { [Current Brand] = 'GAZYVA' } + { [Specialty] != 'ONC' } )"
         was_auto_generated: false
       - id: formula_Naive Saphnelo R4W
         name: Naive Saphnelo R4W
-        expr: "group_aggregate ( moving_average ( [Naive Patients Weekly]  , 3 , 0 , [Week ID] ) , query_groups ( ) , query_filters ( ) + { [Current Brand] = 'SAPHNELO' } )"
+        expr: "group_aggregate ( moving_average ( ifnull ( [Naive Patients Weekly] , 0 ) , 3 , 0 , [Week ID] ) , query_groups ( ) , query_filters ( ) + { [Current Brand] = 'SAPHNELO' } )"
         was_auto_generated: false
       - id: formula_R4 Market Share
         name: R4 Market Share
