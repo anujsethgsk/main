@@ -37,6 +37,20 @@ model:
       'on': '[dim_launch_date_alignment_sob::Week_ID] = [fact_sob_weekly_monthly_sbu::Week_ID] AND [dim_launch_date_alignment_sob::DIAGNOSIS] = [fact_sob_weekly_monthly_sbu::DIAGNOSIS_CATEGORY] AND [dim_launch_date_alignment_sob::BRAND] = [fact_sob_weekly_monthly_sbu::Current_Product_Group]'
       type: INNER
       cardinality: ONE_TO_MANY
+  - name: weekly_factors_copd_ntb
+    fqn: 3e355239-dc31-4b68-b692-db51d7db3ed7
+    joins:
+    - with: dim_sob_weekly_monthly (weekly)
+      'on': '[weekly_factors_copd_ntb::start_of_week_epoch] = [dim_sob_weekly_monthly_sbu::Date_ID_as_date]'
+      type: INNER
+      cardinality: ONE_TO_ONE
+  - name: monthly_factors_copd_ntb
+    fqn: 3911411c-2dbe-4c26-83cf-d7da44ea40f4
+    joins:
+    - with: dim_sob_weekly_monthly (monthly)
+      'on': '[monthly_factors_copd_ntb::start_of_month] = [dim_sob_weekly_monthly_sbu::Date_ID_as_date]'
+      type: INNER
+      cardinality: ONE_TO_ONE
   formulas:
   - id: formula_IL5 Market Indicator
     name: IL5 Market Indicator
@@ -95,6 +109,62 @@ model:
       - NUCALA AI
       - NUCALA PFS
       - NUCALA LYO VIAL
+  - name: Patient Nucala Sbu Pct Monthly
+    column_id: monthly_factors_copd_ntb::patient_nucala_SBU_pct
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      is_hidden: true
+  - name: Patient Nucala Air Pct Monthly
+    column_id: monthly_factors_copd_ntb::patient_nucala_AIR_pct
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      is_hidden: true
+  - name: Patient Dupi Air Pct Monthly
+    column_id: monthly_factors_copd_ntb::patient_dupi_AIR_pct
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      is_hidden: true
+  - name: Patient Dupi Sbu Pct Monthly
+    column_id: monthly_factors_copd_ntb::patient_dupi_SBU_pct
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      is_hidden: true
+  - name: Patient Dupi Air Pct Weekly
+    column_id: weekly_factors_copd_ntb::patient_dupi_AIR_pct
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      is_hidden: true
+  - name: Patient Dupi Sbu Pct Weekly
+    column_id: weekly_factors_copd_ntb::patient_dupi_SBU_pct
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      is_hidden: true
+  - name: Patient Nucala Air Pct Weekly
+    column_id: weekly_factors_copd_ntb::patient_nucala_AIR_pct
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      is_hidden: true
+  - name: Patient Nucala Sbu Pct Weekly
+    column_id: weekly_factors_copd_ntb::patient_nucala_SBU_pct
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      is_hidden: true
   - name: Month ID
     formula_id: formula_Month ID
     properties:

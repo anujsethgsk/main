@@ -1,0 +1,53 @@
+guid: 3e355239-dc31-4b68-b692-db51d7db3ed7
+table:
+  name: weekly_factors_copd_ntb
+  description: UNKNOWN
+  db: hive_metastore
+  schema: us_speciality_analytics
+  db_table: weekly_factors_copd_ntb
+  connection:
+    name: Thoughtspot Databricks Service Principal
+    fqn: 26f23c00-ab28-4aa8-841b-665c0cf48bce
+  columns:
+  - name: start_of_week_epoch
+    db_column_name: start_of_week_epoch
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DATE
+  - name: patient_nucala_AIR_pct
+    db_column_name: patient_nucala_AIR_pct
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DOUBLE
+  - name: patient_nucala_SBU_pct
+    db_column_name: patient_nucala_SBU_pct
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DOUBLE
+  - name: patient_dupi_AIR_pct
+    db_column_name: patient_dupi_AIR_pct
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DOUBLE
+  - name: patient_dupi_SBU_pct
+    db_column_name: patient_dupi_SBU_pct
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DOUBLE
+  properties:
+    spotter_config:
+      is_spotter_enabled: false

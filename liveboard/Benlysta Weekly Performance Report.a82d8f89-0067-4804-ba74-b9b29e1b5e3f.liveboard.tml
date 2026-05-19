@@ -1124,15 +1124,15 @@ liveboard:
         was_auto_generated: false
       - id: formula_NTB Benlysta R4W
         name: NTB Benlysta R4W
-        expr: "group_aggregate ( moving_average ( [New To Brand Patients] , 3 , 0 , [Week ID] ) , query_groups ( ) , query_filters ( ) + { [Current Brand] = 'BENLYSTA' } )"
+        expr: "ifnull ( group_aggregate ( moving_average ( [New To Brand Patients] , 3 , 0 , [Week ID] ) , query_groups ( ) , query_filters ( ) + { [Current Brand] = 'BENLYSTA' } ) , 0 )"
         was_auto_generated: false
       - id: formula_NTB Gazyva R4W
         name: NTB Gazyva R4W
-        expr: "group_aggregate ( moving_average ( [New To Brand Patients] , 3 , 0 , [Week ID] ) , query_groups ( ) , query_filters ( ) + { [Current Brand] = 'GAZYVA' } + { [Specialty] != 'ONC' } )"
+        expr: "ifnull ( group_aggregate ( moving_average ( [New To Brand Patients] , 3 , 0 , [Week ID] ) , query_groups ( ) , query_filters ( ) + { [Current Brand] = 'GAZYVA' } + { [Specialty] != 'ONC' } ) , 0 )"
         was_auto_generated: false
       - id: formula_NTB Saphnelo R4W
         name: NTB Saphnelo R4W
-        expr: "group_aggregate ( moving_average ( [New To Brand Patients] , 3 , 0 , [Week ID] ) , query_groups ( ) , query_filters ( ) + { [Current Brand] = 'SAPHNELO' } )"
+        expr: "ifnull ( group_aggregate ( moving_average ( [New To Brand Patients] , 3 , 0 , [Week ID] ) , query_groups ( ) , query_filters ( ) + { [Current Brand] = 'SAPHNELO' } ) , 0 )"
         was_auto_generated: false
       search_query: "[Current Product Group] sort by [Week ID] [Weeks Ago] <= 13 [Market Desc] = 'lupus' [Week ID].weekly [formula_NTB Benlysta Share R4W] [formula_NTB Saphnelo Share R4W] [formula_NTB Gazyva Share R4W]"
       answer_columns:
