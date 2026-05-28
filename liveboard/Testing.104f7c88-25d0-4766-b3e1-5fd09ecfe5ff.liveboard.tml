@@ -58,6 +58,60 @@ liveboard:
       display_mode: TABLE_MODE
       dynamic_name: "Total quantity purchased by city, state, Yearly date, item type"
     viz_guid: e67dd521-038e-4180-b643-c968ab50cfa8
+  - id: Viz_2
+    answer:
+      name: "Total quantity purchased by Yearly date, item type, city, state"
+      tables:
+      - id: (Sample) Retail - Apparel
+        name: (Sample) Retail - Apparel
+        fqn: cd252e5c-b552-49a8-821d-3eadaa049cca
+      search_query: "[quantity purchased] [date].yearly [item type] [city] [state] [state] = 'arizona' sort by [item type]"
+      answer_columns:
+      - name: Total quantity purchased
+      - name: Year(date)
+      - name: city
+      - name: item type
+        sort_info:
+          category: DEFAULT
+      - name: state
+      table:
+        table_columns:
+        - column_id: Total quantity purchased
+          headline_aggregation: SUM
+        - column_id: Year(date)
+          headline_aggregation: MIN-MAX
+        - column_id: city
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: item type
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: state
+          headline_aggregation: COUNT_DISTINCT
+        ordered_column_ids:
+        - Year(date)
+        - item type
+        - city
+        - state
+        - Total quantity purchased
+        client_state: ""
+      chart:
+        type: COLUMN
+        chart_columns:
+        - column_id: Total quantity purchased
+        - column_id: Year(date)
+        - column_id: city
+        - column_id: item type
+        - column_id: state
+        axis_configs:
+        - x:
+          - Year(date)
+          "y":
+          - Total quantity purchased
+          color:
+          - item type
+        client_state: ""
+      display_mode: TABLE_MODE
+    viz_guid: d2fe49ab-c6a2-42db-ae9c-6249718301b3
   layout:
     tiles:
     - visualization_id: Viz_1
+    - visualization_id: Viz_2
