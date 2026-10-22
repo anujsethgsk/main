@@ -145,8 +145,41 @@ liveboard:
         client_state: ""
       display_mode: TABLE_MODE
     viz_guid: 1bf335ea-6c17-49c4-8e69-d1bfb716bad8
+  - id: Viz_4
+    answer:
+      name: "Daily date, Day of week date"
+      tables:
+      - id: (Sample) Retail - Apparel
+        name: (Sample) Retail - Apparel
+        fqn: cd252e5c-b552-49a8-821d-3eadaa049cca
+      search_query: "[date] [date].daily [date].'day of week'"
+      answer_columns:
+      - name: Day of Week(date)
+      - name: Day(date)
+      table:
+        table_columns:
+        - column_id: Day of Week(date)
+          show_headline: false
+        - column_id: Day(date)
+          show_headline: false
+        ordered_column_ids:
+        - Day(date)
+        - Day of Week(date)
+        client_state: ""
+      chart:
+        type: KPI
+        chart_columns:
+        - column_id: Day of Week(date)
+        - column_id: Day(date)
+        axis_configs:
+        - "y":
+          - Day(date)
+        client_state: ""
+      display_mode: TABLE_MODE
+    viz_guid: 5a7fafc1-e1bf-473f-a03a-07067aabc028
   layout:
     tiles:
     - visualization_id: Viz_1
     - visualization_id: Viz_2
     - visualization_id: Viz_3
+    - visualization_id: Viz_4
