@@ -250,6 +250,9 @@ liveboard:
         height: 8
         width: 6
       id: 9126334f-c915-4977-8a0c-7b7f74924a5f
+    - name: test 3
+      description: ""
+      id: 169c0c53-0797-49ca-bb3e-86e65b5786cf
   style:
     style_properties:
     - name: lb_border_type
