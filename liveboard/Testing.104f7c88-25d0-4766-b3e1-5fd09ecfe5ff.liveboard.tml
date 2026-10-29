@@ -177,9 +177,52 @@ liveboard:
         client_state: ""
       display_mode: TABLE_MODE
     viz_guid: 5a7fafc1-e1bf-473f-a03a-07067aabc028
+  - id: Viz_5
+    answer:
+      name: Total sales by region
+      tables:
+      - id: (Sample) Retail - Apparel
+        name: (Sample) Retail - Apparel
+        fqn: cd252e5c-b552-49a8-821d-3eadaa049cca
+      search_query: "[sales] [region]"
+      answer_columns:
+      - name: Total sales
+      - name: region
+      table:
+        table_columns:
+        - column_id: Total sales
+          show_headline: false
+        - column_id: region
+          show_headline: false
+        ordered_column_ids:
+        - region
+        - Total sales
+        client_state: ""
+      chart:
+        type: ADVANCED_DONUT
+        chart_columns:
+        - column_id: Total sales
+        - column_id: region
+        client_state: ""
+        custom_chart_config:
+        - key: basic
+          dimensions:
+          - key: x-axis
+            axes:
+            - type: FLAT
+              column: region
+            mode: AXIS_DRIVEN
+          - key: y-axis
+            axes:
+            - type: FLAT
+              column: Total sales
+            mode: AXIS_DRIVEN
+      display_mode: CHART_MODE
+    viz_guid: 3a6e8a3c-fab9-446d-a102-7f63abebee1b
   layout:
     tiles:
     - visualization_id: Viz_1
     - visualization_id: Viz_2
     - visualization_id: Viz_3
     - visualization_id: Viz_4
+    - visualization_id: Viz_5
