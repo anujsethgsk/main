@@ -220,9 +220,49 @@ liveboard:
       display_mode: CHART_MODE
     viz_guid: 3a6e8a3c-fab9-446d-a102-7f63abebee1b
   layout:
-    tiles:
-    - visualization_id: Viz_1
-    - visualization_id: Viz_2
-    - visualization_id: Viz_3
-    - visualization_id: Viz_4
-    - visualization_id: Viz_5
+    tabs:
+    - name: test 2
+      description: ""
+      tiles:
+      - visualization_id: Viz_1
+        x: 0
+        "y": 0
+        height: 8
+        width: 6
+      - visualization_id: Viz_2
+        x: 6
+        "y": 0
+        height: 8
+        width: 6
+      - visualization_id: Viz_3
+        x: 0
+        "y": 8
+        height: 8
+        width: 12
+      - visualization_id: Viz_4
+        x: 0
+        "y": 16
+        height: 8
+        width: 12
+      - visualization_id: Viz_5
+        x: 0
+        "y": 24
+        height: 8
+        width: 6
+      id: 9126334f-c915-4977-8a0c-7b7f74924a5f
+  style:
+    style_properties:
+    - name: lb_border_type
+      value: CURVED
+    - name: lb_brand_color
+      value: LBC_A
+    - name: hide_group_title
+      value: "false"
+    - name: hide_group_description
+      value: "true"
+    - name: hide_group_tile_description
+      value: "false"
+    - name: hide_tile_description
+      value: "false"
+    - name: kpi_hero_font_size
+      value: M
